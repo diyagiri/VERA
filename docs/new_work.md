@@ -17,3 +17,7 @@
 - models.py - added naturalized_citizen fact (S2) and load_rules() (2026-11-05)
 - tests/test_rules_data.py - rule/evidence integrity tests (2026-11-05)
 - docs/reuse_terms.md - per-source reuse terms and handling (2026-11-05)
+- rules.py - deterministic evaluators for 8 rules, approval gate, aggregation, correction re-run (2026-11-05)
+- models.py - RuleResult.logic_outcome/gated/fact_version; facts_from_dict() (2026-11-05)
+- tests/test_rules_engine.py - persona, correction, gating and wording tests (2026-11-05)
+- demo_rules.py - terminal demo of a persona journey without an LLM (2026-11-05)

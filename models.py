@@ -104,10 +104,13 @@ class RuleRecord:
 @dataclass
 class RuleResult:
     rule_id: str
-    outcome: RuleOutcome
+    outcome: RuleOutcome              # what is displayed (after the approval gate)
     reason: str
     missing_inputs: list[str] = field(default_factory=list)
     evidence_ids: list[str] = field(default_factory=list)
+    logic_outcome: Optional[RuleOutcome] = None   # what the rule logic says, before gating
+    gated: bool = False               # True when a non-approved rule was forced to review_required
+    fact_version: int = 0
 
 
 @dataclass
@@ -181,3 +184,19 @@ def load_rules(path: str = RULES_PATH) -> list[RuleRecord]:
         p = Path(__file__).resolve().parent / p
     data = json.loads(p.read_text(encoding="utf-8"))
     return [RuleRecord(**r) for r in data["rules"]]
+
+
+def facts_from_dict(d: dict, goal: str = "") -> Facts:
+    """Build Facts from fixture/UI JSON (string values)."""
+    def tri(v):
+        return TriState(v) if v else TriState.UNKNOWN
+    return Facts(
+        status_category=StatusCategory(d["status_category"]) if d.get("status_category") else None,
+        naturalized_citizen=tri(d.get("naturalized_citizen")),
+        is_post_secondary_student=tri(d.get("is_post_secondary_student")),
+        institution_offers_service=tri(d.get("institution_offers_service")),
+        pr_class=d.get("pr_class"),
+        pr_landing_date=date.fromisoformat(d["pr_landing_date"]) if d.get("pr_landing_date") else None,
+        bc_resident=tri(d.get("bc_resident")),
+        goal=goal,
+    )
