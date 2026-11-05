@@ -1,0 +1,125 @@
+{
+  "note": "Targets for a future NEW-03-R2 date calculator. The calculator is disabled, so every row must currently return review_required. Rows with needs_verification=true are VERA's month-end reading, not a stated S4 example; a reviewer must confirm before the calculator is enabled. S4 transition wording must also be reconciled.",
+  "boundaries": [
+    {
+      "boundary_id": "D01",
+      "pr_class": "economic",
+      "pr_landing_date": "2020-03-31",
+      "as_of_date": "2026-04-01",
+      "expected_now": "review_required",
+      "expected_access_until": null,
+      "expected_in_period_on_as_of": false,
+      "basis": "S4 Example 1: became PR on or before April 1, 2020; no access starting April 1, 2026",
+      "needs_verification": false,
+      "verified_by_reviewer": false
+    },
+    {
+      "boundary_id": "D02",
+      "pr_class": "economic",
+      "pr_landing_date": "2020-04-01",
+      "as_of_date": "2026-04-01",
+      "expected_now": "review_required",
+      "expected_access_until": null,
+      "expected_in_period_on_as_of": false,
+      "basis": "S4 Example 1 boundary day",
+      "needs_verification": false,
+      "verified_by_reviewer": false
+    },
+    {
+      "boundary_id": "D03",
+      "pr_class": "economic",
+      "pr_landing_date": "2020-04-02",
+      "as_of_date": "2026-04-01",
+      "expected_now": "review_required",
+      "expected_access_until": "2026-04-30",
+      "expected_in_period_on_as_of": true,
+      "basis": "S4 Example 2 first day; +6 years to month end is VERA's reading",
+      "needs_verification": true,
+      "verified_by_reviewer": false
+    },
+    {
+      "boundary_id": "D04",
+      "pr_class": "economic",
+      "pr_landing_date": "2021-06-21",
+      "as_of_date": "2027-06-29",
+      "expected_now": "review_required",
+      "expected_access_until": "2027-06-30",
+      "expected_in_period_on_as_of": true,
+      "basis": "S4 Example 2: June 21, 2021 -> June 30, 2027 (day before end)",
+      "needs_verification": false,
+      "verified_by_reviewer": false
+    },
+    {
+      "boundary_id": "D05",
+      "pr_class": "economic",
+      "pr_landing_date": "2021-06-21",
+      "as_of_date": "2027-06-30",
+      "expected_now": "review_required",
+      "expected_access_until": "2027-06-30",
+      "expected_in_period_on_as_of": true,
+      "basis": "S4 Example 2 (on end date)",
+      "needs_verification": false,
+      "verified_by_reviewer": false
+    },
+    {
+      "boundary_id": "D06",
+      "pr_class": "economic",
+      "pr_landing_date": "2021-06-21",
+      "as_of_date": "2027-07-01",
+      "expected_now": "review_required",
+      "expected_access_until": "2027-06-30",
+      "expected_in_period_on_as_of": false,
+      "basis": "S4 Example 2 (day after end)",
+      "needs_verification": false,
+      "verified_by_reviewer": false
+    },
+    {
+      "boundary_id": "D07",
+      "pr_class": "economic",
+      "pr_landing_date": "2027-03-31",
+      "as_of_date": "2027-04-15",
+      "expected_now": "review_required",
+      "expected_access_until": "2033-03-31",
+      "expected_in_period_on_as_of": true,
+      "basis": "Last day of the 6-year cohort (Example 2 range ends March 31, 2027); month-end reading",
+      "needs_verification": true,
+      "verified_by_reviewer": false
+    },
+    {
+      "boundary_id": "D08",
+      "pr_class": "economic",
+      "pr_landing_date": "2027-04-01",
+      "as_of_date": "2027-04-15",
+      "expected_now": "review_required",
+      "expected_access_until": "2032-04-30",
+      "expected_in_period_on_as_of": true,
+      "basis": "First day of the 5-year cohort (Example 3); month-end reading",
+      "needs_verification": true,
+      "verified_by_reviewer": false
+    },
+    {
+      "boundary_id": "D09",
+      "pr_class": "economic",
+      "pr_landing_date": "2027-05-04",
+      "as_of_date": "2032-05-31",
+      "expected_now": "review_required",
+      "expected_access_until": "2032-05-31",
+      "expected_in_period_on_as_of": true,
+      "basis": "S4 Example 3: May 4, 2027 -> May 31, 2032 (on end date)",
+      "needs_verification": false,
+      "verified_by_reviewer": false
+    },
+    {
+      "boundary_id": "D10",
+      "pr_class": "economic",
+      "pr_landing_date": "2027-05-04",
+      "as_of_date": "2032-06-01",
+      "expected_now": "review_required",
+      "expected_access_until": "2032-05-31",
+      "expected_in_period_on_as_of": false,
+      "basis": "S4 Example 3 (day after end)",
+      "needs_verification": false,
+      "verified_by_reviewer": false
+    }
+  ]
+}

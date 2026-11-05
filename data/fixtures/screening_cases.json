@@ -1,0 +1,938 @@
+{
+  "note": "Expected states come from reading the sources (S1-S4) with draft logic visible (allow_draft=True). Never copy expected values from engine output. Held-out cases are run only by `python tests/fixture_runner.py heldout`, never by pytest.",
+  "cases": [
+    {
+      "case_id": "C01",
+      "split": "dev",
+      "covers": [
+        "student",
+        "unknown_fact"
+      ],
+      "facts": {
+        "status_category": "study_permit",
+        "naturalized_citizen": null,
+        "is_post_secondary_student": "yes",
+        "institution_offers_service": null,
+        "pr_class": null,
+        "pr_landing_date": null,
+        "bc_resident": null
+      },
+      "as_of_date": "2026-11-05",
+      "expected": {
+        "STU-01": "blocker_found",
+        "NEW-02": "needs_information",
+        "NEW-03": "blocker_found"
+      },
+      "expected_missing": {
+        "NEW-02": [
+          "institution_offers_service"
+        ]
+      },
+      "source_refs": [
+        "STU-01-R1",
+        "NEW-02-R2",
+        "NEW-03-R1"
+      ],
+      "author": "Diya Giri",
+      "reviewer": null
+    },
+    {
+      "case_id": "C02",
+      "split": "dev",
+      "covers": [
+        "student",
+        "supported_route"
+      ],
+      "facts": {
+        "status_category": "study_permit",
+        "naturalized_citizen": null,
+        "is_post_secondary_student": "yes",
+        "institution_offers_service": "no",
+        "pr_class": null,
+        "pr_landing_date": null,
+        "bc_resident": null
+      },
+      "as_of_date": "2026-11-05",
+      "expected": {
+        "STU-01": "blocker_found",
+        "NEW-02": "no_blocker_in_checked_criteria",
+        "NEW-03": "blocker_found"
+      },
+      "expected_missing": {},
+      "source_refs": [
+        "NEW-02-R2"
+      ],
+      "author": "Diya Giri",
+      "reviewer": null
+    },
+    {
+      "case_id": "C03",
+      "split": "dev",
+      "covers": [
+        "student",
+        "supported_exclusion"
+      ],
+      "facts": {
+        "status_category": "study_permit",
+        "naturalized_citizen": null,
+        "is_post_secondary_student": "yes",
+        "institution_offers_service": "yes",
+        "pr_class": null,
+        "pr_landing_date": null,
+        "bc_resident": null
+      },
+      "as_of_date": "2026-11-05",
+      "expected": {
+        "STU-01": "blocker_found",
+        "NEW-02": "blocker_found",
+        "NEW-03": "blocker_found"
+      },
+      "expected_missing": {},
+      "source_refs": [
+        "NEW-02-R2"
+      ],
+      "author": "Diya Giri",
+      "reviewer": null
+    },
+    {
+      "case_id": "C04",
+      "split": "dev",
+      "covers": [
+        "student",
+        "not_listed"
+      ],
+      "facts": {
+        "status_category": "study_permit",
+        "naturalized_citizen": null,
+        "is_post_secondary_student": "no",
+        "institution_offers_service": null,
+        "pr_class": null,
+        "pr_landing_date": null,
+        "bc_resident": null
+      },
+      "as_of_date": "2026-11-05",
+      "expected": {
+        "STU-01": "blocker_found",
+        "NEW-02": "needs_official_review",
+        "NEW-03": "blocker_found"
+      },
+      "expected_missing": {},
+      "source_refs": [
+        "NEW-02-R2"
+      ],
+      "author": "Diya Giri",
+      "reviewer": null
+    },
+    {
+      "case_id": "C05",
+      "split": "dev",
+      "covers": [
+        "student",
+        "unknown_fact"
+      ],
+      "facts": {
+        "status_category": "study_permit",
+        "naturalized_citizen": null,
+        "is_post_secondary_student": null,
+        "institution_offers_service": null,
+        "pr_class": null,
+        "pr_landing_date": null,
+        "bc_resident": null
+      },
+      "as_of_date": "2026-11-05",
+      "expected": {
+        "STU-01": "blocker_found",
+        "NEW-02": "needs_information",
+        "NEW-03": "blocker_found"
+      },
+      "expected_missing": {
+        "NEW-02": [
+          "is_post_secondary_student"
+        ]
+      },
+      "source_refs": [
+        "NEW-02-R2"
+      ],
+      "author": "Diya Giri",
+      "reviewer": null
+    },
+    {
+      "case_id": "C06",
+      "split": "dev",
+      "covers": [
+        "worker"
+      ],
+      "facts": {
+        "status_category": "work_permit",
+        "naturalized_citizen": null,
+        "is_post_secondary_student": null,
+        "institution_offers_service": null,
+        "pr_class": null,
+        "pr_landing_date": null,
+        "bc_resident": null
+      },
+      "as_of_date": "2026-11-05",
+      "expected": {
+        "STU-01": "blocker_found",
+        "NEW-02": "no_blocker_in_checked_criteria",
+        "NEW-03": "blocker_found"
+      },
+      "expected_missing": {},
+      "source_refs": [
+        "STU-01-R1",
+        "NEW-02-R1",
+        "NEW-03-R1"
+      ],
+      "author": "Diya Giri",
+      "reviewer": null
+    },
+    {
+      "case_id": "C07",
+      "split": "dev",
+      "covers": [
+        "pr_economic",
+        "time_sensitive"
+      ],
+      "facts": {
+        "status_category": "permanent_resident",
+        "naturalized_citizen": null,
+        "is_post_secondary_student": null,
+        "institution_offers_service": null,
+        "pr_class": "economic",
+        "pr_landing_date": "2021-06-21",
+        "bc_resident": null
+      },
+      "as_of_date": "2026-11-05",
+      "expected": {
+        "STU-01": "needs_official_review",
+        "NEW-02": "blocker_found",
+        "NEW-03": "needs_official_review"
+      },
+      "expected_missing": {},
+      "source_refs": [
+        "NEW-03-R2"
+      ],
+      "author": "Diya Giri",
+      "reviewer": null
+    },
+    {
+      "case_id": "C08",
+      "split": "dev",
+      "covers": [
+        "pr_non_economic"
+      ],
+      "facts": {
+        "status_category": "permanent_resident",
+        "naturalized_citizen": null,
+        "is_post_secondary_student": null,
+        "institution_offers_service": null,
+        "pr_class": "family",
+        "pr_landing_date": "2019-01-10",
+        "bc_resident": null
+      },
+      "as_of_date": "2026-11-05",
+      "expected": {
+        "STU-01": "needs_official_review",
+        "NEW-02": "blocker_found",
+        "NEW-03": "no_blocker_in_checked_criteria"
+      },
+      "expected_missing": {},
+      "source_refs": [
+        "NEW-03-R3",
+        "NEW-02-R1"
+      ],
+      "author": "Diya Giri",
+      "reviewer": null
+    },
+    {
+      "case_id": "C09",
+      "split": "dev",
+      "covers": [
+        "pr_non_economic"
+      ],
+      "facts": {
+        "status_category": "permanent_resident",
+        "naturalized_citizen": null,
+        "is_post_secondary_student": null,
+        "institution_offers_service": null,
+        "pr_class": "refugee",
+        "pr_landing_date": "2022-03-01",
+        "bc_resident": null
+      },
+      "as_of_date": "2026-11-05",
+      "expected": {
+        "STU-01": "needs_official_review",
+        "NEW-02": "blocker_found",
+        "NEW-03": "no_blocker_in_checked_criteria"
+      },
+      "expected_missing": {},
+      "source_refs": [
+        "NEW-03-R3"
+      ],
+      "author": "Diya Giri",
+      "reviewer": null
+    },
+    {
+      "case_id": "C10",
+      "split": "dev",
+      "covers": [
+        "pr",
+        "unknown_fact"
+      ],
+      "facts": {
+        "status_category": "permanent_resident",
+        "naturalized_citizen": null,
+        "is_post_secondary_student": null,
+        "institution_offers_service": null,
+        "pr_class": null,
+        "pr_landing_date": null,
+        "bc_resident": null
+      },
+      "as_of_date": "2026-11-05",
+      "expected": {
+        "STU-01": "needs_official_review",
+        "NEW-02": "blocker_found",
+        "NEW-03": "needs_information"
+      },
+      "expected_missing": {
+        "NEW-03": [
+          "pr_class"
+        ]
+      },
+      "source_refs": [
+        "NEW-03-R2",
+        "NEW-03-R3"
+      ],
+      "author": "Diya Giri",
+      "reviewer": null
+    },
+    {
+      "case_id": "C11",
+      "split": "dev",
+      "covers": [
+        "pr_economic",
+        "unknown_fact"
+      ],
+      "facts": {
+        "status_category": "permanent_resident",
+        "naturalized_citizen": null,
+        "is_post_secondary_student": null,
+        "institution_offers_service": null,
+        "pr_class": "economic",
+        "pr_landing_date": null,
+        "bc_resident": null
+      },
+      "as_of_date": "2026-11-05",
+      "expected": {
+        "STU-01": "needs_official_review",
+        "NEW-02": "blocker_found",
+        "NEW-03": "needs_information"
+      },
+      "expected_missing": {
+        "NEW-03": [
+          "pr_landing_date"
+        ]
+      },
+      "source_refs": [
+        "NEW-03-R2"
+      ],
+      "author": "Diya Giri",
+      "reviewer": null
+    },
+    {
+      "case_id": "C12",
+      "split": "dev",
+      "covers": [
+        "pr",
+        "not_modeled"
+      ],
+      "facts": {
+        "status_category": "permanent_resident",
+        "naturalized_citizen": null,
+        "is_post_secondary_student": null,
+        "institution_offers_service": null,
+        "pr_class": "other",
+        "pr_landing_date": null,
+        "bc_resident": null
+      },
+      "as_of_date": "2026-11-05",
+      "expected": {
+        "STU-01": "needs_official_review",
+        "NEW-02": "blocker_found",
+        "NEW-03": "needs_official_review"
+      },
+      "expected_missing": {},
+      "source_refs": [
+        "NEW-03-R3"
+      ],
+      "author": "Diya Giri",
+      "reviewer": null
+    },
+    {
+      "case_id": "C13",
+      "split": "dev",
+      "covers": [
+        "protected_person"
+      ],
+      "facts": {
+        "status_category": "protected_person",
+        "naturalized_citizen": null,
+        "is_post_secondary_student": null,
+        "institution_offers_service": null,
+        "pr_class": null,
+        "pr_landing_date": null,
+        "bc_resident": null
+      },
+      "as_of_date": "2026-11-05",
+      "expected": {
+        "STU-01": "needs_official_review",
+        "NEW-02": "blocker_found",
+        "NEW-03": "no_blocker_in_checked_criteria"
+      },
+      "expected_missing": {},
+      "source_refs": [
+        "STU-01-R1",
+        "NEW-02-R1",
+        "NEW-03-R1"
+      ],
+      "author": "Diya Giri",
+      "reviewer": null
+    },
+    {
+      "case_id": "C14",
+      "split": "dev",
+      "covers": [
+        "citizen",
+        "naturalized"
+      ],
+      "facts": {
+        "status_category": "citizen",
+        "naturalized_citizen": "yes",
+        "is_post_secondary_student": null,
+        "institution_offers_service": null,
+        "pr_class": null,
+        "pr_landing_date": null,
+        "bc_resident": null
+      },
+      "as_of_date": "2026-11-05",
+      "expected": {
+        "STU-01": "needs_official_review",
+        "NEW-02": "no_blocker_in_checked_criteria",
+        "NEW-03": "blocker_found"
+      },
+      "expected_missing": {},
+      "source_refs": [
+        "NEW-02-R1",
+        "NEW-03-R1"
+      ],
+      "author": "Diya Giri",
+      "reviewer": null
+    },
+    {
+      "case_id": "C15",
+      "split": "dev",
+      "covers": [
+        "citizen"
+      ],
+      "facts": {
+        "status_category": "citizen",
+        "naturalized_citizen": "no",
+        "is_post_secondary_student": null,
+        "institution_offers_service": null,
+        "pr_class": null,
+        "pr_landing_date": null,
+        "bc_resident": null
+      },
+      "as_of_date": "2026-11-05",
+      "expected": {
+        "STU-01": "needs_official_review",
+        "NEW-02": "blocker_found",
+        "NEW-03": "blocker_found"
+      },
+      "expected_missing": {},
+      "source_refs": [
+        "NEW-02-R1"
+      ],
+      "author": "Diya Giri",
+      "reviewer": null
+    },
+    {
+      "case_id": "C16",
+      "split": "dev",
+      "covers": [
+        "citizen",
+        "unknown_fact"
+      ],
+      "facts": {
+        "status_category": "citizen",
+        "naturalized_citizen": null,
+        "is_post_secondary_student": null,
+        "institution_offers_service": null,
+        "pr_class": null,
+        "pr_landing_date": null,
+        "bc_resident": null
+      },
+      "as_of_date": "2026-11-05",
+      "expected": {
+        "STU-01": "needs_official_review",
+        "NEW-02": "needs_information",
+        "NEW-03": "blocker_found"
+      },
+      "expected_missing": {
+        "NEW-02": [
+          "naturalized_citizen"
+        ]
+      },
+      "source_refs": [
+        "NEW-02-R1"
+      ],
+      "author": "Diya Giri",
+      "reviewer": null
+    },
+    {
+      "case_id": "C17",
+      "split": "dev",
+      "covers": [
+        "unknown_status",
+        "skipped"
+      ],
+      "facts": {
+        "status_category": null,
+        "naturalized_citizen": null,
+        "is_post_secondary_student": null,
+        "institution_offers_service": null,
+        "pr_class": null,
+        "pr_landing_date": null,
+        "bc_resident": null
+      },
+      "as_of_date": "2026-11-05",
+      "expected": {
+        "STU-01": "needs_information",
+        "NEW-02": "needs_information",
+        "NEW-03": "needs_information"
+      },
+      "expected_missing": {
+        "STU-01": [
+          "status_category"
+        ],
+        "NEW-02": [
+          "status_category"
+        ],
+        "NEW-03": [
+          "status_category"
+        ]
+      },
+      "source_refs": [
+        "STU-01-R1",
+        "NEW-02-R1",
+        "NEW-03-R1"
+      ],
+      "author": "Diya Giri",
+      "reviewer": null
+    },
+    {
+      "case_id": "C18",
+      "split": "dev",
+      "covers": [
+        "unknown_status",
+        "prefer_not_to_say"
+      ],
+      "facts": {
+        "status_category": "prefer_not_to_say",
+        "naturalized_citizen": null,
+        "is_post_secondary_student": null,
+        "institution_offers_service": null,
+        "pr_class": null,
+        "pr_landing_date": null,
+        "bc_resident": null
+      },
+      "as_of_date": "2026-11-05",
+      "expected": {
+        "STU-01": "needs_information",
+        "NEW-02": "needs_information",
+        "NEW-03": "needs_information"
+      },
+      "expected_missing": {
+        "STU-01": [
+          "status_category"
+        ],
+        "NEW-02": [
+          "status_category"
+        ],
+        "NEW-03": [
+          "status_category"
+        ]
+      },
+      "source_refs": [
+        "STU-01-R1",
+        "NEW-02-R1",
+        "NEW-03-R1"
+      ],
+      "author": "Diya Giri",
+      "reviewer": null
+    },
+    {
+      "case_id": "C19",
+      "split": "dev",
+      "covers": [
+        "not_modeled",
+        "exception"
+      ],
+      "facts": {
+        "status_category": "other",
+        "naturalized_citizen": null,
+        "is_post_secondary_student": null,
+        "institution_offers_service": null,
+        "pr_class": null,
+        "pr_landing_date": null,
+        "bc_resident": null
+      },
+      "as_of_date": "2026-11-05",
+      "expected": {
+        "STU-01": "needs_official_review",
+        "NEW-02": "needs_official_review",
+        "NEW-03": "needs_official_review"
+      },
+      "expected_missing": {},
+      "source_refs": [
+        "STU-01-R1",
+        "NEW-02-R1",
+        "NEW-03-R1"
+      ],
+      "author": "Diya Giri",
+      "reviewer": null
+    },
+    {
+      "case_id": "C20",
+      "split": "dev",
+      "covers": [
+        "pr_economic",
+        "time_sensitive",
+        "boundary"
+      ],
+      "facts": {
+        "status_category": "permanent_resident",
+        "naturalized_citizen": null,
+        "is_post_secondary_student": null,
+        "institution_offers_service": null,
+        "pr_class": "economic",
+        "pr_landing_date": "2020-04-01",
+        "bc_resident": null
+      },
+      "as_of_date": "2026-11-05",
+      "expected": {
+        "STU-01": "needs_official_review",
+        "NEW-02": "blocker_found",
+        "NEW-03": "needs_official_review"
+      },
+      "expected_missing": {},
+      "source_refs": [
+        "NEW-03-R2"
+      ],
+      "author": "Diya Giri",
+      "reviewer": null
+    },
+    {
+      "case_id": "C21",
+      "split": "heldout",
+      "covers": [
+        "student",
+        "supported_route"
+      ],
+      "facts": {
+        "status_category": "study_permit",
+        "naturalized_citizen": null,
+        "is_post_secondary_student": "yes",
+        "institution_offers_service": "no",
+        "pr_class": null,
+        "pr_landing_date": null,
+        "bc_resident": "yes"
+      },
+      "as_of_date": "2026-11-05",
+      "expected": {
+        "STU-01": "blocker_found",
+        "NEW-02": "no_blocker_in_checked_criteria",
+        "NEW-03": "blocker_found"
+      },
+      "expected_missing": {},
+      "source_refs": [
+        "NEW-02-R2",
+        "STU-01-R1"
+      ],
+      "author": "Diya Giri (draft; Contributor A to review)",
+      "reviewer": null
+    },
+    {
+      "case_id": "C22",
+      "split": "heldout",
+      "covers": [
+        "worker",
+        "irrelevant_fact"
+      ],
+      "facts": {
+        "status_category": "work_permit",
+        "naturalized_citizen": null,
+        "is_post_secondary_student": "yes",
+        "institution_offers_service": "yes",
+        "pr_class": null,
+        "pr_landing_date": null,
+        "bc_resident": null
+      },
+      "as_of_date": "2026-11-05",
+      "expected": {
+        "STU-01": "blocker_found",
+        "NEW-02": "no_blocker_in_checked_criteria",
+        "NEW-03": "blocker_found"
+      },
+      "expected_missing": {},
+      "source_refs": [
+        "NEW-02-R1",
+        "NEW-02-R2"
+      ],
+      "author": "Diya Giri (draft; Contributor A to review)",
+      "reviewer": null
+    },
+    {
+      "case_id": "C23",
+      "split": "heldout",
+      "covers": [
+        "citizen",
+        "irrelevant_fact"
+      ],
+      "facts": {
+        "status_category": "citizen",
+        "naturalized_citizen": "yes",
+        "is_post_secondary_student": "yes",
+        "institution_offers_service": "yes",
+        "pr_class": null,
+        "pr_landing_date": null,
+        "bc_resident": null
+      },
+      "as_of_date": "2026-11-05",
+      "expected": {
+        "STU-01": "needs_official_review",
+        "NEW-02": "no_blocker_in_checked_criteria",
+        "NEW-03": "blocker_found"
+      },
+      "expected_missing": {},
+      "source_refs": [
+        "NEW-02-R1",
+        "NEW-02-R2"
+      ],
+      "author": "Diya Giri (draft; Contributor A to review)",
+      "reviewer": null
+    },
+    {
+      "case_id": "C24",
+      "split": "heldout",
+      "covers": [
+        "protected_person"
+      ],
+      "facts": {
+        "status_category": "protected_person",
+        "naturalized_citizen": null,
+        "is_post_secondary_student": null,
+        "institution_offers_service": null,
+        "pr_class": null,
+        "pr_landing_date": null,
+        "bc_resident": "yes"
+      },
+      "as_of_date": "2026-11-05",
+      "expected": {
+        "STU-01": "needs_official_review",
+        "NEW-02": "blocker_found",
+        "NEW-03": "no_blocker_in_checked_criteria"
+      },
+      "expected_missing": {},
+      "source_refs": [
+        "STU-01-R2",
+        "NEW-03-R1"
+      ],
+      "author": "Diya Giri (draft; Contributor A to review)",
+      "reviewer": null
+    },
+    {
+      "case_id": "C25",
+      "split": "heldout",
+      "covers": [
+        "pr_non_economic",
+        "unknown_fact"
+      ],
+      "facts": {
+        "status_category": "permanent_resident",
+        "naturalized_citizen": null,
+        "is_post_secondary_student": null,
+        "institution_offers_service": null,
+        "pr_class": "family",
+        "pr_landing_date": null,
+        "bc_resident": null
+      },
+      "as_of_date": "2026-11-05",
+      "expected": {
+        "STU-01": "needs_official_review",
+        "NEW-02": "blocker_found",
+        "NEW-03": "no_blocker_in_checked_criteria"
+      },
+      "expected_missing": {},
+      "source_refs": [
+        "NEW-03-R3"
+      ],
+      "author": "Diya Giri (draft; Contributor A to review)",
+      "reviewer": null
+    },
+    {
+      "case_id": "C26",
+      "split": "heldout",
+      "covers": [
+        "pr_economic",
+        "time_sensitive"
+      ],
+      "facts": {
+        "status_category": "permanent_resident",
+        "naturalized_citizen": null,
+        "is_post_secondary_student": null,
+        "institution_offers_service": null,
+        "pr_class": "economic",
+        "pr_landing_date": "2027-05-04",
+        "bc_resident": null
+      },
+      "as_of_date": "2027-06-01",
+      "expected": {
+        "STU-01": "needs_official_review",
+        "NEW-02": "blocker_found",
+        "NEW-03": "needs_official_review"
+      },
+      "expected_missing": {},
+      "source_refs": [
+        "NEW-03-R2"
+      ],
+      "author": "Diya Giri (draft; Contributor A to review)",
+      "reviewer": null
+    },
+    {
+      "case_id": "C27",
+      "split": "heldout",
+      "covers": [
+        "student",
+        "unknown_fact"
+      ],
+      "facts": {
+        "status_category": "study_permit",
+        "naturalized_citizen": null,
+        "is_post_secondary_student": null,
+        "institution_offers_service": "no",
+        "pr_class": null,
+        "pr_landing_date": null,
+        "bc_resident": null
+      },
+      "as_of_date": "2026-11-05",
+      "expected": {
+        "STU-01": "blocker_found",
+        "NEW-02": "needs_information",
+        "NEW-03": "blocker_found"
+      },
+      "expected_missing": {
+        "NEW-02": [
+          "is_post_secondary_student"
+        ]
+      },
+      "source_refs": [
+        "NEW-02-R2"
+      ],
+      "author": "Diya Giri (draft; Contributor A to review)",
+      "reviewer": null
+    },
+    {
+      "case_id": "C28",
+      "split": "heldout",
+      "covers": [
+        "citizen",
+        "unknown_fact"
+      ],
+      "facts": {
+        "status_category": "citizen",
+        "naturalized_citizen": null,
+        "is_post_secondary_student": "yes",
+        "institution_offers_service": null,
+        "pr_class": null,
+        "pr_landing_date": null,
+        "bc_resident": null
+      },
+      "as_of_date": "2026-11-05",
+      "expected": {
+        "STU-01": "needs_official_review",
+        "NEW-02": "needs_information",
+        "NEW-03": "blocker_found"
+      },
+      "expected_missing": {
+        "NEW-02": [
+          "naturalized_citizen"
+        ]
+      },
+      "source_refs": [
+        "NEW-02-R1"
+      ],
+      "author": "Diya Giri (draft; Contributor A to review)",
+      "reviewer": null
+    },
+    {
+      "case_id": "C29",
+      "split": "heldout",
+      "covers": [
+        "not_modeled",
+        "irrelevant_fact"
+      ],
+      "facts": {
+        "status_category": "other",
+        "naturalized_citizen": null,
+        "is_post_secondary_student": "yes",
+        "institution_offers_service": "no",
+        "pr_class": null,
+        "pr_landing_date": null,
+        "bc_resident": null
+      },
+      "as_of_date": "2026-11-05",
+      "expected": {
+        "STU-01": "needs_official_review",
+        "NEW-02": "needs_official_review",
+        "NEW-03": "needs_official_review"
+      },
+      "expected_missing": {},
+      "source_refs": [
+        "NEW-02-R1"
+      ],
+      "author": "Diya Giri (draft; Contributor A to review)",
+      "reviewer": null
+    },
+    {
+      "case_id": "C30",
+      "split": "heldout",
+      "covers": [
+        "pr_economic",
+        "time_sensitive",
+        "boundary"
+      ],
+      "facts": {
+        "status_category": "permanent_resident",
+        "naturalized_citizen": null,
+        "is_post_secondary_student": null,
+        "institution_offers_service": null,
+        "pr_class": "economic",
+        "pr_landing_date": "2027-03-31",
+        "bc_resident": null
+      },
+      "as_of_date": "2027-04-15",
+      "expected": {
+        "STU-01": "needs_official_review",
+        "NEW-02": "blocker_found",
+        "NEW-03": "needs_official_review"
+      },
+      "expected_missing": {},
+      "source_refs": [
+        "NEW-03-R2"
+      ],
+      "author": "Diya Giri (draft; Contributor A to review)",
+      "reviewer": null
+    }
+  ]
+}
