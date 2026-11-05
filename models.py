@@ -200,3 +200,39 @@ def facts_from_dict(d: dict, goal: str = "") -> Facts:
         bc_resident=tri(d.get("bc_resident")),
         goal=goal,
     )
+
+
+# ---------- plan (Step 7) ----------
+
+@dataclass
+class PlanLine:
+    line_id: str
+    program_id: Optional[str]
+    kind: str                      # "task" | "enquiry_context" | "enquiry_question" | "handoff"
+    text: str
+    depends_on: list[str] = field(default_factory=list)
+    evidence_ids: list[str] = field(default_factory=list)
+    fact_version: int = 0
+
+
+@dataclass
+class Plan:
+    as_of_date: str
+    fact_version: int
+    lines: list[PlanLine]
+    removed: list[str] = field(default_factory=list)
+    stale: bool = False
+
+
+# One question per fact. Categories only; never ask for identifying numbers.
+QUESTIONS: dict[str, str] = {
+    "status_category": "Which best describes your current status in Canada? (study permit, work permit, "
+                       "permanent resident, protected person, Canadian citizen, other, prefer not to say)",
+    "naturalized_citizen": "Did you become a Canadian citizen after immigrating (naturalized)?",
+    "is_post_secondary_student": "Are you a student at a college or university in B.C.?",
+    "institution_offers_service": "Does your college or university offer newcomer or settlement services "
+                                  "to international students? (yes / no / not sure)",
+    "pr_class": "Which kind of program made you a permanent resident? (economic, family, refugee, other)",
+    "pr_landing_date": "In which month and year did you become a permanent resident?",
+    "bc_resident": "Do you currently live in British Columbia?",
+}

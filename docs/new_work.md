@@ -27,3 +27,7 @@
 - build_evidence.py, data/evidence.json - 37 verbatim evidence records (8 rule spans, 20 exceptions, 9 context) (2026-11-05)
 - sources.py - route_goal, search_sources, resolve/validate evidence, untrusted-excerpt wrapping (2026-11-05)
 - tests/test_retrieval.py - routing, out-of-scope handoff, stale version, prompt-injection wrapping (2026-11-05)
+- actions.py - checklist + editable enquiry templates, dependency tracking, support check, markdown export (2026-11-05)
+- models.py - PlanLine, Plan, QUESTIONS (2026-11-05)
+- rules.py - results now cite exact evidence.json records (2026-11-05)
+- tests/test_actions.py - plan, correction, invalidation, wording and export tests (2026-11-05)

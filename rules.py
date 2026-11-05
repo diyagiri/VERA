@@ -152,8 +152,24 @@ def aggregate(outcomes: list[RuleOutcome]) -> AggregateState:
     return AggregateState.NO_BLOCKER_IN_CHECKED
 
 
+_SPAN_IDS: Optional[dict[str, str]] = None
+
+
+def _rule_span_ids() -> dict[str, str]:
+    """rule_id -> evidence_id of that rule's verbatim span in data/evidence.json."""
+    global _SPAN_IDS
+    if _SPAN_IDS is None:
+        try:
+            from sources import load_evidence
+            _SPAN_IDS = {e["rule_id"]: e["evidence_id"] for e in load_evidence() if e["kind"] == "rule_span"}
+        except FileNotFoundError:
+            _SPAN_IDS = {}
+    return _SPAN_IDS
+
+
 def _evidence_id(r: RuleRecord) -> str:
-    return f"{r.source_id}@{(r.source_version or 'unversioned')[:8]}"
+    """Cite the exact catalog record; fall back to source@version if the catalog lacks it."""
+    return _rule_span_ids().get(r.rule_id) or f"{r.source_id}@{(r.source_version or 'unversioned')[:8]}"
 
 
 def check_rules(program_id: str, facts: Facts, as_of_date: date,

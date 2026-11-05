@@ -96,3 +96,10 @@ def test_institution_offers_service_blocks_nsp_for_student():
                 institution_offers_service=m.TriState.YES)
     res = r.check_rules("NEW-02", f, date(2026, 11, 5), allow_draft=True)
     assert res.state == m.AggregateState.BLOCKER_FOUND
+
+
+def test_engine_cites_catalog_evidence_ids():
+    import sources
+    facts, as_of, _ = _load("P1-MEI")
+    ids = {i for res in r.check_all(facts, as_of, allow_draft=True).values() for i in res.evidence_ids}
+    assert ids and all(sources.resolve_evidence(i) is not None for i in ids), ids
