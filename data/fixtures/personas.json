@@ -16,17 +16,35 @@
         "bc_resident": "unknown"
       },
       "expected": {
-        "STU-01": {"state": "blocker_found", "why": "S1: a study permit alone does not satisfy the listed status criterion."},
-        "NEW-02": {"state": "needs_information", "missing": ["institution_offers_service"], "why": "S2: institutional service availability is an explicit condition for international post-secondary students."},
-        "NEW-03": {"state": "blocker_found", "why": "S3: ordinary study-permit status alone is not a general route; exceptions shown as unchecked."}
+        "STU-01": {
+          "state": "blocker_found",
+          "why": "S1: a study permit alone does not satisfy the listed status criterion."
+        },
+        "NEW-02": {
+          "state": "needs_information",
+          "missing": [
+            "institution_offers_service"
+          ],
+          "why": "S2: institutional service availability is an explicit condition for international post-secondary students."
+        },
+        "NEW-03": {
+          "state": "blocker_found",
+          "why": "S3: ordinary study-permit status alone is not a general route; exceptions shown as unchecked."
+        }
       },
       "correction": {
         "field": "institution_offers_service",
         "new_value": "no",
         "expected_after": {
-          "NEW-02": {"state": "no_blocker_in_checked_criteria", "why": "ASSUMPTION TO VERIFY IN STEP 3 against S2 wording: NSP serves international post-secondary students when the service is not offered by their institution."}
+          "NEW-02": {
+            "state": "no_blocker_in_checked_criteria",
+            "why": "VERIFIED 2026-11-05 against S2 snapshot (sha256 14fb8a28...): eligible as 'international post-secondary student on a study permit (if services are not offered at your educational institution)'."
+          }
         },
-        "unaffected": ["STU-01", "NEW-03"]
+        "unaffected": [
+          "STU-01",
+          "NEW-03"
+        ]
       }
     },
     {
@@ -44,7 +62,10 @@
         "bc_resident": "yes"
       },
       "expected": {
-        "NEW-03": {"state": "needs_official_review", "why": "Cutoff-dependent economic-class case; date calculator not enabled until S4 transition wording and examples are reconciled. Link official guidance."}
+        "NEW-03": {
+          "state": "needs_official_review",
+          "why": "Cutoff-dependent economic-class case; date calculator not enabled until S4 transition wording and examples are reconciled. Link official guidance."
+        }
       }
     }
   ]
