@@ -1,0 +1,22 @@
+# ============================================================
+# REQUIREMENTS.TXT
+# ============================================================
+# This file lists all the Python libraries VERA needs to work.
+# Install everything by running this command in the terminal:
+#   pip install -r requirements.txt
+#
+# Libraries we will add here:
+# - anthropic         → to talk to Claude AI
+# - pdfplumber        → to extract text from PDF files
+# - sentence-transformers → to convert text into numbers (embeddings)
+# - chromadb          → local database to store and search chunks
+# - streamlit         → to create the web interface in the browser
+# ============================================================
+
+anthropic              # Connects to Claude AI to generate answers
+pdfplumber             # Reads and extracts text from PDF files
+sentence-transformers  # Converts text into numbers (embeddings)
+chromadb               # Local database to store and search chunks
+streamlit              # Creates the web interface in the browser
+openai                 # Connects to GPT for evaluation judging
+numpy                  # Used for cosine similarity in evaluate.py
