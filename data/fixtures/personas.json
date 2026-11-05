@@ -1,0 +1,51 @@
+{
+  "note": "Fictional personas only. Expected outcomes assume the relevant rules are RULE_APPROVED; while any rule is RULE_DRAFT the live engine must return needs_official_review for it.",
+  "personas": [
+    {
+      "persona_id": "P1-MEI",
+      "journey": "primary",
+      "description": "Mei, fictional first-year international master's student in Vancouver on a study permit.",
+      "goal": "I just arrived for my master's. I want help settling in and to know if I can get student funding.",
+      "as_of_date": "2026-11-05",
+      "facts": {
+        "status_category": "study_permit",
+        "is_post_secondary_student": "yes",
+        "institution_offers_service": "unknown",
+        "pr_class": null,
+        "pr_landing_date": null,
+        "bc_resident": "unknown"
+      },
+      "expected": {
+        "STU-01": {"state": "blocker_found", "why": "S1: a study permit alone does not satisfy the listed status criterion."},
+        "NEW-02": {"state": "needs_information", "missing": ["institution_offers_service"], "why": "S2: institutional service availability is an explicit condition for international post-secondary students."},
+        "NEW-03": {"state": "blocker_found", "why": "S3: ordinary study-permit status alone is not a general route; exceptions shown as unchecked."}
+      },
+      "correction": {
+        "field": "institution_offers_service",
+        "new_value": "no",
+        "expected_after": {
+          "NEW-02": {"state": "no_blocker_in_checked_criteria", "why": "ASSUMPTION TO VERIFY IN STEP 3 against S2 wording: NSP serves international post-secondary students when the service is not offered by their institution."}
+        },
+        "unaffected": ["STU-01", "NEW-03"]
+      }
+    },
+    {
+      "persona_id": "P2-TOMAS",
+      "journey": "uncertainty",
+      "description": "Tomas, fictional economic-class permanent resident who landed in June 2021.",
+      "goal": "I want free settlement help with finding work.",
+      "as_of_date": "2026-11-05",
+      "facts": {
+        "status_category": "permanent_resident",
+        "is_post_secondary_student": "no",
+        "institution_offers_service": "unknown",
+        "pr_class": "economic",
+        "pr_landing_date": "2021-06-21",
+        "bc_resident": "yes"
+      },
+      "expected": {
+        "NEW-03": {"state": "needs_official_review", "why": "Cutoff-dependent economic-class case; date calculator not enabled until S4 transition wording and examples are reconciled. Link official guidance."}
+      }
+    }
+  ]
+}

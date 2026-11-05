@@ -1,0 +1,31 @@
+{
+  "manifest_version": "2026-11-05-draft",
+  "note": "Values from Source Registry v2 (checked 2026-10-28). canonical_url, snapshot_path and sha256 are null until captured in Step 2. Do not invent values.",
+  "sources": [
+    {"source_id": "S1", "program_id": "STU-01", "publisher": "StudentAid BC / Province of BC",
+     "canonical_url": null, "title": "Basic eligibility requirements",
+     "evidence_section": "Basic-criteria list and subsequent exclusions",
+     "checked_on": "2026-10-28", "page_modified_on": null, "effective_period": null,
+     "snapshot_path": null, "sha256": null, "reuse_status": "unreviewed", "review_status": "SOURCE_CHECKED"},
+    {"source_id": "S2", "program_id": "NEW-02", "publisher": "WelcomeBC / Province of BC",
+     "canonical_url": null, "title": "BC NSP eligibility and provider directory",
+     "evidence_section": "Eligibility list; Find a service provider",
+     "checked_on": "2026-10-28", "page_modified_on": "2026-08-24", "effective_period": null,
+     "snapshot_path": null, "sha256": null, "reuse_status": "unreviewed", "review_status": "SOURCE_CHECKED"},
+    {"source_id": "S3", "program_id": "NEW-03", "publisher": "Immigration, Refugees and Citizenship Canada",
+     "canonical_url": null, "title": "Find free newcomer services near you",
+     "evidence_section": "Eligibility",
+     "checked_on": "2026-10-28", "page_modified_on": "2026-10-09", "effective_period": null,
+     "snapshot_path": null, "sha256": null, "reuse_status": "unreviewed", "review_status": "SOURCE_CHECKED"},
+    {"source_id": "S4", "program_id": "NEW-03", "publisher": "Immigration, Refugees and Citizenship Canada",
+     "canonical_url": null, "title": "Economic-class PR eligibility periods",
+     "evidence_section": "Periods, examples and other categories",
+     "checked_on": "2026-10-28", "page_modified_on": "2026-03-10", "effective_period": null,
+     "snapshot_path": null, "sha256": null, "reuse_status": "unreviewed", "review_status": "SOURCE_CHECKED"},
+    {"source_id": "S5", "program_id": null, "publisher": "Government of Canada",
+     "canonical_url": null, "title": "Federal Benefits Finder",
+     "evidence_section": "Discovery baseline (not an eligibility rule source)",
+     "checked_on": "2026-10-28", "page_modified_on": "2026-04-16", "effective_period": null,
+     "snapshot_path": null, "sha256": null, "reuse_status": "unreviewed", "review_status": "SOURCE_CHECKED"}
+  ]
+}
