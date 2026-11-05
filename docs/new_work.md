@@ -24,3 +24,6 @@
 - data/fixtures/screening_cases.json - 30 screening cases, 20 dev / 10 held-out (2026-11-05)
 - data/fixtures/date_boundaries.json - 10 S4 date-boundary targets; calculator disabled (2026-11-05)
 - tests/fixture_runner.py, tests/test_fixtures.py - fixture runner (n/N reporting) and dev-only tests (2026-11-05)
+- build_evidence.py, data/evidence.json - 37 verbatim evidence records (8 rule spans, 20 exceptions, 9 context) (2026-11-05)
+- sources.py - route_goal, search_sources, resolve/validate evidence, untrusted-excerpt wrapping (2026-11-05)
+- tests/test_retrieval.py - routing, out-of-scope handoff, stale version, prompt-injection wrapping (2026-11-05)

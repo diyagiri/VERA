@@ -1,12 +1,15 @@
-"""Source catalog: load/save manifest, capture versioned snapshots, verify hashes.
+"""Source catalog, versioned snapshots, and curated evidence retrieval.
 
-Retrieval (search_sources) is added in Step 6.
+Retrieved excerpts are untrusted data: they are wrapped before any model sees them
+and can never grant permissions or change tool policy.
 Human-recorded fields (checked_on, page_modified_on, effective_period) are never
 changed by code.
 """
 from __future__ import annotations
 
 import hashlib
+import html as _html
+import re
 import json
 import sys
 import time
@@ -122,6 +125,111 @@ def verify_snapshot(rec: SourceRecord) -> bool:
     return hashlib.sha256(p.read_bytes()).hexdigest() == rec.sha256
 
 
+# ---------- retrieval (Step 6) ----------
+
+EVIDENCE_PATH = ROOT / "data" / "evidence.json"
+S5_HANDOFF_URL = "https://www.canada.ca/en/services/benefits/finder.html"
+
+PROGRAM_KEYWORDS: dict[str, list[str]] = {
+    "STU-01": ["funding", "loan", "loans", "grant", "student aid", "tuition", "pay for school",
+               "financial aid", "studentaid"],
+    "NEW-02": ["settle", "settling", "newcomer", "services", "job", "work", "english",
+               "community", "counselling", "adjust"],
+    "NEW-03": ["settle", "settling", "newcomer", "settlement", "permanent resident", "pr",
+               "job", "english", "refugee"],
+}
+OUT_OF_SCOPE_KEYWORDS = ["tax", "rent", "housing", "child benefit", "ccb", "dental", "cdcp",
+                         "workers benefit", "cwb", "safer", "immigration application", "visa",
+                         "citizenship test"]
+STOPWORDS = {"a", "an", "the", "i", "to", "and", "or", "for", "of", "in", "my", "me", "is",
+             "it", "can", "do", "help", "want", "need"}
+KIND_RANK = {"rule_span": 0, "context": 1, "exception": 2}
+
+
+def tokenize(s: str) -> list[str]:
+    return [t for t in re.split(r"[^a-z0-9]+", s.lower()) if t and t not in STOPWORDS]
+
+
+def _matches(tokens: list[str], keyword: str) -> bool:
+    kw = tokenize(keyword) if " " in keyword else [keyword]
+    if len(kw) == 1:
+        return kw[0] in tokens
+    joined = " " + " ".join(tokens) + " "
+    return " " + " ".join(kw) + " " in joined
+
+
+def route_goal(goal: str) -> dict:
+    tokens = tokenize(goal)
+    matched = {pid: sorted(k for k in kws if _matches(tokens, k)) for pid, kws in PROGRAM_KEYWORDS.items()}
+    program_ids = sorted(pid for pid, ks in matched.items() if ks)
+    oos = sorted(k for k in OUT_OF_SCOPE_KEYWORDS if _matches(tokens, k))
+    if not program_ids and not oos:
+        program_ids = sorted(PROGRAM_KEYWORDS)
+    return {"program_ids": program_ids, "out_of_scope_terms": oos,
+            "matched_keywords": {k: v for k, v in matched.items() if v}}
+
+
+def load_evidence(path: Path | str = EVIDENCE_PATH) -> list[dict]:
+    return json.loads(Path(path).read_text(encoding="utf-8"))["evidence"]
+
+
+def wrap_untrusted(excerpt: str) -> str:
+    """Mark retrieved text as data. Angle brackets and ampersands are escaped."""
+    return f"<source_excerpt>{_html.escape(excerpt, quote=False)}</source_excerpt>"
+
+
+def search_sources(goal: str, program_ids: list[str] | None = None, k: int = 5,
+                   evidence: list[dict] | None = None) -> dict:
+    route = route_goal(goal)
+    program_ids = route["program_ids"] if program_ids is None else sorted(program_ids)
+    evidence = load_evidence() if evidence is None else evidence
+    goal_tokens = set(tokenize(goal))
+    results = []
+    for pid in program_ids:
+        scored = []
+        for rec in evidence:
+            if rec["program_id"] != pid:
+                continue
+            overlap = goal_tokens & set(tokenize(rec["excerpt"]))
+            score = 2 * len(overlap) + (3 if rec["kind"] == "rule_span" else 1 if rec["kind"] == "context" else 0)
+            scored.append((score, rec))
+        scored.sort(key=lambda t: (-t[0], KIND_RANK[t[1]["kind"]], t[1]["evidence_id"]))
+        for score, rec in scored[:k]:
+            results.append({"evidence_id": rec["evidence_id"], "program_id": pid,
+                            "source_id": rec["source_id"], "kind": rec["kind"], "rule_id": rec["rule_id"],
+                            "excerpt": wrap_untrusted(rec["excerpt"]), "title": rec["title"],
+                            "canonical_url": rec["canonical_url"], "score": score})
+    oos = route["out_of_scope_terms"]
+    return {"goal": goal, "program_ids": program_ids, "results": results,
+            "out_of_scope_terms": oos, "handoff": S5_HANDOFF_URL if oos else None}
+
+
+def resolve_evidence(evidence_id: str, evidence: list[dict] | None = None) -> dict | None:
+    evidence = load_evidence() if evidence is None else evidence
+    return next((e for e in evidence if e["evidence_id"] == evidence_id), None)
+
+
+def validate_record(rec: dict | None) -> tuple[bool, str]:
+    """True only if the record points at the current approved snapshot and the excerpt is in it."""
+    from extract import find_span, snapshot_text  # local import: extract imports this module
+    if rec is None:
+        return False, "unknown evidence id"
+    src = next((r for r in load_manifest() if r.source_id == rec["source_id"]), None)
+    if src is None:
+        return False, "unknown source"
+    if rec["source_version"] != src.sha256:
+        return False, "stale version"
+    if not verify_snapshot(src):
+        return False, "snapshot missing or hash mismatch"
+    if not find_span(snapshot_text(rec["source_id"]), rec["excerpt"]):
+        return False, "excerpt not found in snapshot"
+    return True, "ok"
+
+
+def validate_evidence(evidence_id: str, evidence: list[dict] | None = None) -> tuple[bool, str]:
+    return validate_record(resolve_evidence(evidence_id, evidence))
+
+
 def _cli(argv: list[str]) -> int:
     if len(argv) >= 3 and argv[0] == "capture":
         rec = record_capture(argv[1], argv[2])
@@ -131,6 +239,14 @@ def _cli(argv: list[str]) -> int:
         rec = import_snapshot(argv[1], argv[2], argv[3])
         print(f"{rec.source_id} imported -> {rec.snapshot_path}\n  sha256 {rec.sha256}")
         return 0
+    if len(argv) >= 2 and argv[0] == "search":
+        out = search_sources(" ".join(argv[1:]))
+        print(f"programs: {out['program_ids']}  out_of_scope: {out['out_of_scope_terms']}")
+        for x in out["results"]:
+            print(f"  [{x['score']}] {x['evidence_id']} {x['kind']:9} {x['excerpt'][16:-17][:80]}")
+        if out["handoff"]:
+            print(f"  handoff: {out['handoff']}")
+        return 0
     if argv and argv[0] == "verify":
         bad = 0
         for r in load_manifest():
@@ -138,7 +254,7 @@ def _cli(argv: list[str]) -> int:
             bad += not ok
             print(f"{'PASS' if ok else 'FAIL'} {r.source_id} {r.snapshot_path}")
         return 1 if bad else 0
-    print("usage: python sources.py capture <ID> <URL> | import <ID> <URL> <saved.html> | verify")
+    print("usage: python sources.py capture <ID> <URL> | import <ID> <URL> <saved.html> | verify | search <goal>")
     return 2
 
 
