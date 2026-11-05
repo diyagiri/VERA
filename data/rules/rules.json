@@ -1,0 +1,194 @@
+{
+  "rules_version": "2026-11-05-draft",
+  "note": "All rules RULE_DRAFT. Live screening requires RULE_APPROVED with an independent reviewer (not the author).",
+  "rules": [
+    {
+      "rule_id": "STU-01-R1",
+      "program_id": "STU-01",
+      "condition": "Status category must be Canadian citizen, permanent resident, or protected person. A study permit or work permit alone does not meet this criterion.",
+      "required_inputs": [
+        "status_category"
+      ],
+      "source_id": "S1",
+      "source_version": "86a15797a30cffd87ac7efd1a45d80800d15f2668d8237835e91890f9e5cef05",
+      "evidence_span": "be a Canadian citizen, a permanent resident or have protected person status",
+      "effective_from": null,
+      "effective_to": null,
+      "exceptions": [],
+      "coverage_limit": "",
+      "reviewer": null,
+      "reviewed_on": null,
+      "test_ids": [],
+      "approval_state": "RULE_DRAFT",
+      "author": "Diya Giri"
+    },
+    {
+      "rule_id": "STU-01-R2",
+      "program_id": "STU-01",
+      "condition": "Must be a resident of British Columbia as defined by StudentAid BC.",
+      "required_inputs": [
+        "bc_resident"
+      ],
+      "source_id": "S1",
+      "source_version": "86a15797a30cffd87ac7efd1a45d80800d15f2668d8237835e91890f9e5cef05",
+      "evidence_span": "be a resident of British Columbia",
+      "effective_from": null,
+      "effective_to": null,
+      "exceptions": [],
+      "coverage_limit": "StudentAid BC residency definition (linked page) not reviewed. Arrival in BC is not proof of residency. Always review_required until reviewed.",
+      "reviewer": null,
+      "reviewed_on": null,
+      "test_ids": [],
+      "approval_state": "RULE_DRAFT",
+      "author": "Diya Giri"
+    },
+    {
+      "rule_id": "STU-01-R3",
+      "program_id": "STU-01",
+      "condition": "Eligible program at an eligible school, financial need, and satisfactory academic progress.",
+      "required_inputs": [],
+      "source_id": "S1",
+      "source_version": "86a15797a30cffd87ac7efd1a45d80800d15f2668d8237835e91890f9e5cef05",
+      "evidence_span": "be able to demonstrate financial need",
+      "effective_from": null,
+      "effective_to": null,
+      "exceptions": [
+        "be enrolled in an eligible program of study at an eligible post-secondary school",
+        "make academic progress and achieve satisfactory scholastic standing in each period of post-secondary study",
+        "Delinquent or in default of previous student loans."
+      ],
+      "coverage_limit": "Not assessed by VERA. Always review_required; hand off to official StudentAid BC application. No funding amount output.",
+      "reviewer": null,
+      "reviewed_on": null,
+      "test_ids": [],
+      "approval_state": "RULE_DRAFT",
+      "author": "Diya Giri"
+    },
+    {
+      "rule_id": "NEW-02-R1",
+      "program_id": "NEW-02",
+      "condition": "Status must be one of the BC NSP listed categories. Work permit holders qualify. Citizens qualify only if naturalized. Other listed categories are not modeled and route to review.",
+      "required_inputs": [
+        "status_category",
+        "naturalized_citizen"
+      ],
+      "source_id": "S2",
+      "source_version": "14fb8a28c094106a51e9190ce03daf8e6b0e2421f80c9284651da5f7a4c2db13",
+      "evidence_span": "You are eligible for the BC Newcomer Services Program (BC NSP) if you are a:",
+      "effective_from": null,
+      "effective_to": null,
+      "exceptions": [
+        "temporary worker with a valid work permit",
+        "international post-secondary student on a study permit (if services are not offered at your educational institution)",
+        "provincial nominee awaiting a decision on your application for permanent residency",
+        "naturalized Canadian citizen",
+        "displaced Ukrainian (including immediate family members) with valid CUAET visas",
+        "refugee claimant (more support is available through the BC Safe Haven program)."
+      ],
+      "coverage_limit": "Permanent residents are not a listed category; route PRs to NEW-03. Provider intake and availability remain external.",
+      "reviewer": null,
+      "reviewed_on": null,
+      "test_ids": [],
+      "approval_state": "RULE_DRAFT",
+      "author": "Diya Giri"
+    },
+    {
+      "rule_id": "NEW-02-R2",
+      "program_id": "NEW-02",
+      "condition": "If the person is an international post-secondary student on a study permit, BC NSP applies only if their educational institution does not offer the service. Unknown availability stays unknown.",
+      "required_inputs": [
+        "status_category",
+        "is_post_secondary_student",
+        "institution_offers_service"
+      ],
+      "source_id": "S2",
+      "source_version": "14fb8a28c094106a51e9190ce03daf8e6b0e2421f80c9284651da5f7a4c2db13",
+      "evidence_span": "international post-secondary student on a study permit (if services are not offered at your educational institution)",
+      "effective_from": null,
+      "effective_to": null,
+      "exceptions": [],
+      "coverage_limit": "Do not infer institutional service availability from school identity.",
+      "reviewer": null,
+      "reviewed_on": null,
+      "test_ids": [],
+      "approval_state": "RULE_DRAFT",
+      "author": "Diya Giri"
+    },
+    {
+      "rule_id": "NEW-03-R1",
+      "program_id": "NEW-03",
+      "condition": "Status must be in an IRCC settlement-eligible category. Ordinary study-permit or work-permit status alone is not a general route.",
+      "required_inputs": [
+        "status_category"
+      ],
+      "source_id": "S3",
+      "source_version": "1607efb11e9bf67030ceb04f5a1a3279a4815e9b17e6183d01d16a3ba1822fa5",
+      "evidence_span": "You're eligible for our services if you're:",
+      "effective_from": null,
+      "effective_to": null,
+      "exceptions": [
+        "a permanent resident (PR), including a resettled refugee",
+        "a successful permanent residence applicant (approved in principle)",
+        "a protected person who received a positive decision from the Immigration and Refugee Board (IRB)",
+        "a temporary resident (or their dependant) in certain employment programs, such as:",
+        "a person approved under certain pathways, such as:",
+        "a participant of Francophone Minority Communities Student Pilot (including their families)"
+      ],
+      "coverage_limit": "Exception programs and pathways are listed as unchecked; any user in them gets review_required.",
+      "reviewer": null,
+      "reviewed_on": null,
+      "test_ids": [],
+      "approval_state": "RULE_DRAFT",
+      "author": "Diya Giri"
+    },
+    {
+      "rule_id": "NEW-03-R2",
+      "program_id": "NEW-03",
+      "condition": "Economic-class PRs may access services for a limited period from the date they became a PR (6 years from April 1, 2026; 5 years for those becoming PR from April 1, 2027).",
+      "required_inputs": [
+        "pr_class",
+        "pr_landing_date",
+        "as_of_date"
+      ],
+      "source_id": "S4",
+      "source_version": "af175798fa7921870b88377e923c4264565bf27f64946db8c754571c2d7b6eab",
+      "evidence_span": "starting April 1, 2026, you can access newcomer services for up to 6 years from the date you became a PR",
+      "effective_from": null,
+      "effective_to": null,
+      "exceptions": [
+        "starting April 1, 2027, you can access the services for up to 5 years from the date you became a PR"
+      ],
+      "coverage_limit": "Date calculator DISABLED. S4 transition wording ('These changes apply to all economic class PRs, including people who became PRs before April 1, 2026.') must be reconciled with Examples 1-3 and month-end endpoints before enabling. Until approved, return review_required and link official guidance.",
+      "reviewer": null,
+      "reviewed_on": null,
+      "test_ids": [],
+      "approval_state": "RULE_DRAFT",
+      "author": "Diya Giri"
+    },
+    {
+      "rule_id": "NEW-03-R3",
+      "program_id": "NEW-03",
+      "condition": "No time limit applies to non-economic PRs, resettled refugees, protected persons, and temporary residents approved under certain programs or pathways.",
+      "required_inputs": [
+        "pr_class"
+      ],
+      "source_id": "S4",
+      "source_version": "af175798fa7921870b88377e923c4264565bf27f64946db8c754571c2d7b6eab",
+      "evidence_span": "There's no time limit to access newcomer services if you're",
+      "effective_from": null,
+      "effective_to": null,
+      "exceptions": [
+        "a PR approved through a non-economic PR program",
+        "a resettled refugee",
+        "a protected person, or",
+        "a temporary resident approved under certain programs or pathways"
+      ],
+      "coverage_limit": "",
+      "reviewer": null,
+      "reviewed_on": null,
+      "test_ids": [],
+      "approval_state": "RULE_DRAFT",
+      "author": "Diya Giri"
+    }
+  ]
+}

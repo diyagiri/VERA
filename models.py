@@ -138,6 +138,7 @@ class ProviderLead:
 class Facts:
     """Session-only user facts. Bumping version invalidates dependent results."""
     status_category: Optional[StatusCategory] = None
+    naturalized_citizen: TriState = TriState.UNKNOWN   # S2: NSP covers naturalized citizens only
     is_post_secondary_student: TriState = TriState.UNKNOWN
     institution_offers_service: TriState = TriState.UNKNOWN
     pr_class: Optional[str] = None           # "economic" | "family" | "refugee" | "other" | None=unknown
@@ -167,3 +168,16 @@ def to_dict(obj) -> dict:
             return {k: conv(x) for k, x in v.items()}
         return v
     return conv(asdict(obj))
+
+
+RULES_PATH = "data/rules/rules.json"
+
+
+def load_rules(path: str = RULES_PATH) -> list[RuleRecord]:
+    import json
+    from pathlib import Path
+    p = Path(path)
+    if not p.is_absolute():
+        p = Path(__file__).resolve().parent / p
+    data = json.loads(p.read_text(encoding="utf-8"))
+    return [RuleRecord(**r) for r in data["rules"]]
