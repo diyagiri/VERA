@@ -2,9 +2,11 @@
 
 VERA helps newcomers in British Columbia turn official information into a justified next step. It screens three support programs with written rules, explains every result with its official source, updates when an answer is corrected, and builds a practical plan with an editable, unsent enquiry. English and French.
 
-**[Demo with Claude (1 min 43 s)](docs/demo/VERA_demo_ai.mp4)** · [Offline demo (90 s)](docs/demo/VERA_demo.mp4) · [Evaluation](docs/EVALUATION.md) · [Architecture](docs/ARCHITECTURE.md) · [Evidence and sources](docs/EVIDENCE.md)
+**[Try VERA in your browser](https://diyagiri.github.io/VERA/)** (offline mode) · **[Demo with Claude (1 min 43 s)](docs/demo/VERA_demo_ai.mp4)** · [Offline demo (90 s)](docs/demo/VERA_demo.mp4) · [Evaluation](docs/EVALUATION.md) · [Architecture](docs/ARCHITECTURE.md) · [Evidence and sources](docs/EVIDENCE.md)
 
 > Prototype for a hackathon. Not legal, immigration or financial advice. Official programs make every decision.
+
+**About the AI on the public link.** The browser link runs VERA's offline mode: program screening, corrections, the five-topic plan and the draft enquiry all work, in English and French. The AI assistant is switched off there, because it needs a private Anthropic API key and a server, and publishing a key would let anyone spend it. To see the AI, watch the [demo with Claude](docs/demo/VERA_demo_ai.mp4), read the [live AI test](docs/EVALUATION.md#ai-assistant-live-test-2026-11-12), or run it yourself with your own key (step 2 below). Program results are the same either way: the written rules decide, not the AI.
 
 ## What it does
 
@@ -56,7 +58,9 @@ The AI results come from ten fictional goals run live with Claude on 2026-11-12;
 
 ## Run it yourself
 
-### 1. Offline, no key needed (any computer with Python)
+### 1. Offline, no key needed
+
+Open https://diyagiri.github.io/VERA/ , or on any computer with Python:
 
 ```
 git clone https://github.com/diyagiri/VERA.git

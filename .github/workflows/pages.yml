@@ -1,0 +1,34 @@
+# Publishes the offline browser version (dist/) to GitHub Pages on every push to main.
+# One-time setting on GitHub: Settings > Pages > Source: GitHub Actions.
+# The AI assistant is not included: it needs a private Anthropic key and the Python server.
+name: Publish offline site
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Copy the built site
+        run: |
+          cp -r dist _site
+          rm -f _site/VERA_Complete_Project.zip
+          touch _site/.nojekyll
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4

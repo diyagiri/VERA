@@ -44,7 +44,7 @@
   "demo": "Essayer un exemple fictif",
   "restore": "Reprendre un plan enregistré",
   "offline": "Guide hors ligne",
-  "offlineExplanation": "Guide de préparation hors ligne. La conversation en ligne attend une configuration sécurisée et une vérification.",
+  "offlineExplanation": "Mode hors ligne : la vérification des programmes et votre plan fonctionnent entièrement ici. L’assistant IA est désactivé sur cette copie, car il nécessite une clé Anthropic privée ; il fonctionne lorsque VERA est lancé sur un ordinateur avec une clé (voir le README et la vidéo de démonstration IA).",
   "online": "Conversation avec l’IA",
   "onlineAvailable": "Une conversation facultative avec l’IA est disponible sur ce serveur.",
   "enableAI": "Utiliser la conversation IA",

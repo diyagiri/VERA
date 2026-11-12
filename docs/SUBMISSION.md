@@ -15,6 +15,7 @@
 ## Still needs a person
 
 - [ ] Push `main` to github.com/diyagiri/VERA and make the repository public
+- [ ] Turn on GitHub Pages: Settings > Pages > Source: GitHub Actions; then check https://diyagiri.github.io/VERA/ loads (offline mode; the AI is off on the public link by design)
 - [ ] Run `npm test` once after `npm run build`; the bundled-Worker test needs the build
 - [ ] Run `python -m pytest -q` once with `requirements-api.txt` installed; `tests/test_v2.py` needs FastAPI
 - [ ] Optional: a teammate who did not write the rules reviews them (`data/rules/rules.json`) and the three disputed held-out cases (`docs/fixture_review.md`)

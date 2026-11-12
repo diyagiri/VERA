@@ -44,7 +44,7 @@
   "demo": "Try a fictional example",
   "restore": "Resume a saved plan",
   "offline": "Offline guidance",
-  "offlineExplanation": "Offline preparation guide. Online conversation is awaiting secure setup and verification.",
+  "offlineExplanation": "Offline mode: program screening and your plan work fully here. The AI assistant is off on this copy because it needs a private Anthropic key; it runs when VERA is started on a computer with a key (see the README and the AI demo video).",
   "online": "AI conversation",
   "onlineAvailable": "Optional AI conversation is available on this server.",
   "enableAI": "Use AI conversation",
