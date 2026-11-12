@@ -1,31 +1,35 @@
-# Release record — 11 November 2026 (America/Vancouver)
+# VERA v2 release — 11 November 2026 (America/Vancouver)
+
+Implemented against the user-supplied `docs/PLAN.md`, starting from GitHub commit `185e545eb77c0c501d16673318d2bba56f278988`. The original local Sites source had the identical tree `403a8cd0d566fe43cebea0727c41014cea721dd2`. No intervening GitHub change was present at inspection. Original release evidence remains in `RELEASE_v1.md` and the existing reports.
 
 ## Delivered
 
-- Complete goal → questions → evidence-linked guidance → correction → editable checklist and unsent enquiry → Markdown/text/JSON download workflow.
-- Three-pathway coverage with named exclusions from scope; no benefits dashboard or account system.
-- Primary browser app and Streamlit adapter; no mandatory model service.
-- Python-backed browser rule tables, approval/freshness gates, real event traces and bounded orchestration.
-- Official source capture and byte hashes. S2 and S3 matched upstream bytes exactly; S1, S4 and S5 differed at byte level. All existing supporting spans were still present. Updated version pointers remain drafts; no independent approval was manufactured.
-- Verified baseline directory unchanged against upstream `f7ea6b9`; upstream history and baseline tag retained.
-- Frozen evaluation outputs and failure history, automated tests and a one-command local launcher.
+- Five-topic BC-wide guidance: settlement, education, banking, taxes and benefits. Students remain included; the app is not limited to one campus or family benefits.
+- English/French UI, source summaries, tasks and enquiry drafts. Language switching preserves task IDs, facts, edits and completion; no human language-review claim.
+- Multi-topic intake, explicit priority, confirmation of proposed details and optional relevant profile fields.
+- SFU and UBC Vancouver records with scope limits; other campuses and institutions receive a truthful handoff. UBC emergency-funding expenses are bounded. CCB/BC family benefit tasks avoid duplicate applications.
+- Stable, dependency-aware tasks: unrelated completed work survives corrections; affected edits are retained and flagged; completed work whose meaning changes is reopened for review.
+- Editable unsent enquiries, notes, Markdown export, strict JSON export/import, and source-version/age revalidation. No imported AI consent or executable instructions.
+- Optional same-origin FastAPI service, strict v2 schemas, cookie-bound ephemeral sessions, version conflicts, idempotent message retries, origin/size/rate/budget controls and session deletion.
+- Bounded Anthropic conversation adapter with actual retrieval/catalog tools, citations, fact proposals and a separate model support-check step. Mocked tests exercise tool execution and failure boundaries.
+- 19 official source records and short bilingual paraphrases, aliases for S1–S5, allowlisted capture tooling, source-status reporting and an auditable SQLite lexical index builder. Publisher dates, inspection dates, summary versions and snapshot hashes are separate.
+- Updated public-site GitHub link and a labelled link to the existing slide deck. Original browser demo and upstream attribution remain available.
 
-## Measured verification
+## Measured results
 
-Final build: 93 Python tests pass without skips on the build machine; 12 Node tests pass, including 252 individual evaluator parity checks. Development screening cases pass 20/20; the author-written held-out-labelled partition passes 10/10. Scripted journeys pass 7/7 and 3/3. Release gating produced zero positive results over 90 program screens, which is not a policy-accuracy or population-risk guarantee.
+- Baseline before edits: 93 Python tests and 12 JavaScript tests passed locally.
+- Updated build: 123 Python tests and 29 JavaScript tests passed, with no skips on this build machine. One upstream Starlette/httpx deprecation warning remains.
+- 30 v2 Python/browser plan comparisons matched across institutions, service answers and en/fr.
+- Retrieval: 20 English and 20 paired French development queries each achieved Recall@5 = 1.0 with a known topic filter over 19 short summaries. This is a small author-written regression set, not a held-out result, semantic-search benchmark or generalization claim.
+- All 19 records had required metadata and were within the configured 30-day inspection window when checked. No full v2 publisher snapshots were ingested or cleared for redistribution.
+- Desktop browser checks exercised combined goals, institution selection, a correction, preserved banking completion and a French switch. Additional QA details are recorded in `reports/verification_latest.json`.
 
-The first journey evaluation failed J04, J08 and J09 because the routing dictionary omitted “settlement” from BC NSP. That routing defect was corrected and the same frozen-input scenarios rerun. Held-out-labelled journeys were exposed during debugging; the final numbers are regression results, not a held-out generalization estimate. Earlier frozen outputs and scores remain in `reports/`.
+## Incomplete / blocked
 
-Local deterministic journey latency is recorded in `reports/evaluation_release.json`. It excludes user reading time, browser time and provider latency. No manual-navigation comparison, retrieval-chatbot study, consenting-participant study, live model call or real-world impact claim was made.
+The P0 plan is **not fully complete**. `reports/v2_live_provider_01.json` records a blocked provider test: no key/model configuration was available, and no live provider call was made. The public static host cannot run the Python API; a Python backend host and secure runtime configuration are needed before online AI can be enabled publicly. The public release remains usable offline.
 
-Browser checks covered goal submission, contextual questions, keyboard activation of answer controls, fictional correction and changed result, stale enquiry removal, normal-mode review states, editable enquiry, checked tasks and download completion. The desktop layout was visually inspected. Mobile media queries are implemented; device-specific browser and screen-reader audits remain unperformed. No application-origin console errors were observed; the browser's extension emitted unrelated metadata errors.
+Retrieval is a Unicode lexical baseline over curated summaries. The proposed E5 model, semantic index, longer section-level ingestion, independently reviewed expected-evidence cases and blinded held-out evaluation are not implemented or validated. The capture tool prepares a new review, not automatic approval.
 
-## External release gates
+English/French are implemented and automatically checked, but neither has human language certification. Simplified Chinese, voice, cross-device accounts, document processing, live-provider failure testing, human usability studies and broader institution/provider coverage remain deferred. No reduction in effort, improved benefit uptake or population accuracy is claimed.
 
-1. Independent policy reviewer sign-off for each exact rule and source version. Eight of eight are still drafts.
-2. Source reuse review before redistributing snapshots. Full snapshots are local and excluded from the source ZIP and Git.
-3. Confirmation of the hackathon rubric, preparation policy, attribution and submission format.
-4. Optional model credentials, selected model and live-provider smoke test if the team enables that mode.
-5. Independent held-out fixtures and blinded human evidence-support review before claiming policy correctness. Fresh usability research before claiming reduced effort or impact.
-
-These gates do not block the delivered guidance workflow. They prevent it being represented as approved live eligibility screening.
+All eight original rules remain drafts. `audit_release.py --require-screening` intentionally fails. Independent policy and source-reuse review are still required for formal screening and full-snapshot redistribution. The public app offers preparation, education and official handoffs only.

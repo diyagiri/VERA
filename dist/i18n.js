@@ -1,0 +1,1 @@
+export async function loadLocales(){const entries=await Promise.all(['en','fr'].map(async lang=>{const r=await fetch(`./locales/${lang}.json`);if(!r.ok)throw Error('locale_unavailable');return [lang,await r.json()];}));return Object.fromEntries(entries);}

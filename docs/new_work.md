@@ -41,3 +41,10 @@
 - `sources.py`: settlement routing fix and invalidation on changed captures. `build_evidence.py`: current captures and supporting spans reconciled while preserving draft status.
 - `evaluate.py`, `tests/`, `reports/`: frozen evaluations, 10 scripted journeys, browser/core parity, validation limits and preserved failure history.
 - `docs/`: setup, architecture, demo, contract changes and explicit release gates. `baseline/` remains unchanged.
+
+## V2 expansion — 2026-11-12
+
+- `api_contracts.py`, `catalog.py`, `planning.py`, `retrieval.py`: five-topic profiles, source-aware tasks, correction preservation and bilingual curated-summary retrieval.
+- `server.py`, `conversation.py`, `grounding.py`, `sessions.py`, `settings.py`: optional bounded Anthropic API, explicit consent, session isolation, structured output validation and resource limits. Live provider validation remains blocked by missing credentials.
+- `web/`, `data/catalog/`: English/French interface, ten preparation routes, 19 official-source summaries, plan export/import and retained legacy demo.
+- `scripts/`, `tests/`, `reports/`: source tooling, reproducible regression reports and expanded checks. No independent policy approval, human translation review, full-document semantic retrieval or achieved user impact is claimed.

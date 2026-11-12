@@ -3,12 +3,14 @@ No duplicated rule logic. Rebuild whenever rules, evidence, or sources change.
 """
 from pathlib import Path
 import sys,json,itertools,shutil
-from datetime import date
+from datetime import date, datetime
+from zoneinfo import ZoneInfo
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from models import facts_from_dict, load_rules
 from rules import EVALUATORS, approval_problem
 from sources import load_manifest, verify_snapshot, PROGRAM_KEYWORDS, OUT_OF_SCOPE_KEYWORDS
 ROOT=Path(__file__).resolve().parents[1]
+BUILD_DATE=datetime.now(ZoneInfo('America/Vancouver')).date()
 DOMAINS={
  'status_category':[None,'study_permit','work_permit','permanent_resident','protected_person','citizen','other','prefer_not_to_say'],
  'naturalized_citizen':['unknown','yes','no'], 'is_post_secondary_student':['unknown','yes','no'],
@@ -27,12 +29,12 @@ for r in load_rules():
  rows={}
  for values in itertools.product(*(DOMAINS[x] for x in fields)):
   f=facts_from_dict(dict(zip(fields,values)))
-  outcome,reason,missing=EVALUATORS[r.rule_id](f,date(2026,11,11))
+  outcome,reason,missing=EVALUATORS[r.rule_id](f,BUILD_DATE)
   key=json.dumps(values,separators=(',',':'))
   rows[key]=[outcome.value,reason,missing]
  rules.append({'id':r.rule_id,'program_id':r.program_id,'fields':fields,'rows':rows,
                'approval_state':r.approval_state,'source_id':r.source_id,'source_version':r.source_version,
-               'coverage_limit':r.coverage_limit,'gate':approval_problem(r,date.today()),
+               'coverage_limit':r.coverage_limit,'gate':approval_problem(r,BUILD_DATE),
                'reviewer':r.reviewer,'reviewed_on':r.reviewed_on,'effective_from':r.effective_from,'effective_to':r.effective_to})
 sources=[]
 for s in load_manifest():
@@ -40,11 +42,16 @@ for s in load_manifest():
  'url':s.canonical_url,'summary':SUMMARIES[s.source_id],'checked_on':s.checked_on,
  'page_modified_on':s.page_modified_on,'sha256':s.sha256,'snapshot_verified':verify_snapshot(s),
  'evidence_section':s.evidence_section,'effective_period':s.effective_period,
- 'web_rechecked_on':'2026-11-11','captured_at':s.captured_at})
+ 'web_rechecked_on':None,'captured_at':s.captured_at})
+report_path=ROOT/'reports/verification_latest.json'
+validation=json.loads(report_path.read_text()) if report_path.exists() else {'status':'not_measured'}
 payload={'rules':rules,'sources':sources,'keywords':PROGRAM_KEYWORDS,'out_of_scope':OUT_OF_SCOPE_KEYWORDS,
-         'validation':{'python_passed':93,'javascript_passed':12,'parity_cases':252,'screening_cases':30,'scripted_journeys':10,'kind':'synthetic regression checks; independent policy review pending'},'compiled_on':date.today().isoformat(),'mode':'guidance','approval_count':sum(r['gate'] is None for r in rules)}
+         'validation':validation,'compiled_on':BUILD_DATE.isoformat(),'mode':'guidance','approval_count':sum(r['gate'] is None for r in rules)}
 dist=ROOT/'dist';dist.mkdir(exist_ok=True)
 for f in (ROOT/'web').iterdir():
  if f.is_file():shutil.copy2(f,dist/f.name)
+ elif f.is_dir():shutil.copytree(f,dist/f.name,dirs_exist_ok=True)
+shutil.copy2(ROOT/'data/catalog/navigation.json',dist/'navigation.json')
+(dist/'runtime.json').write_text(json.dumps({'api_available':False,'mode':'offline'}))
 (dist/'catalog.json').write_text(json.dumps(payload,separators=(',',':'),ensure_ascii=False))
 print(f'Built {len(rules)} rule tables, {len(sources)} sources; {payload["approval_count"]} enabled rules.')

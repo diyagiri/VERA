@@ -1,0 +1,402 @@
+[
+  {
+    "id": "R01-en",
+    "topic": "banking",
+    "locale": "en",
+    "query": "Opening an account: which identification should I prepare?",
+    "expected": [
+      "D09"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R01-fr",
+    "topic": "banking",
+    "locale": "fr",
+    "query": "Ouvrir un compte : quelles pièces d’identité préparer?",
+    "expected": [
+      "D09"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R02-en",
+    "topic": "banking",
+    "locale": "en",
+    "query": "Compare low-cost accounts, monthly charges and ATM fees",
+    "expected": [
+      "D10"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R02-fr",
+    "topic": "banking",
+    "locale": "fr",
+    "query": "Comparer les comptes à frais modiques et les frais de guichet",
+    "expected": [
+      "D10"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R03-en",
+    "topic": "banking",
+    "locale": "en",
+    "query": "Where can I learn about budgeting, saving and fraud?",
+    "expected": [
+      "D18"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R03-fr",
+    "topic": "banking",
+    "locale": "fr",
+    "query": "Où apprendre le budget, l’épargne et la prévention de la fraude?",
+    "expected": [
+      "D18"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R04-en",
+    "topic": "banking",
+    "locale": "en",
+    "query": "I need to read the account agreement before I sign",
+    "expected": [
+      "D09"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R04-fr",
+    "topic": "banking",
+    "locale": "fr",
+    "query": "Je veux lire la convention de compte avant de signer",
+    "expected": [
+      "D09"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R05-en",
+    "topic": "taxes",
+    "locale": "en",
+    "query": "How is tax residency different from immigration status?",
+    "expected": [
+      "D11"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R05-fr",
+    "topic": "taxes",
+    "locale": "fr",
+    "query": "Quelle différence entre résidence fiscale et statut d’immigration?",
+    "expected": [
+      "D11"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R06-en",
+    "topic": "taxes",
+    "locale": "en",
+    "query": "I am preparing my first tax year in Canada",
+    "expected": [
+      "D11"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R06-fr",
+    "topic": "taxes",
+    "locale": "fr",
+    "query": "Je prépare ma première année fiscale au Canada",
+    "expected": [
+      "D11"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R07-en",
+    "topic": "taxes",
+    "locale": "en",
+    "query": "Do I need to collect income slips and supporting records?",
+    "expected": [
+      "D11"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R07-fr",
+    "topic": "taxes",
+    "locale": "fr",
+    "query": "Faut-il conserver les feuillets et pièces justificatives?",
+    "expected": [
+      "D11"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R08-en",
+    "topic": "education",
+    "locale": "en",
+    "query": "Which funding routes does SFU offer international students?",
+    "expected": [
+      "D05"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R08-fr",
+    "topic": "education",
+    "locale": "fr",
+    "query": "Quelles pistes de financement SFU propose-t-elle aux étudiants internationaux?",
+    "expected": [
+      "D05"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R09-en",
+    "topic": "education",
+    "locale": "en",
+    "query": "Will SFU undergraduate bursary payments arrive before tuition deadlines?",
+    "expected": [
+      "D06"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R09-fr",
+    "topic": "education",
+    "locale": "fr",
+    "query": "Les bourses de premier cycle de SFU arrivent-elles avant les échéances de scolarité?",
+    "expected": [
+      "D06"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R10-en",
+    "topic": "education",
+    "locale": "en",
+    "query": "Does UBC emergency support cover tuition or student fees?",
+    "expected": [
+      "D08"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R10-fr",
+    "topic": "education",
+    "locale": "fr",
+    "query": "L’aide d’urgence de UBC couvre-t-elle les droits de scolarité et frais étudiants?",
+    "expected": [
+      "D08"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R11-en",
+    "topic": "education",
+    "locale": "en",
+    "query": "Who can discuss funding with me at UBC Vancouver?",
+    "expected": [
+      "D07"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R11-fr",
+    "topic": "education",
+    "locale": "fr",
+    "query": "Qui peut discuter du financement avec moi à UBC Vancouver?",
+    "expected": [
+      "D07"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R12-en",
+    "topic": "education",
+    "locale": "en",
+    "query": "StudentAid BC has its own residency conditions",
+    "expected": [
+      "D04"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R12-fr",
+    "topic": "education",
+    "locale": "fr",
+    "query": "StudentAid BC applique ses propres conditions de résidence",
+    "expected": [
+      "D04"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R13-en",
+    "topic": "benefits",
+    "locale": "en",
+    "query": "Does the Canada child benefit application include provincial programs?",
+    "expected": [
+      "D13"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R13-fr",
+    "topic": "benefits",
+    "locale": "fr",
+    "query": "La demande d’Allocation canadienne pour enfants inclut-elle les programmes provinciaux?",
+    "expected": [
+      "D13"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R14-en",
+    "topic": "benefits",
+    "locale": "en",
+    "query": "Where can I find support for different household needs?",
+    "expected": [
+      "D15"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R14-fr",
+    "topic": "benefits",
+    "locale": "fr",
+    "query": "Où trouver des aides pour différents besoins du ménage?",
+    "expected": [
+      "D15"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R15-en",
+    "topic": "benefits",
+    "locale": "en",
+    "query": "Who administers the BC family benefit?",
+    "expected": [
+      "D14"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R15-fr",
+    "topic": "benefits",
+    "locale": "fr",
+    "query": "Qui administre la prestation familiale de la C.-B.?",
+    "expected": [
+      "D14"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R16-en",
+    "topic": "benefits",
+    "locale": "en",
+    "query": "Where is the CRA family benefit directory?",
+    "expected": [
+      "D12"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R16-fr",
+    "topic": "benefits",
+    "locale": "fr",
+    "query": "Où se trouve le répertoire des prestations familiales de l’ARC?",
+    "expected": [
+      "D12"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R17-en",
+    "topic": "settlement",
+    "locale": "en",
+    "query": "Find a settlement service in my city",
+    "expected": [
+      "D02"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R17-fr",
+    "topic": "settlement",
+    "locale": "fr",
+    "query": "Trouver un service d’établissement dans ma ville",
+    "expected": [
+      "D02"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R18-en",
+    "topic": "settlement",
+    "locale": "en",
+    "query": "My school does not offer the newcomer service I need",
+    "expected": [
+      "D19"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R18-fr",
+    "topic": "settlement",
+    "locale": "fr",
+    "query": "Mon établissement n’offre pas le service d’établissement souhaité",
+    "expected": [
+      "D19"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R19-en",
+    "topic": "settlement",
+    "locale": "en",
+    "query": "Do economic class permanent residents have service time limits?",
+    "expected": [
+      "D03"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R19-fr",
+    "topic": "settlement",
+    "locale": "fr",
+    "query": "L’accès aux services est-il limité pour les résidents permanents de la catégorie économique?",
+    "expected": [
+      "D03"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R20-en",
+    "topic": "settlement",
+    "locale": "en",
+    "query": "Find BC newcomer guide resources in different languages",
+    "expected": [
+      "D16"
+    ],
+    "partition": "development_regression"
+  },
+  {
+    "id": "R20-fr",
+    "topic": "settlement",
+    "locale": "fr",
+    "query": "Trouver le guide des nouveaux arrivants en C.-B. en différentes langues",
+    "expected": [
+      "D16"
+    ],
+    "partition": "development_regression"
+  }
+]

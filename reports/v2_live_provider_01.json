@@ -1,0 +1,7 @@
+{
+  "schema_version": 2,
+  "test": "live_provider",
+  "status": "blocked",
+  "model": null,
+  "reason": "ANTHROPIC_API_KEY and VERA_MODEL are required; no provider request was made."
+}

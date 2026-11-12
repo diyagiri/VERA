@@ -1,80 +1,97 @@
 # VERA — your next step in BC
 
-A complete runnable **guidance prototype** for newcomers in British Columbia, extending [diyagiri/VERA](https://github.com/diyagiri/VERA) at `f7ea6b9`.
+A bilingual financial and settlement **preparation guide** for newcomers across British Columbia, including students.
 
-State a goal, answer relevant questions, inspect official sources, correct answers, and leave with an editable checklist and provider enquiry. Three pathways: BC Newcomer Services Program, federal settlement services, and StudentAid BC.
+**[Open the public website](https://vera-newcomer-guide.fondfoam.chatgpt.site)** · [Project presentation](https://chatgpt.com/space/page_d14459ce272081919fc31ab5d7062b42) · [Implementation status](docs/RELEASE.md)
 
-**Release boundary:** all 8 policy rules remain `RULE_DRAFT`. The app provides preparation guidance and official handoffs. Fictional demos expose draft outcomes with prominent labels. No rule has been independently approved, and no eligibility, funding amount, appointment availability or federal service end date is promised.
+Choose one or more needs, confirm relevant details, and leave with a source-backed plan and editable, unsent enquiries. Coverage includes **settlement, education funding, banking, newcomer taxes and benefits**. English and French preserve the same facts and task progress. Specific institution records cover SFU and UBC Vancouver; other institutions receive an explicit handoff.
 
-## Run in one command
+## Use it now — offline guidance
 
-Python 3.11 or newer, no packages or API keys required:
+Python 3.11+; no packages, API key or sign-in required:
 
 ```bash
 python run.py
 ```
 
-Open `http://127.0.0.1:8000`. On Windows, use `py run.py` if `python` is unavailable. This builds and serves the polished web interface locally. `--port 8080` chooses another port. Stop with Ctrl+C.
+Open `http://127.0.0.1:8000`. Use `--port 8080` for another port, or `py run.py` on Windows. The public website uses this offline browser workflow. It does **not** run a live AI service.
 
-The hosted browser version performs all guidance locally. It has no analytics, transcripts, local storage, database or external model calls. A page refresh clears the session. Downloaded files remain on the user's device.
+- Select multiple topics and a priority; only relevant optional details appear.
+- Edit a fact without losing unrelated completed tasks or personal notes. Changed work is flagged for review.
+- Inspect 19 official source records and their original summaries, locators and review status.
+- Edit tasks and enquiries; nothing is sent or submitted.
+- Download a readable Markdown plan, or a version 2 JSON file to resume later. Import validates fields, known sources and official destinations, then checks current catalog versions and age.
+- Answers stay in page memory. No analytics, automatic local storage, accounts or document uploads. A refresh clears the page unless you exported your plan.
 
-## Python / Streamlit interface
+## Optional AI API — setup and limitations
+
+The new Python API is included, but a **real provider smoke test has not passed: credentials were unavailable**. Public Sites hosting currently serves static files and cannot run this Python API. Online public use requires a separately hosted, same-origin Python application over HTTPS. Do not put a key in the frontend or configure an arbitrary browser-side provider URL.
 
 ```bash
 python -m venv .venv
-# macOS/Linux:
-source .venv/bin/activate
+# macOS/Linux: source .venv/bin/activate
 # Windows PowerShell: .venv\Scripts\Activate.ps1
-python -m pip install -r requirements-streamlit.lock
-python -m streamlit run app.py
+python -m pip install -r requirements-api.txt
+python scripts/build_web.py
+# Export ANTHROPIC_API_KEY and VERA_MODEL securely in your environment.
+# VERA_ORIGIN must exactly match your browser origin.
+python -m uvicorn server:app --host 127.0.0.1 --port 8000 --workers 1 --no-access-log
 ```
 
-The Streamlit adapter uses the same Python engine and stores answers in session memory. It offers an **optional** model planner. Export `ANTHROPIC_API_KEY` and `VERA_MODEL` in your environment; select a model available in your account. Explicitly consent in the local UI before sending selected goal/category facts and source metadata to Anthropic. `.env.example` is a reference, not an automatically loaded file. Provider access was not available during this build; the live adapter is unverified. Mock-provider safety tests pass. No secret belongs in the frontend.
+The frontend discovers the API and offers an explicit consent choice only when a model and key are configured. The Anthropic adapter can interpret new wording, select bounded retrieval/catalog tools, propose facts for confirmation, and return cited explanations. A separate model support check rejects unsupported output; it is **not independent policy verification**. Tool events describe operations actually executed. Failure preserves the plan and offers offline guidance.
 
-## What is included
+Single-process, cookie-bound sessions expire after 60 idle minutes. Mutations enforce origin, size, rate, version and schema checks. Provider requests have repetition, tool-count, request-count, conservative token-reservation and timeout limits. Configure `.env.example` values in the environment; the app does not automatically load that file. See [API and deployment](docs/API.md).
 
-| Part | Entry point |
-|---|---|
-| Responsive web interface, editable tasks, downloads, sources, demos | `web/` |
-| Canonical deterministic rule evaluators and approval/freshness gates | `rules.py` |
-| Shared facts, evidence and result contracts | `models.py` |
-| Bounded orchestration, question selection, correction propagation | `agent.py` |
-| Optional model tool planner with timeout and repetition limits | `model_agent.py` |
-| Checklist, self-reported context, unsent enquiry generation | `actions.py` |
-| Source capture, SHA-256 integrity, retrieval and provenance | `sources.py`, `extract.py`, `build_evidence.py` |
-| Browser decision tables generated directly from Python evaluators | `scripts/build_web.py` |
-| Frozen-output evaluation, screening cases and scripted journeys | `evaluate.py`, `data/fixtures/`, `reports/` |
-| Unmodified inherited prototype | `baseline/` |
+Test a configured provider with fictional data before enabling it for visitors:
 
-## Verify
+```bash
+python scripts/smoke_live.py --output reports/my_live_smoke.json
+```
 
-Node 18+ is needed only for JavaScript tests, not for running the app.
+## Verify and maintain sources
 
 ```bash
 python -m pip install -r requirements-dev.txt
 python scripts/build_web.py
 python -m pytest -q
-node --test tests/web.test.mjs
+node --test tests/*.test.mjs
 python scripts/audit_release.py
+python scripts/evaluate_v2.py --output reports/my_v2_scores.json
+python scripts/check_sources.py --output reports/my_source_status.json
+python scripts/build_index.py
 ```
 
-Build-machine results: **93 Python tests, 12 JavaScript tests, 252 Python/browser parity comparisons, 30/30 screening cases and 10/10 scripted journeys**. Full source snapshots were fetched locally and all 37 catalog excerpts validated. These are functional/regression checks, not independent policy validation. The held-out-labelled cases were author-written and exposed during debugging; they are not an unbiased held-out study.
+Current build: **123 Python tests and 29 JavaScript tests passed**; 30 v2 Python/browser plan comparisons matched. Required evidence appeared in the top five results for 20 English and 20 French development queries with a selected-topic filter. These are author-written regression checks on a small corpus, not held-out accuracy, language certification or a user study. See `reports/v2_development_01.json` and `reports/verification_latest.json`.
 
-Snapshots are deliberately excluded from distribution pending reuse review. On a fresh checkout, three integrity tests skip until exact snapshots are restored. Restore using `python scripts/restore_snapshots.py`; it fails clearly if fetched bytes differ and never silently changes versions. New captures require explicit evidence reconciliation and independent rule sign-off.
+Retrieval currently uses Unicode-aware lexical ranking over curated bilingual summaries. No embedding model or full-document semantic index has been installed or evaluated. `scripts/build_index.py` creates an auditable SQLite copy of those summaries. The original evidence engine and rules remain available; full source snapshots are excluded pending reuse review. Three inherited integrity tests skip on fresh checkouts until exact snapshots are restored.
 
 ```bash
-python evaluate.py freeze --output reports/my_frozen_run.json
-python evaluate.py score --input reports/my_frozen_run.json --output reports/my_scores.json
+# Optional, allowlisted source capture for a NEW review; never silently changes approvals:
+python scripts/ingest_sources.py --ids D09 D11 --output reports/new_capture.json
+# Restore exact inherited snapshots where available:
+python scripts/restore_snapshots.py
 ```
 
-Frozen outputs are never overwritten. `reports/evaluation_release.json` is the final measured report. Earlier failed/regression runs are preserved for transparency. Manual-navigation, retrieval-chatbot, and usability comparisons have **not** been performed.
+A capture is not a policy review. New source bytes need extraction, reconciliation and review before editing catalog records. Builds do not update inspection dates or invent validation metrics.
 
-## Before enabling real screening
+## Project map
 
-See `docs/RELEASE.md`. Independent contributors must verify exact source versions, interpretation, exceptions, limits and tests. Populate authentic reviewer information; do not copy test reviewer identities. Source byte integrity alone does not establish policy accuracy or reuse permission. `python scripts/audit_release.py --require-screening` intentionally exits nonzero for this release.
+| Area | Files |
+|---|---|
+| Browser, bilingual UI and offline plans | `web/app.js`, `web/navigator.js`, `web/locales/` |
+| Strict v2 contracts, stable tasks and corrections | `api_contracts.py`, `catalog.py`, `planning.py` |
+| Optional API and bounded model conversation | `server.py`, `sessions.py`, `settings.py`, `conversation.py`, `grounding.py` |
+| Curated official evidence and lexical retrieval | `data/catalog/navigation.json`, `retrieval.py` |
+| Original deterministic rules and source integrity | `models.py`, `rules.py`, `agent.py`, `sources.py` |
+| Original browser demo | `web/legacy.html`, `web/engine.js` |
+| Original optional Streamlit planner | `app.py`, `model_agent.py` |
+| Plan and release evidence | `docs/PLAN.md`, `docs/RELEASE.md`, `reports/` |
+| Preserved inherited prototype | `baseline/` |
 
-Full snapshots, model keys, transcripts, identity documents and the employer handbook are excluded. The event rubric, inherited-code policy and submission rules still require organizer confirmation. No claims of multilingual validation or measured social impact are made.
+The Streamlit interface remains optional: use a separate environment with `requirements-streamlit.lock`, then `python -m streamlit run app.py`.
 
-## Attribution
+## Boundaries and attribution
 
-Diya Giri's VERA repository supplies the starting catalog, contracts, rules and action groundwork. Kopal Chaudhary's supplied thesis/prototype remains unchanged under `baseline/`, retaining the upstream `baseline-v0` tag in repository history. See `NOTICE.md` and `docs/new_work.md`. No new blanket license is asserted over third-party work.
+All eight inherited policy rules remain `RULE_DRAFT`. VERA does not establish eligibility, tax residency, funding amounts, bank acceptance or appointment availability, and it does not file taxes or submit applications. English/French text is implemented but has not received human language review. Chinese, semantic embeddings, a fresh independent evaluation, human studies and policy sign-off remain future work. The slide deck linked above describes the earlier three-pathway release; its ChatGPT access depends on sharing settings.
+
+Built on [Diya Giri’s VERA](https://github.com/diyagiri/VERA). Kopal Chaudhary’s inherited thesis/prototype remains unchanged under `baseline/`. See `NOTICE.md` and `docs/new_work.md`. No new blanket license is asserted over third-party work.

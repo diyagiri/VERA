@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "measured_at": "2026-11-12T05:51:51.587918+00:00",
+  "kind": "functional regression checks; no independent policy or language validation",
+  "baseline_reviewed_commit": "185e545eb77c0c501d16673318d2bba56f278988",
+  "source_input_sha256": "4c309ed4acf05073172c9aa77f6261ebea4fc72c9cccba3c366c4819f15ae293",
+  "input_count": 48,
+  "python": {
+    "tests": 123,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 123
+  },
+  "javascript": {
+    "tests": 29,
+    "pass": 29,
+    "fail": 0,
+    "skipped": 0
+  },
+  "live_screening_ready": false,
+  "retrieval_report": "v2_development_01.json",
+  "human_language_reviewed": false,
+  "policy_reviewed": false,
+  "browser_report": "v2_browser_01.json",
+  "live_provider_report": "v2_live_provider_01.json"
+}

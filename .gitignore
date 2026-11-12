@@ -12,3 +12,5 @@ outputs/
 # Snapshots stay local until reuse terms are reviewed (hashes in manifest are committed)
 data/snapshots/*.html
 data/snapshots/*.txt
+data/snapshots/v2/
+data/index/*.sqlite

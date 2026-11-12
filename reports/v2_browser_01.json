@@ -1,0 +1,15 @@
+{
+  "schema_version": 2,
+  "checked_at": "2026-11-12T05:51:51.587918+00:00",
+  "kind": "manual desktop browser checks of local release candidate",
+  "results": {
+    "desktop_layout": "checked",
+    "multi_topic_plan": "checked",
+    "correction_preserves_unrelated_completion": "checked",
+    "en_fr_switch": "checked",
+    "json_download": "completed",
+    "browser_import_roundtrip": "not completed: browser URL policy blocked reload after the download; strict import and resume are covered by automated tests",
+    "mobile_device": "not tested",
+    "screen_reader": "not tested"
+  }
+}

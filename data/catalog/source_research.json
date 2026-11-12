@@ -1,0 +1,392 @@
+{
+  "schema_version": 2,
+  "checked_on": "2026-11-11",
+  "sources": [
+    {
+      "id": "D05",
+      "title": "SFU funding options for international students",
+      "publisher": "Simon Fraser University",
+      "topic": "education",
+      "institution": "sfu",
+      "campus": null,
+      "url": "https://www.sfu.ca/students/financial-aid/international/general-funding-options.html",
+      "fr_url": null,
+      "section": "Funding options for International Students",
+      "facts_en": [
+        "SFU lists separate undergraduate and graduate funding resources for international students.",
+        "Bursaries are supplemental, not guaranteed, and cannot be treated as core funding for immigration requirements."
+      ],
+      "facts_fr": [
+        "SFU présente des ressources de financement distinctes pour les étudiants internationaux de premier cycle et des cycles supérieurs.",
+        "Les bourses fondées sur les besoins sont un complément non garanti; elles ne constituent pas le financement de base exigé pour l’immigration."
+      ],
+      "preparation": "Choose the undergraduate or graduate route and ask SFU Financial Aid and Awards about applicable support.",
+      "limits": "Institution-specific discovery only; admission does not imply financial support; no award amount or deadline verified.",
+      "modified_on": null,
+      "checked_on": "2026-11-11",
+      "checked_timezone": "America/Vancouver",
+      "review_status": "automated_source_inspection",
+      "human_reviewed_on": null,
+      "reuse_status": "links_and_short_original_summaries_only; full-text redistribution not reviewed",
+      "translation_status": "French summaries are AI-drafted; human language review not performed",
+      "resolved_url": "https://www.sfu.ca/students/financial-aid/international/general-funding-options.html"
+    },
+    {
+      "id": "D06",
+      "title": "SFU undergraduate bursaries",
+      "publisher": "Simon Fraser University",
+      "topic": "education",
+      "institution": "sfu",
+      "campus": null,
+      "url": "https://www.sfu.ca/students/financial-aid/undergraduate/bursaries.html",
+      "fr_url": null,
+      "section": "Eligibility Requirements; How to Apply",
+      "facts_en": [
+        "SFU undergraduate bursaries depend on assessed financial need and enrolment requirements, with listed exceptions.",
+        "Check the current application period; applications use the SFU Student Information System. Bursary payments occur after the tuition deadline."
+      ],
+      "facts_fr": [
+        "Les bourses de premier cycle de SFU dépendent des besoins financiers évalués et des conditions d’inscription, avec des exceptions publiées.",
+        "Vérifiez la période de demande; la demande passe par le système étudiant de SFU. Les versements ont lieu après l’échéance des frais de scolarité."
+      ],
+      "preparation": "Check the term and enrolment rules with SFU before planning on a bursary to pay tuition.",
+      "limits": "Undergraduate-specific page; eligibility is not inferred. Active dates and personalized funding not assessed.",
+      "modified_on": null,
+      "checked_on": "2026-11-11",
+      "checked_timezone": "America/Vancouver",
+      "review_status": "automated_source_inspection",
+      "human_reviewed_on": null,
+      "reuse_status": "links_and_short_original_summaries_only; full-text redistribution not reviewed",
+      "translation_status": "French summaries are AI-drafted; human language review not performed",
+      "resolved_url": "https://www.sfu.ca/students/financial-aid/undergraduate/bursaries.html"
+    },
+    {
+      "id": "D07",
+      "title": "UBC Vancouver financial support options",
+      "publisher": "University of British Columbia",
+      "topic": "education",
+      "institution": "ubc",
+      "campus": "vancouver",
+      "url": "https://students.ubc.ca/finances/financial-support-options/",
+      "fr_url": null,
+      "section": "Financial support options; If you have questions",
+      "facts_en": [
+        "UBC Vancouver Enrolment Services Advisors can help discuss financial plans and funding resources.",
+        "The page separates domestic, international, Indigenous and disability-related resources; individual program conditions differ."
+      ],
+      "facts_fr": [
+        "Les conseillers des services d’inscription de UBC Vancouver peuvent aider à discuter d’un plan financier et des ressources disponibles.",
+        "La page distingue plusieurs catégories de soutien; chaque programme possède ses propres conditions."
+      ],
+      "preparation": "Identify your campus and study level, then contact the appropriate UBC financial advising office.",
+      "limits": "This is the Vancouver campus site. Do not apply its specific programs to Okanagan without separate evidence.",
+      "modified_on": null,
+      "checked_on": "2026-11-11",
+      "checked_timezone": "America/Vancouver",
+      "review_status": "automated_source_inspection",
+      "human_reviewed_on": null,
+      "reuse_status": "links_and_short_original_summaries_only; full-text redistribution not reviewed",
+      "translation_status": "French summaries are AI-drafted; human language review not performed",
+      "resolved_url": "https://students.ubc.ca/finances/financial-support-options/"
+    },
+    {
+      "id": "D08",
+      "title": "UBC Vancouver emergency funding",
+      "publisher": "University of British Columbia",
+      "topic": "education",
+      "institution": "ubc",
+      "campus": "vancouver",
+      "url": "https://students.ubc.ca/finances/financial-support-options/emergency-funding/",
+      "fr_url": null,
+      "section": "Eligibility requirements; How to apply",
+      "facts_en": [
+        "The published emergency-funding route covers registered degree-seeking students at UBC Vancouver and unexpected temporary shortfalls after other options are exhausted.",
+        "Tuition and student fees are excluded. Students may contact an Enrolment Services Advisor or use the linked application."
+      ],
+      "facts_fr": [
+        "La voie publiée vise les étudiants inscrits à un programme menant à un diplôme à UBC Vancouver et certains manques temporaires imprévus après épuisement des autres options.",
+        "Les droits de scolarité et frais étudiants sont exclus. Il est possible de contacter un conseiller ou d’utiliser la demande liée."
+      ],
+      "preparation": "Describe the unexpected expense and ask an advisor whether this route fits; do not upload documents to VERA.",
+      "limits": "Vancouver only; degree and expense restrictions apply. No guarantee or amount is established.",
+      "modified_on": null,
+      "checked_on": "2026-11-11",
+      "checked_timezone": "America/Vancouver",
+      "review_status": "automated_source_inspection",
+      "human_reviewed_on": null,
+      "reuse_status": "links_and_short_original_summaries_only; full-text redistribution not reviewed",
+      "translation_status": "French summaries are AI-drafted; human language review not performed",
+      "resolved_url": "https://students.ubc.ca/finances/financial-support-options/emergency-funding/"
+    },
+    {
+      "id": "D09",
+      "title": "Opening a bank account",
+      "publisher": "Financial Consumer Agency of Canada",
+      "topic": "banking",
+      "institution": null,
+      "campus": null,
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/banking/opening-bank-account.html",
+      "fr_url": "https://www.canada.ca/fr/agence-consommation-matiere-financiere/services/activites-bancaires/ouvrir-compte-banque.html",
+      "section": "Before opening an account; Providing identification",
+      "facts_en": [
+        "Compare how you will use the account, fees, interest and deposit protection; read the account agreement.",
+        "Banks verify identity using accepted original documents. Contact the institution to confirm the appropriate identification route and whether an in-person visit is needed."
+      ],
+      "facts_fr": [
+        "Comparez l’usage prévu, les frais, les intérêts et la protection des dépôts; lisez la convention de compte.",
+        "Les banques vérifient l’identité à l’aide de documents originaux acceptés. Confirmez les pièces requises et la nécessité d’une visite auprès de l’institution."
+      ],
+      "preparation": "Prepare questions about accepted identification and all account charges; keep identity numbers out of VERA.",
+      "limits": "No account opening, bank ranking or individual acceptance guarantee. Financial institution requirements must be confirmed.",
+      "modified_on": "2026-10-29",
+      "fr_modified_on": "2026-10-29",
+      "checked_on": "2026-11-11",
+      "checked_timezone": "America/Vancouver",
+      "review_status": "automated_source_inspection",
+      "human_reviewed_on": null,
+      "reuse_status": "links_and_short_original_summaries_only; full-text redistribution not reviewed",
+      "translation_status": "French summaries are AI-drafted; human language review not performed",
+      "resolved_url": "https://www.canada.ca/en/financial-consumer-agency/services/banking/opening-bank-account.html"
+    },
+    {
+      "id": "D10",
+      "title": "Opening a low-cost or no-cost bank account",
+      "publisher": "Financial Consumer Agency of Canada",
+      "topic": "banking",
+      "institution": null,
+      "campus": null,
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/banking/bank-accounts/low-cost-no-cost.html",
+      "fr_url": "https://www.canada.ca/fr/agence-consommation-matiere-financiere/services/activites-bancaires/comptes-bancaires/frais-modiques-sans-frais.html",
+      "section": "Comparing account options; Contacting the financial institution",
+      "facts_en": [
+        "FCAC provides an account comparison tool for low-cost and no-cost options.",
+        "Compare total costs, including transaction and ATM fees, and confirm included services and any qualifying conditions with the institution."
+      ],
+      "facts_fr": [
+        "L’ACFC fournit un outil de comparaison des comptes à frais modiques et sans frais.",
+        "Comparez tous les coûts, y compris les opérations et retraits, puis confirmez les services compris et les conditions auprès de l’institution."
+      ],
+      "preparation": "Use the official comparison resource and ask which no-cost categories, if any, apply to you.",
+      "limits": "No promotional product ranking; no automatic conclusion that a newcomer receives a free account. English and French page modification dates differ.",
+      "modified_on": "2026-10-29",
+      "fr_modified_on": "2026-10-23",
+      "checked_on": "2026-11-11",
+      "checked_timezone": "America/Vancouver",
+      "review_status": "automated_source_inspection",
+      "human_reviewed_on": null,
+      "reuse_status": "links_and_short_original_summaries_only; full-text redistribution not reviewed",
+      "translation_status": "French summaries are AI-drafted; human language review not performed",
+      "resolved_url": "https://www.canada.ca/en/financial-consumer-agency/services/banking/bank-accounts/low-cost-no-cost.html"
+    },
+    {
+      "id": "D11",
+      "title": "Newcomers to Canada and the CRA",
+      "publisher": "Canada Revenue Agency",
+      "topic": "taxes",
+      "institution": null,
+      "campus": null,
+      "url": "https://www.canada.ca/en/revenue-agency/services/tax/international-non-residents/individuals-leaving-entering-canada-non-residents/newcomers-canada-immigrants.html",
+      "fr_url": "https://www.canada.ca/fr/agence-revenu/services/impot/impot-international-non-residents/particuliers-depart-canada-entree-canada-non-residents/nouveaux-arrivants-canada-immigrants.html",
+      "section": "Residency status; Immigration status; Canada’s tax system",
+      "facts_en": [
+        "Tax residency and immigration status are distinct; arrival date alone is not a complete tax-residency assessment.",
+        "CRA explains tax slips, supporting records, and benefit application routes for newcomers, including before a first tax return in applicable cases."
+      ],
+      "facts_fr": [
+        "La résidence fiscale et le statut d’immigration sont distincts; la date d’arrivée seule ne permet pas une évaluation complète de la résidence fiscale.",
+        "L’ARC explique les feuillets, les pièces justificatives et les démarches de prestations des nouveaux arrivants, parfois avant la première déclaration."
+      ],
+      "preparation": "Read CRA residency guidance and prepare questions about income records and your circumstances for CRA or a qualified tax helper.",
+      "limits": "No residency decision, tax filing, liability calculation, or benefit eligibility determination.",
+      "modified_on": "2026-08-03",
+      "checked_on": "2026-11-11",
+      "checked_timezone": "America/Vancouver",
+      "review_status": "automated_source_inspection",
+      "human_reviewed_on": null,
+      "reuse_status": "links_and_short_original_summaries_only; full-text redistribution not reviewed",
+      "translation_status": "French summaries are AI-drafted; human language review not performed",
+      "resolved_url": "https://www.canada.ca/en/revenue-agency/services/tax/international-non-residents/individuals-leaving-entering-canada-non-residents/newcomers-canada-immigrants.html"
+    },
+    {
+      "id": "D12",
+      "title": "Overview of child and family benefits",
+      "publisher": "Canada Revenue Agency",
+      "topic": "benefits",
+      "institution": null,
+      "campus": null,
+      "url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits.html",
+      "fr_url": "https://www.canada.ca/fr/agence-revenu/services/prestations-enfants-familles.html",
+      "section": "Overview; After applying",
+      "facts_en": [
+        "CRA’s directory links Canada child benefit and other household benefits to their specific requirements.",
+        "Ongoing payments depend on current information and annual tax filing, including for a spouse or common-law partner where applicable."
+      ],
+      "facts_fr": [
+        "Le répertoire de l’ARC relie l’Allocation canadienne pour enfants et d’autres prestations à leurs conditions propres.",
+        "La continuité des versements dépend de renseignements à jour et des déclarations annuelles, y compris celles du conjoint s’il y a lieu."
+      ],
+      "preparation": "Use the directory to identify applicable official pages, then ask CRA about unresolved conditions.",
+      "limits": "Directory is not an exhaustive VERA catalog or eligibility decision. Current page names Canada Groceries and Essentials Benefit, formerly GST/HST credit; do not promote the old name as current.",
+      "modified_on": "2026-11-02",
+      "checked_on": "2026-11-11",
+      "checked_timezone": "America/Vancouver",
+      "review_status": "automated_source_inspection",
+      "human_reviewed_on": null,
+      "reuse_status": "links_and_short_original_summaries_only; full-text redistribution not reviewed",
+      "translation_status": "French summaries are AI-drafted; human language review not performed",
+      "resolved_url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits.html"
+    },
+    {
+      "id": "D13",
+      "title": "Canada child benefit — How to apply",
+      "publisher": "Canada Revenue Agency",
+      "topic": "benefits",
+      "institution": null,
+      "campus": null,
+      "url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit/how-apply.html",
+      "fr_url": "https://www.canada.ca/fr/agence-revenu/services/prestations-enfants-familles/allocation-canadienne-enfants/comment-demande.html",
+      "section": "How to apply; Gather supporting documents",
+      "facts_en": [
+        "A Canada child benefit application also lets CRA assess related provincial and territorial programs; separate applications for those related programs are not needed.",
+        "Check eligibility and situation-specific supporting documents before using an official application method."
+      ],
+      "facts_fr": [
+        "La demande d’Allocation canadienne pour enfants permet aussi l’évaluation des programmes provinciaux et territoriaux connexes; une demande distincte n’est pas nécessaire pour ceux-ci.",
+        "Vérifiez les conditions et les pièces propres à votre situation avant de choisir une méthode officielle de demande."
+      ],
+      "preparation": "Prepare the questions and document categories shown on CRA’s instructions. Submit only through official CRA channels.",
+      "limits": "Do not decide who qualifies, infer custody or applicant identity, or collect documents/identifiers in VERA.",
+      "modified_on": "2026-10-22",
+      "checked_on": "2026-11-11",
+      "checked_timezone": "America/Vancouver",
+      "review_status": "automated_source_inspection",
+      "human_reviewed_on": null,
+      "reuse_status": "links_and_short_original_summaries_only; full-text redistribution not reviewed",
+      "translation_status": "French summaries are AI-drafted; human language review not performed",
+      "resolved_url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit/how-apply.html"
+    },
+    {
+      "id": "D14",
+      "title": "Province of British Columbia — BC family benefit",
+      "publisher": "Canada Revenue Agency",
+      "topic": "benefits",
+      "institution": null,
+      "campus": null,
+      "url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/provincial-territorial-programs/province-british-columbia.html",
+      "fr_url": "https://www.canada.ca/fr/agence-revenu/services/prestations-enfants-familles/programmes-provinciaux-territoriaux/province-colombie-britannique.html",
+      "section": "BC family benefit",
+      "facts_en": [
+        "CRA administers the BC family benefit as a program related to the Canada child benefit.",
+        "The BC family benefit is combined with CCB in one monthly payment; confirm individual conditions through CRA."
+      ],
+      "facts_fr": [
+        "L’ARC administre la prestation familiale de la Colombie-Britannique comme programme connexe à l’Allocation canadienne pour enfants.",
+        "La prestation de la C.-B. est combinée à l’ACE en un versement mensuel; confirmez les conditions individuelles auprès de l’ARC."
+      ],
+      "preparation": "Read alongside the CCB application instructions to avoid duplicate application tasks.",
+      "limits": "No amount or award estimate; VERA does not assess household income or eligibility.",
+      "modified_on": "2026-05-11",
+      "checked_on": "2026-11-11",
+      "checked_timezone": "America/Vancouver",
+      "review_status": "automated_source_inspection",
+      "human_reviewed_on": null,
+      "reuse_status": "links_and_short_original_summaries_only; full-text redistribution not reviewed",
+      "translation_status": "French summaries are AI-drafted; human language review not performed",
+      "resolved_url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/provincial-territorial-programs/province-british-columbia.html"
+    },
+    {
+      "id": "D16",
+      "title": "B.C. Newcomers’ Guide",
+      "publisher": "Government of British Columbia",
+      "topic": "settlement",
+      "institution": null,
+      "campus": null,
+      "url": "https://www.welcomebc.ca/start-your-life-in-b-c/bc-newcomers-guide",
+      "fr_url": "https://www.welcomebc.ca/start-your-life-in-b-c/bc-newcomers-guide-french-pdf",
+      "section": "2025 edition download links",
+      "facts_en": [
+        "The official page lists the 2025 guide in English, French and Simplified Chinese, among other languages.",
+        "It introduces life in BC, including housing, health care, transport and other everyday topics."
+      ],
+      "facts_fr": [
+        "La page officielle propose le guide de 2025 en anglais, en français et en chinois simplifié, entre autres langues.",
+        "Il présente la vie en C.-B., notamment le logement, les soins de santé et les transports."
+      ],
+      "preparation": "Use the page’s language-specific downloads for background orientation, then consult current program pages for conditions.",
+      "limits": "French PDF target is an official listed link but could not be fetched by web tool because of file size. PDF content and language-version equivalence not independently audited.",
+      "modified_on": "2026-08-25",
+      "checked_on": "2026-11-11",
+      "checked_timezone": "America/Vancouver",
+      "review_status": "automated_source_inspection",
+      "human_reviewed_on": null,
+      "reuse_status": "links_and_short_original_summaries_only; full-text redistribution not reviewed",
+      "translation_status": "French summaries are AI-drafted; human language review not performed",
+      "resolved_url": "https://www.welcomebc.ca/start-your-life-in-b-c/bc-newcomers-guide"
+    },
+    {
+      "id": "D17",
+      "title": "Welcome to Canada: Multilingual resources for newcomers",
+      "publisher": "Immigration, Refugees and Citizenship Canada",
+      "topic": "settlement",
+      "institution": null,
+      "campus": null,
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/publication-welcome-canada-what-you-should-know.html",
+      "fr_url": "https://www.canada.ca/fr/immigration-refugies-citoyennete/organisation/publications-guides/bienvenue-canada-vous-devriez-savoir.html",
+      "section": "Living in Canada — Money and finances",
+      "facts_en": [
+        "IRCC links multilingual resources about arriving, housing, work, study and everyday life.",
+        "The money-and-finances section includes English and French PDF resources for orientation."
+      ],
+      "facts_fr": [
+        "IRCC propose des ressources multilingues sur l’arrivée, le logement, le travail, les études et la vie quotidienne.",
+        "La section consacrée à l’argent et aux finances comprend des ressources PDF en anglais et en français."
+      ],
+      "preparation": "Offer the official language resource as optional background, preserving direct program sources for current rules.",
+      "limits": "General orientation; PDF contents and language equivalence not audited; not a current eligibility rule source.",
+      "modified_on": "2025-08-11",
+      "checked_on": "2026-11-11",
+      "checked_timezone": "America/Vancouver",
+      "review_status": "automated_source_inspection",
+      "human_reviewed_on": null,
+      "reuse_status": "links_and_short_original_summaries_only; full-text redistribution not reviewed",
+      "translation_status": "French summaries are AI-drafted; human language review not performed",
+      "resolved_url": "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/publication-welcome-canada-what-you-should-know.html"
+    },
+    {
+      "id": "D18",
+      "title": "Financial Basics",
+      "publisher": "Financial Consumer Agency of Canada",
+      "topic": "banking",
+      "institution": null,
+      "campus": null,
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/financial-basics.html",
+      "fr_url": "https://www.canada.ca/fr/agence-consommation-matiere-financiere/services/finances-personnelles.html",
+      "section": "Money management lessons for life; Get started now",
+      "facts_en": [
+        "FCAC’s Financial Basics covers budgeting, saving, credit, fraud prevention and financial planning.",
+        "The official page links downloadable learning materials and videos."
+      ],
+      "facts_fr": [
+        "Les ressources de l’ACFC abordent le budget, l’épargne, le crédit, la prévention de la fraude et la planification financière.",
+        "La page officielle propose des documents d’apprentissage téléchargeables et des vidéos."
+      ],
+      "preparation": "Use the official resources to learn unfamiliar terms before comparing accounts or preparing questions.",
+      "limits": "Education only; no personalized investment or credit-product advice. Linked materials were not fully reviewed.",
+      "modified_on": "2025-09-23",
+      "checked_on": "2026-11-11",
+      "checked_timezone": "America/Vancouver",
+      "review_status": "automated_source_inspection",
+      "human_reviewed_on": null,
+      "reuse_status": "links_and_short_original_summaries_only; full-text redistribution not reviewed",
+      "translation_status": "French summaries are AI-drafted; human language review not performed",
+      "resolved_url": "https://www.canada.ca/en/financial-consumer-agency/services/financial-basics.html"
+    }
+  ],
+  "notes": [
+    "Research-only metadata, not human policy approval.",
+    "No full source snapshots or personal data captured.",
+    "English and French FCAC low/no-cost page dates differ; both pages must retain separate version metadata.",
+    "Use updated CRA program naming: Canada Groceries and Essentials Benefit (formerly GST/HST credit).",
+    "UBC catalog coverage here is Vancouver-specific; other campuses require separate handoff."
+  ]
+}
