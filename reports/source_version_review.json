@@ -1,0 +1,41 @@
+{
+  "review_date": "2026-11-11",
+  "review_kind": "source byte capture and existing span integrity; no independent policy sign-off",
+  "sources": [
+    {
+      "source_id": "S1",
+      "previous_sha256": "86a15797a30cffd87ac7efd1a45d80800d15f2668d8237835e91890f9e5cef05",
+      "current_sha256": "f320bfb0e555159bd1f499a79db5827e47127e174ad44cb9c5995fdb41b1b8aa",
+      "all_existing_evidence_spans_found": true,
+      "independent_rule_review": false
+    },
+    {
+      "source_id": "S2",
+      "previous_sha256": "14fb8a28c094106a51e9190ce03daf8e6b0e2421f80c9284651da5f7a4c2db13",
+      "current_sha256": "14fb8a28c094106a51e9190ce03daf8e6b0e2421f80c9284651da5f7a4c2db13",
+      "all_existing_evidence_spans_found": true,
+      "independent_rule_review": false
+    },
+    {
+      "source_id": "S3",
+      "previous_sha256": "1607efb11e9bf67030ceb04f5a1a3279a4815e9b17e6183d01d16a3ba1822fa5",
+      "current_sha256": "1607efb11e9bf67030ceb04f5a1a3279a4815e9b17e6183d01d16a3ba1822fa5",
+      "all_existing_evidence_spans_found": true,
+      "independent_rule_review": false
+    },
+    {
+      "source_id": "S4",
+      "previous_sha256": "af175798fa7921870b88377e923c4264565bf27f64946db8c754571c2d7b6eab",
+      "current_sha256": "ed528ae96a4337dd0c023a2478c810d0a51946e9cd5090da18d24e8c5727a16a",
+      "all_existing_evidence_spans_found": true,
+      "independent_rule_review": false
+    },
+    {
+      "source_id": "S5",
+      "previous_sha256": "b8f1bd6f747e9732250142efc9b1d19d97fd0a9e11bf6d2c78928a782319d1dc",
+      "current_sha256": "6dcbf062d5189b8a01634b40e370397cf73768775111fe6aa2c176c170a933de",
+      "all_existing_evidence_spans_found": true,
+      "independent_rule_review": false
+    }
+  ]
+}

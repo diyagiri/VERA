@@ -1,0 +1,53 @@
+{
+  "frozen_sha256": "d15af9ad11ba155a8a5ce6371c50fea2bfad510fd013b0cf5c86394dde68f549",
+  "run_at_utc": "2026-11-12T02:05:29.090875+00:00",
+  "model": "none \u2014 deterministic guided workflow",
+  "cases": {
+    "dev": {
+      "passed": 20,
+      "total": 20,
+      "failures": []
+    },
+    "heldout": {
+      "passed": 10,
+      "total": 10,
+      "failures": []
+    }
+  },
+  "journeys": {
+    "dev": {
+      "passed": 7,
+      "total": 7,
+      "failures": []
+    },
+    "heldout": {
+      "passed": 3,
+      "total": 3,
+      "failures": []
+    }
+  },
+  "limitations": [
+    "Synthetic author-written cases; held-out partition is not independently validated and was inspected during routing debugging. This rerun is regression evidence.",
+    "Policy correctness and excerpt support still need independent human review.",
+    "Full source snapshots are verified locally but excluded from redistribution pending reuse review.",
+    "Manual navigation and retrieval-chatbot comparison not performed.",
+    "No usability participants; no claim about reduced user effort.",
+    "Latency measures local Python orchestration, not human completion or hosted browser time.",
+    "No live model-provider request was tested."
+  ],
+  "comparisons": {
+    "manual_navigation": "not_run",
+    "retrieval_chatbot": "not_run"
+  },
+  "model_cost_usd": 0,
+  "unsupported_positive_recommendations": {
+    "observed": 0,
+    "screens": 90,
+    "scope": "Gated release mode; zero does not measure policy accuracy or population risk."
+  },
+  "latency_ms": {
+    "n": 10,
+    "p50": 2.718,
+    "p95": 5.313
+  }
+}

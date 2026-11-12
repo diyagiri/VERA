@@ -58,7 +58,7 @@ def build() -> list[dict]:
             "source_id": source_id, "program_id": program_id, "source_version": src.sha256,
             "excerpt": excerpt, "kind": kind, "rule_id": rule_id,
             "title": src.title, "publisher": src.publisher, "canonical_url": src.canonical_url,
-            "captured_on": (src.snapshot_path or "").split("_")[-1][:8] or None,
+            "captured_on": src.captured_at or (src.snapshot_path or "").split("_")[-1][:8] or None,
             "reuse_status": src.reuse_status,
         })
 

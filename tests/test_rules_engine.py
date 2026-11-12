@@ -52,7 +52,7 @@ def test_default_gate_blocks_draft_rules():
         assert all(x.logic_outcome is not None for x in res.rule_outcomes)
 
 
-def test_approved_rule_is_not_gated():
+def test_label_without_full_review_cannot_enable_rule():
     facts, as_of, _ = _load("P1-MEI")
     rules = m.load_rules()
     for x in rules:
@@ -60,8 +60,8 @@ def test_approved_rule_is_not_gated():
             x.approval_state, x.reviewer = m.ApprovalState.RULE_APPROVED.value, "Reviewer B"
     res = r.check_rules("STU-01", facts, as_of, rules=rules)
     r1 = next(x for x in res.rule_outcomes if x.rule_id == "STU-01-R1")
-    assert not r1.gated and r1.outcome == m.RuleOutcome.FAIL
-    assert res.state == m.AggregateState.BLOCKER_FOUND
+    assert r1.gated and r1.outcome == m.RuleOutcome.REVIEW_REQUIRED
+    assert res.state == m.AggregateState.NEEDS_OFFICIAL_REVIEW
 
 
 def test_next_action_text_avoids_forbidden_words():

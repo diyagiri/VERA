@@ -10,7 +10,7 @@
         "status_category"
       ],
       "source_id": "S1",
-      "source_version": "86a15797a30cffd87ac7efd1a45d80800d15f2668d8237835e91890f9e5cef05",
+      "source_version": "f320bfb0e555159bd1f499a79db5827e47127e174ad44cb9c5995fdb41b1b8aa",
       "evidence_span": "be a Canadian citizen, a permanent resident or have protected person status",
       "effective_from": null,
       "effective_to": null,
@@ -30,7 +30,7 @@
         "bc_resident"
       ],
       "source_id": "S1",
-      "source_version": "86a15797a30cffd87ac7efd1a45d80800d15f2668d8237835e91890f9e5cef05",
+      "source_version": "f320bfb0e555159bd1f499a79db5827e47127e174ad44cb9c5995fdb41b1b8aa",
       "evidence_span": "be a resident of British Columbia",
       "effective_from": null,
       "effective_to": null,
@@ -48,7 +48,7 @@
       "condition": "Eligible program at an eligible school, financial need, and satisfactory academic progress.",
       "required_inputs": [],
       "source_id": "S1",
-      "source_version": "86a15797a30cffd87ac7efd1a45d80800d15f2668d8237835e91890f9e5cef05",
+      "source_version": "f320bfb0e555159bd1f499a79db5827e47127e174ad44cb9c5995fdb41b1b8aa",
       "evidence_span": "be able to demonstrate financial need",
       "effective_from": null,
       "effective_to": null,
@@ -119,7 +119,8 @@
       "program_id": "NEW-03",
       "condition": "Status must be in an IRCC settlement-eligible category. Ordinary study-permit or work-permit status alone is not a general route.",
       "required_inputs": [
-        "status_category"
+        "status_category",
+        "federal_exception"
       ],
       "source_id": "S3",
       "source_version": "1607efb11e9bf67030ceb04f5a1a3279a4815e9b17e6183d01d16a3ba1822fa5",
@@ -148,10 +149,11 @@
       "required_inputs": [
         "pr_class",
         "pr_landing_date",
-        "as_of_date"
+        "as_of_date",
+        "status_category"
       ],
       "source_id": "S4",
-      "source_version": "af175798fa7921870b88377e923c4264565bf27f64946db8c754571c2d7b6eab",
+      "source_version": "ed528ae96a4337dd0c023a2478c810d0a51946e9cd5090da18d24e8c5727a16a",
       "evidence_span": "starting April 1, 2026, you can access newcomer services for up to 6 years from the date you became a PR",
       "effective_from": null,
       "effective_to": null,
@@ -170,10 +172,11 @@
       "program_id": "NEW-03",
       "condition": "No time limit applies to non-economic PRs, resettled refugees, protected persons, and temporary residents approved under certain programs or pathways.",
       "required_inputs": [
-        "pr_class"
+        "pr_class",
+        "status_category"
       ],
       "source_id": "S4",
-      "source_version": "af175798fa7921870b88377e923c4264565bf27f64946db8c754571c2d7b6eab",
+      "source_version": "ed528ae96a4337dd0c023a2478c810d0a51946e9cd5090da18d24e8c5727a16a",
       "evidence_span": "There's no time limit to access newcomer services if you're",
       "effective_from": null,
       "effective_to": null,

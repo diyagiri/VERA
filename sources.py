@@ -111,6 +111,17 @@ def record_capture(source_id: str, url: str, path: Path | str = MANIFEST,
     rec.snapshot_path = snap
     rec.sha256 = digest
     save_manifest(records, path)
+    # Capturing new bytes does not silently roll an approved interpretation forward.
+    if Path(path).resolve() == MANIFEST.resolve():
+        rule_path = ROOT / "data/rules/rules.json"
+        data = json.loads(rule_path.read_text(encoding="utf-8"))
+        for rule in data["rules"]:
+            if rule["source_id"] == source_id and rule["source_version"] != digest:
+                rule["approval_state"] = "RULE_DRAFT"
+                rule["reviewer"] = None
+                rule["reviewed_on"] = None
+                rule["test_ids"] = []
+        rule_path.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
     return rec
 
 
@@ -133,7 +144,7 @@ S5_HANDOFF_URL = "https://www.canada.ca/en/services/benefits/finder.html"
 PROGRAM_KEYWORDS: dict[str, list[str]] = {
     "STU-01": ["funding", "loan", "loans", "grant", "student aid", "tuition", "pay for school",
                "financial aid", "studentaid"],
-    "NEW-02": ["settle", "settling", "newcomer", "services", "job", "work", "english",
+    "NEW-02": ["settle", "settling", "settlement", "newcomer", "services", "job", "work", "english",
                "community", "counselling", "adjust"],
     "NEW-03": ["settle", "settling", "newcomer", "settlement", "permanent resident", "pr",
                "job", "english", "refugee"],

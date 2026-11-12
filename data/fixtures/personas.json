@@ -28,8 +28,11 @@
           "why": "S2: institutional service availability is an explicit condition for international post-secondary students."
         },
         "NEW-03": {
-          "state": "blocker_found",
-          "why": "S3: ordinary study-permit status alone is not a general route; exceptions shown as unchecked."
+          "state": "needs_information",
+          "missing": [
+            "federal_exception"
+          ],
+          "why": "Unresolved exception applicability prevents a negative screen."
         }
       },
       "correction": {

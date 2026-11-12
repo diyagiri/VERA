@@ -1,6 +1,6 @@
 {
   "manifest_version": "2026-11-05-draft",
-  "note": "Values from Source Registry v2 (checked 2026-10-28). canonical_url, snapshot_path and sha256 are null until captured in Step 2. Do not invent values.",
+  "note": "Current source bytes captured and existing evidence spans checked 2026-11-11 America/Vancouver. Source inspection does not constitute independent rule approval. Snapshots remain local for reuse review.",
   "sources": [
     {
       "source_id": "S1",
@@ -9,13 +9,14 @@
       "canonical_url": "https://studentaidbc.ca/help-centre/applying-loans/basic-eligibility-requirements",
       "title": "Basic eligibility requirements",
       "evidence_section": "Basic-criteria list and subsequent exclusions",
-      "checked_on": "2026-10-28",
+      "checked_on": "2026-11-11",
       "page_modified_on": null,
       "effective_period": null,
-      "snapshot_path": "data/snapshots/S1_20261105T170512999106Z.html",
-      "sha256": "86a15797a30cffd87ac7efd1a45d80800d15f2668d8237835e91890f9e5cef05",
+      "snapshot_path": "data/snapshots/S1_observed_20261112T015836Z.html",
+      "sha256": "f320bfb0e555159bd1f499a79db5827e47127e174ad44cb9c5995fdb41b1b8aa",
       "reuse_status": "bc_permission_required_local_only",
-      "review_status": "SOURCE_CHECKED"
+      "review_status": "SOURCE_CHECKED",
+      "captured_at": "2026-11-12T01:58:37.298635+00:00"
     },
     {
       "source_id": "S2",
@@ -24,13 +25,14 @@
       "canonical_url": "https://www.welcomebc.ca/start-your-life-in-b-c/find-newcomer-services/services-for-newcomers-on-a-temporary-work-or-study-permit-and-new-citizens%C2%A0(bc-nsp)",
       "title": "BC NSP eligibility and provider directory",
       "evidence_section": "Eligibility list; Find a service provider",
-      "checked_on": "2026-10-28",
+      "checked_on": "2026-11-11",
       "page_modified_on": "2026-08-24",
       "effective_period": null,
       "snapshot_path": "data/snapshots/S2_20261105T170513888859Z.html",
       "sha256": "14fb8a28c094106a51e9190ce03daf8e6b0e2421f80c9284651da5f7a4c2db13",
       "reuse_status": "bc_permission_required_local_only",
-      "review_status": "SOURCE_CHECKED"
+      "review_status": "SOURCE_CHECKED",
+      "captured_at": "2026-11-12T01:58:37.298635+00:00"
     },
     {
       "source_id": "S3",
@@ -39,13 +41,14 @@
       "canonical_url": "https://ircc.canada.ca/english/newcomers/services/",
       "title": "Find free newcomer services near you",
       "evidence_section": "Eligibility",
-      "checked_on": "2026-10-28",
+      "checked_on": "2026-11-11",
       "page_modified_on": "2026-10-09",
       "effective_period": null,
       "snapshot_path": "data/snapshots/S3_20261105T170515184992Z.html",
       "sha256": "1607efb11e9bf67030ceb04f5a1a3279a4815e9b17e6183d01d16a3ba1822fa5",
       "reuse_status": "canada_noncommercial_with_attribution",
-      "review_status": "SOURCE_CHECKED"
+      "review_status": "SOURCE_CHECKED",
+      "captured_at": "2026-11-12T01:58:37.298635+00:00"
     },
     {
       "source_id": "S4",
@@ -54,13 +57,14 @@
       "canonical_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/settle-canada/newcomer-services/eligibility.html",
       "title": "Economic-class PR eligibility periods",
       "evidence_section": "Periods, examples and other categories",
-      "checked_on": "2026-10-28",
+      "checked_on": "2026-11-11",
       "page_modified_on": "2026-03-10",
       "effective_period": null,
-      "snapshot_path": "data/snapshots/S4_20261105T171408644208Z.html",
-      "sha256": "af175798fa7921870b88377e923c4264565bf27f64946db8c754571c2d7b6eab",
+      "snapshot_path": "data/snapshots/S4_observed_20261112T015837Z.html",
+      "sha256": "ed528ae96a4337dd0c023a2478c810d0a51946e9cd5090da18d24e8c5727a16a",
       "reuse_status": "canada_noncommercial_with_attribution",
-      "review_status": "SOURCE_CHECKED"
+      "review_status": "SOURCE_CHECKED",
+      "captured_at": "2026-11-12T01:58:37.298635+00:00"
     },
     {
       "source_id": "S5",
@@ -69,13 +73,14 @@
       "canonical_url": "https://www.canada.ca/en/services/benefits/finder.html",
       "title": "Federal Benefits Finder",
       "evidence_section": "Discovery baseline (not an eligibility rule source)",
-      "checked_on": "2026-10-28",
+      "checked_on": "2026-11-11",
       "page_modified_on": "2026-04-16",
       "effective_period": null,
-      "snapshot_path": "data/snapshots/S5_20261105T171409331484Z.html",
-      "sha256": "b8f1bd6f747e9732250142efc9b1d19d97fd0a9e11bf6d2c78928a782319d1dc",
+      "snapshot_path": "data/snapshots/S5_observed_20261112T015837Z.html",
+      "sha256": "6dcbf062d5189b8a01634b40e370397cf73768775111fe6aa2c176c170a933de",
       "reuse_status": "canada_noncommercial_with_attribution",
-      "review_status": "SOURCE_CHECKED"
+      "review_status": "SOURCE_CHECKED",
+      "captured_at": "2026-11-12T01:58:37.298635+00:00"
     }
   ]
 }

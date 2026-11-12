@@ -1,0 +1,67 @@
+{
+  "guidance_mode_ready": true,
+  "live_screening_ready": false,
+  "sources": [
+    {
+      "id": "S1",
+      "snapshot_verified": true
+    },
+    {
+      "id": "S2",
+      "snapshot_verified": true
+    },
+    {
+      "id": "S3",
+      "snapshot_verified": true
+    },
+    {
+      "id": "S4",
+      "snapshot_verified": true
+    },
+    {
+      "id": "S5",
+      "snapshot_verified": true
+    }
+  ],
+  "rules": [
+    {
+      "id": "STU-01-R1",
+      "blocker": "Rule awaiting independent review."
+    },
+    {
+      "id": "STU-01-R2",
+      "blocker": "Rule awaiting independent review."
+    },
+    {
+      "id": "STU-01-R3",
+      "blocker": "Rule awaiting independent review."
+    },
+    {
+      "id": "NEW-02-R1",
+      "blocker": "Rule awaiting independent review."
+    },
+    {
+      "id": "NEW-02-R2",
+      "blocker": "Rule awaiting independent review."
+    },
+    {
+      "id": "NEW-03-R1",
+      "blocker": "Rule awaiting independent review."
+    },
+    {
+      "id": "NEW-03-R2",
+      "blocker": "Rule awaiting independent review."
+    },
+    {
+      "id": "NEW-03-R3",
+      "blocker": "Rule awaiting independent review."
+    }
+  ],
+  "external_gates": [
+    "Independent rule and evidence sign-off",
+    "Source snapshot restoration / exact version verification",
+    "Event rubric and pre-existing-code policy confirmation",
+    "Source reuse review before redistribution",
+    "Live model credentials and provider smoke test if enabled"
+  ]
+}

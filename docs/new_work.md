@@ -31,3 +31,13 @@
 - models.py - PlanLine, Plan, QUESTIONS (2026-11-05)
 - rules.py - results now cite exact evidence.json records (2026-11-05)
 - tests/test_actions.py - plan, correction, invalidation, wording and export tests (2026-11-05)
+
+## Completed application work — 2026-11-11
+
+- `web/`, `scripts/build_web.py`, `run.py`: responsive dependency-free UI, generated Python rule tables, questions/corrections, source provenance, fictional demos, editable tasks, downloads and actual event trace.
+- `agent.py`, `app.py`, `model_agent.py`: bounded deterministic orchestration, Streamlit adapter and optional consent-based model tool planner. No live model connection claimed.
+- `rules.py`, `models.py`: complete approval/freshness gates, federal-exception category, corrected dependencies and source capture timestamp.
+- `actions.py`: safe source-linked handoff tasks and self-reported enquiry context, including useful output while rules remain draft.
+- `sources.py`: settlement routing fix and invalidation on changed captures. `build_evidence.py`: current captures and supporting spans reconciled while preserving draft status.
+- `evaluate.py`, `tests/`, `reports/`: frozen evaluations, 10 scripted journeys, browser/core parity, validation limits and preserved failure history.
+- `docs/`: setup, architecture, demo, contract changes and explicit release gates. `baseline/` remains unchanged.

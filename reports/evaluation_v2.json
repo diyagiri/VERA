@@ -1,0 +1,53 @@
+{
+  "frozen_sha256": "c8b88f6ca891d9905fc830b55d2e266b8c6b38a580fd2524b6e752a7276cc203",
+  "run_at_utc": "2026-11-12T01:57:56.056009+00:00",
+  "model": "none \u2014 deterministic guided workflow",
+  "cases": {
+    "dev": {
+      "passed": 20,
+      "total": 20,
+      "failures": []
+    },
+    "heldout": {
+      "passed": 10,
+      "total": 10,
+      "failures": []
+    }
+  },
+  "journeys": {
+    "dev": {
+      "passed": 7,
+      "total": 7,
+      "failures": []
+    },
+    "heldout": {
+      "passed": 3,
+      "total": 3,
+      "failures": []
+    }
+  },
+  "limitations": [
+    "Synthetic author-written cases; held-out partition is not independently validated.",
+    "Policy correctness and excerpt support still need independent human review.",
+    "Original source snapshots are absent; 3 snapshot-dependent tests are skipped.",
+    "Manual navigation and retrieval-chatbot comparison not performed.",
+    "No usability participants; no claim about reduced user effort.",
+    "Latency measures local Python orchestration, not human completion or hosted browser time.",
+    "No live model-provider request was tested."
+  ],
+  "comparisons": {
+    "manual_navigation": "not_run",
+    "retrieval_chatbot": "not_run"
+  },
+  "model_cost_usd": 0,
+  "unsupported_positive_recommendations": {
+    "observed": 0,
+    "screens": 90,
+    "scope": "Gated release mode; zero does not measure policy accuracy or population risk."
+  },
+  "latency_ms": {
+    "n": 10,
+    "p50": 1.367,
+    "p95": 2.917
+  }
+}

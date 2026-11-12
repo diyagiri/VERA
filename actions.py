@@ -189,3 +189,50 @@ def render_markdown(plan: Plan, edited_enquiry: Optional[str] = None) -> str:
             enquiry or "No provider questions yet. Answer the open questions above first."]
     out += ["", "## Limits", "", LIMITS, ""]
     return "\n".join(out)
+
+
+def prepare_guidance(results, facts, as_of_date, handoff=None):
+    """Safe, actionable official handoffs even when no screening rule is approved.
+
+    These are preparation steps, not eligibility conclusions. Only self-reported
+    facts enter the enquiry. Exact source quotations are not redistributed.
+    """
+    from sources import load_manifest
+    catalog = {s.source_id:s for s in load_manifest()}
+    tasks = []
+    def add(pid, text, sid):
+        src = catalog[sid]
+        tasks.append({'id':f'{pid}-{len(tasks)}','program_id':pid,'text':text,
+                      'url':src.canonical_url,'source_id':sid,'done':False})
+    if 'NEW-02' in results:
+        if facts.status_category == StatusCategory.STUDY_PERMIT:
+            if facts.institution_offers_service == TriState.YES:
+                add('NEW-02','Ask your institution about the specific newcomer service you need.','S2')
+            elif facts.institution_offers_service == TriState.UNKNOWN:
+                add('NEW-02','Ask your institution whether it offers the newcomer service you need.','S2')
+        add('NEW-02','Use the BC NSP directory to ask a provider about your category and current service availability.','S2')
+    if 'NEW-03' in results:
+        if facts.pr_class == 'economic' and facts.status_category == StatusCategory.PERMANENT_RESIDENT:
+            add('NEW-03','Ask an IRCC-funded provider to confirm the service period for your PR category and date.','S4')
+        else:
+            add('NEW-03','Use the IRCC finder to ask which status categories or special pathways apply to your situation.','S3')
+    if 'STU-01' in results:
+        add('STU-01','Review StudentAid BC’s status, residency, study and financial assessment criteria with your financial aid office.','S1')
+    if handoff or facts.bc_resident == TriState.NO:
+        add('CONTEXT','Explore other support through the Government of Canada Benefits Finder.','S5')
+    context = [x.text for x in describe_facts(facts)]
+    if facts.status_category != StatusCategory.STUDY_PERMIT:
+        context = [x for x in context if 'institution does not' not in x]
+    questions = ['Could you confirm which services and conditions apply to my situation?',
+                 'What information should I prepare, and what are the next steps?',
+                 'Are appointments currently available, and is there a cost?']
+    if facts.status_category == StatusCategory.PERMANENT_RESIDENT and facts.pr_class == 'economic':
+        if facts.pr_landing_date:
+            context.append(f'I became a permanent resident in {facts.pr_landing_date:%B %Y}.')
+        questions.insert(0,'Could you confirm my settlement-service eligibility period?')
+    enquiry = 'Subject: Enquiry about newcomer support\n\nHello,\n\n' + (' '.join(context)+'\n\n' if context else '')
+    enquiry += ('My goal: ' + facts.goal + '\n\n') if facts.goal else ''
+    enquiry += 'I am looking for support and would appreciate your guidance.\n\n' + '\n'.join(f'- {q}' for q in questions)
+    enquiry += '\n\nThank you.'
+    return {'as_of_date':as_of_date,'fact_version':facts.version,'tasks':tasks,'enquiry':enquiry,
+            'limits':'Preparation guidance only. Official programs and providers decide. Appointment availability is unconfirmed. No message has been sent.'}

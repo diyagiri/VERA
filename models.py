@@ -79,6 +79,7 @@ class SourceRecord:
     sha256: Optional[str]
     reuse_status: str = "unreviewed"
     review_status: str = ReviewStatus.SOURCE_CHECKED.value
+    captured_at: Optional[str] = None
 
 
 @dataclass
@@ -149,6 +150,7 @@ class Facts:
     bc_resident: TriState = TriState.UNKNOWN
     goal: str = ""
     version: int = 1
+    federal_exception: TriState = TriState.UNKNOWN
 
     def update(self, field_name: str, value) -> "Facts":
         if not hasattr(self, field_name) or field_name == "version":
@@ -198,6 +200,7 @@ def facts_from_dict(d: dict, goal: str = "") -> Facts:
         pr_class=d.get("pr_class"),
         pr_landing_date=date.fromisoformat(d["pr_landing_date"]) if d.get("pr_landing_date") else None,
         bc_resident=tri(d.get("bc_resident")),
+        federal_exception=tri(d.get("federal_exception")),
         goal=goal,
     )
 
@@ -235,4 +238,5 @@ QUESTIONS: dict[str, str] = {
     "pr_class": "Which kind of program made you a permanent resident? (economic, family, refugee, other)",
     "pr_landing_date": "In which month and year did you become a permanent resident?",
     "bc_resident": "Do you currently live in British Columbia?",
+    "federal_exception": "Could an IRCC exception or special pathway apply to you? (yes / no / not sure)",
 }

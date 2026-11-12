@@ -1,5 +1,2 @@
-# Pinned after first clean install; see docs/setup.md (Step 12)
+# Local Streamlit UI only. The primary browser UI and Python core need no packages.
 streamlit==1.39.0
-anthropic>=0.40.0
-python-dotenv==1.0.1
-pytest==8.3.3

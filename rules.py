@@ -94,7 +94,13 @@ def new03_r1(f: Facts, as_of: date):
         return _unknown_status()
     if st in {S.PERMANENT_RESIDENT, S.PROTECTED_PERSON}:
         return O.PASS, "Status category is listed for IRCC settlement services.", []
-    if st in PERMITS or st == S.CITIZEN:
+    if st in PERMITS:
+        if f.federal_exception == TriState.UNKNOWN:
+            return O.UNKNOWN, "Some temporary residents have special pathways. Confirm with IRCC or a provider if one applies.", ["federal_exception"]
+        if f.federal_exception == TriState.YES:
+            return O.REVIEW_REQUIRED, "A special pathway may apply; its conditions need provider confirmation.", []
+        return O.FAIL, "A permit alone is not a general route; you reported that no special pathway applies.", []
+    if st == S.CITIZEN:
         return (O.FAIL, "Not a general IRCC settlement route; listed programs and pathways were not checked.", [])
     return O.REVIEW_REQUIRED, "Status category not covered by reviewed logic.", []
 
@@ -172,6 +178,38 @@ def _evidence_id(r: RuleRecord) -> str:
     return _rule_span_ids().get(r.rule_id) or f"{r.source_id}@{(r.source_version or 'unversioned')[:8]}"
 
 
+def approval_problem(rule: RuleRecord, as_of_date: date) -> str | None:
+    """Fail closed on incomplete sign-off or missing/stale supporting evidence."""
+    from sources import load_manifest, verify_snapshot, validate_evidence
+    if rule.approval_state != ApprovalState.RULE_APPROVED.value:
+        return "Rule awaiting independent review."
+    if not rule.author or not rule.reviewer or rule.author.casefold() == rule.reviewer.casefold():
+        return "Independent reviewer sign-off is missing."
+    if not rule.reviewed_on or not rule.test_ids or not rule.coverage_limit:
+        return "Review date, signed-off tests or coverage limits are missing."
+    try:
+        if date.fromisoformat(rule.reviewed_on) > as_of_date:
+            return "Review is later than the requested assessment date."
+        if rule.effective_from and as_of_date < date.fromisoformat(rule.effective_from):
+            return "Rule is not effective on the requested date."
+        if rule.effective_to and as_of_date > date.fromisoformat(rule.effective_to):
+            return "Rule has expired."
+    except ValueError:
+        return "Invalid rule review or effective date."
+    src = next((s for s in load_manifest() if s.source_id == rule.source_id), None)
+    if not src or src.sha256 != rule.source_version or not verify_snapshot(src):
+        return "Source snapshot is unavailable, changed or unverifiable."
+    try:
+        age = (as_of_date - date.fromisoformat(src.checked_on or "")).days
+        if age < 0 or age > 30:
+            return "Source needs a fresh review for this date (30-day release policy)."
+    except ValueError:
+        return "Source review date is missing."
+    if not validate_evidence(_evidence_id(rule))[0]:
+        return "Supporting excerpt does not match the current source version."
+    return None
+
+
 def check_rules(program_id: str, facts: Facts, as_of_date: date,
                 rules: Optional[list[RuleRecord]] = None,
                 allow_draft: bool = False) -> ProgramResult:
@@ -184,11 +222,11 @@ def check_rules(program_id: str, facts: Facts, as_of_date: date,
             logic, reason, missing = O.REVIEW_REQUIRED, "No reviewed logic for this rule.", []
         else:
             logic, reason, missing = fn(facts, as_of_date)
-        approved = r.approval_state == ApprovalState.RULE_APPROVED.value
-        gated = not approved and not allow_draft
+        problem = approval_problem(r, as_of_date)
+        gated = bool(problem) and not allow_draft
         shown = O.REVIEW_REQUIRED if gated else logic
         if gated:
-            reason = f"Rule awaiting independent review. (Draft logic: {reason})"
+            reason = f"{problem} (Draft logic: {reason})"
         results.append(RuleResult(rule_id=r.rule_id, outcome=shown, reason=reason,
                                   missing_inputs=[] if gated else missing,
                                   evidence_ids=[_evidence_id(r)], logic_outcome=logic,

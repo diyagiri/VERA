@@ -1,0 +1,33 @@
+{
+  "attempted_at_utc": "2026-11-12T01:58:37.298635+00:00",
+  "sources": [
+    {
+      "source_id": "S1",
+      "status": "different_bytes_review_required",
+      "sha256": "f320bfb0e555159bd1f499a79db5827e47127e174ad44cb9c5995fdb41b1b8aa",
+      "path": "data/snapshots/S1_observed_20261112T015836Z.html"
+    },
+    {
+      "source_id": "S2",
+      "status": "original_snapshot_restored",
+      "sha256": "14fb8a28c094106a51e9190ce03daf8e6b0e2421f80c9284651da5f7a4c2db13"
+    },
+    {
+      "source_id": "S3",
+      "status": "original_snapshot_restored",
+      "sha256": "1607efb11e9bf67030ceb04f5a1a3279a4815e9b17e6183d01d16a3ba1822fa5"
+    },
+    {
+      "source_id": "S4",
+      "status": "different_bytes_review_required",
+      "sha256": "ed528ae96a4337dd0c023a2478c810d0a51946e9cd5090da18d24e8c5727a16a",
+      "path": "data/snapshots/S4_observed_20261112T015837Z.html"
+    },
+    {
+      "source_id": "S5",
+      "status": "different_bytes_review_required",
+      "sha256": "6dcbf062d5189b8a01634b40e370397cf73768775111fe6aa2c176c170a933de",
+      "path": "data/snapshots/S5_observed_20261112T015837Z.html"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "note": "Synthetic functional journeys, not independently reviewed policy or user research. Holdout labels are partitions only.",
+  "journeys": [
+    {"id":"J01","split":"dev","goal":"Help settling in and student funding","answers":[["bc_resident","yes"],["status_category","study_permit"],["is_post_secondary_student","yes"],["institution_offers_service","unknown"],["federal_exception","unknown"],["institution_offers_service","no"]],"expected":{"task_count":3,"enquiry_contains":"My institution does not offer","next":null}},
+    {"id":"J02","split":"dev","goal":"newcomer support and funding","answers":[["bc_resident","yes"],["status_category","study_permit"],["is_post_secondary_student","yes"],["institution_offers_service","no"],["federal_exception","no"],["institution_offers_service","yes"]],"expected":{"task_count":4,"enquiry_excludes":"institution does not offer","next":null}},
+    {"id":"J03","split":"dev","goal":"settlement services","answers":[["bc_resident","yes"],["status_category","permanent_resident"],["pr_class","economic"],["pr_landing_date","2021-06-21"]],"expected":{"task_count":2,"enquiry_contains":"June 2021","next":null}},
+    {"id":"J04","split":"dev","goal":"settlement help","answers":[["bc_resident","yes"],["status_category","other"]],"expected":{"task_count":2,"next":null}},
+    {"id":"J05","split":"dev","goal":"newcomer support","answers":[["bc_resident","yes"],["status_category","citizen"],["naturalized_citizen","yes"]],"expected":{"task_count":2,"enquiry_contains":"Canadian citizen","next":null}},
+    {"id":"J06","split":"dev","goal":"student funding","answers":[["bc_resident","unknown"],["status_category","prefer_not_to_say"]],"expected":{"task_count":1,"next":null}},
+    {"id":"J07","split":"dev","goal":"rent and dental benefits","answers":[],"expected":{"task_count":1,"next":null}},
+    {"id":"J08","split":"heldout","goal":"settlement help and student funding","answers":[["bc_resident","yes"],["status_category","protected_person"]],"expected":{"task_count":3,"enquiry_contains":"protected person","next":null}},
+    {"id":"J09","split":"heldout","goal":"settlement support","answers":[["bc_resident","yes"],["status_category","study_permit"],["is_post_secondary_student","yes"],["institution_offers_service","no"],["status_category","permanent_resident"],["pr_class","family"]],"expected":{"task_count":2,"enquiry_excludes":"study permit","next":null}},
+    {"id":"J10","split":"heldout","goal":"settlement services","answers":[["bc_resident","yes"],["status_category","work_permit"],["federal_exception","yes"]],"expected":{"task_count":2,"enquiry_contains":"work permit","next":null}}
+  ]
+}
