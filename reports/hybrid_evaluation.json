@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "name": "VERA hybrid evaluation",
+  "as_of": "2026-11-12",
+  "code_commit": "see git log (hybrid + Anthropic switch)",
+  "scope": "Author-written fictional cases. Regression and behaviour evidence, not proof of policy accuracy or user benefit.",
+  "screening_cases": {
+    "dev": {
+      "passed": 20,
+      "total": 20,
+      "failures": []
+    },
+    "heldout": {
+      "passed": 7,
+      "total": 10,
+      "failures": [
+        "C21:NEW-03",
+        "C22:NEW-03",
+        "C27:NEW-03"
+      ]
+    },
+    "heldout_note": "The 3 held-out misses are NEW-03 for permit holders: the rule now asks about special IRCC pathways, the original expectation was blocker_found. Awaiting an independent reviewer (docs/fixture_review.md)."
+  },
+  "journeys": {
+    "dev": {
+      "passed": 7,
+      "total": 7,
+      "failures": []
+    },
+    "heldout": {
+      "passed": 3,
+      "total": 3,
+      "failures": []
+    }
+  },
+  "unsupported_positive_recommendations": {
+    "observed": 0,
+    "screens": 90,
+    "scope": "Gated release mode; zero does not measure policy accuracy or population risk."
+  },
+  "retrieval_recall_at_5": {
+    "en": "20/20",
+    "fr": "20/20"
+  },
+  "python_browser_plan_parity": "30/30",
+  "automated_tests": {
+    "python": "90 passed, 3 skipped (snapshots not present); tests/test_v2.py needs fastapi, run where packages install",
+    "javascript": "57/58; the remaining test needs the bundled worker from `npm run build`",
+    "screening": "11/11 in tests/screening.test.mjs"
+  },
+  "browser_checks": {
+    "mei_journey_desktop": "pass",
+    "mei_journey_phone_390px": "pass",
+    "correction_changes_only_nsp": "pass",
+    "skipped_question_not_reasked": "pass",
+    "french": "pass",
+    "banking_only_no_screening": "pass",
+    "legacy_page": "pass",
+    "console_errors": 0
+  },
+  "latency_ms_local_python": {
+    "n": 10,
+    "p50": 1.869,
+    "p95": 4.051
+  },
+  "not_measured": [
+    "Live Anthropic model quality (no API key during build)",
+    "Comparison with manual navigation and a basic retrieval chatbot",
+    "Independent policy review of the 8 rules",
+    "Usability with real newcomers",
+    "Human review of French text"
+  ],
+  "model_cost_usd": 0
+}
