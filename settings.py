@@ -15,7 +15,7 @@ class Settings:
     max_output_tokens: int = 1600
     max_total_tokens: int = 200000
     max_session_tokens: int = 100000
-    wall_seconds: int = 45
+    wall_seconds: int = 150
 
     @property
     def online(self):

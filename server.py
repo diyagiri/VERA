@@ -119,9 +119,11 @@ def create_app(settings=None, provider_call=None):
             try:
                 turn=await converse(settings,session,body,catalog,budget,provider_call or provider_request)
             except (Exception, asyncio.TimeoutError) as exc:
-                code=str(exc) if isinstance(exc,ProviderUnavailable) else 'provider_unavailable'
-                allowed={'ai_unavailable','remove_identifiers','budget_exhausted','unsupported_claim','invalid_response','invalid_tool','tool_limit','invalid_route','request_limit'}
+                code=str(exc) if isinstance(exc,ProviderUnavailable) else _provider_code(exc)
+                allowed={'ai_unavailable','remove_identifiers','budget_exhausted','unsupported_claim','invalid_response','invalid_tool','tool_limit','invalid_route','request_limit',
+                         'invalid_api_key','model_access','quota_exhausted','provider_rate_limit','provider_timeout'}
                 if code not in allowed:code='provider_unavailable'
+                _log_failure(exc, code)
                 result=dict(envelope(session),error={'code':code,'retryable':code=='provider_unavailable'},mode='offline_available')
                 session.retries[body.idempotency_key]=(digest,result)
                 return result
@@ -213,3 +215,34 @@ def create_app(settings=None, provider_call=None):
     return app
 
 app=create_app()
+
+
+def _provider_code(exc):
+    """Map provider failures to safe codes the browser already explains."""
+    import httpx
+    if isinstance(exc, (asyncio.TimeoutError, httpx.TimeoutException)):
+        return 'provider_timeout'
+    if isinstance(exc, httpx.HTTPStatusError):
+        status = exc.response.status_code
+        try:
+            message = str(exc.response.json().get('error', {}).get('message', ''))
+        except Exception:
+            message = ''
+        if status == 401: return 'invalid_api_key'
+        if status in (403, 404): return 'model_access'
+        if status == 429: return 'provider_rate_limit'
+        if status == 400 and 'credit balance' in message.lower(): return 'quota_exhausted'
+    return 'provider_unavailable'
+
+
+def _log_failure(exc, code):
+    """One console line for the operator: error type, HTTP status and the provider's error type. Never the key or user text."""
+    import httpx
+    detail = ''
+    if isinstance(exc, httpx.HTTPStatusError):
+        try:
+            err = exc.response.json().get('error', {})
+            detail = f" status={exc.response.status_code} provider_error={err.get('type')}: {str(err.get('message', ''))[:200]}"
+        except Exception:
+            detail = f" status={exc.response.status_code}"
+    print(f"[VERA] AI turn failed: code={code} exception={type(exc).__name__}{detail}", flush=True)

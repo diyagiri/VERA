@@ -59,7 +59,7 @@ class Budget:
             session.provider_requests += 1
 
 async def provider_request(settings, messages, tools, system=SYSTEM):
-    async with httpx.AsyncClient(timeout=14, follow_redirects=False) as client:
+    async with httpx.AsyncClient(timeout=60, follow_redirects=False) as client:
         response = await client.post('https://api.anthropic.com/v1/messages',
             headers={'x-api-key':settings.api_key,'anthropic-version':'2023-06-01','content-type':'application/json'},
             json={'model':settings.model,'max_tokens':settings.max_output_tokens,'system':system,'tools':tools,'messages':messages})
