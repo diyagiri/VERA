@@ -14,7 +14,7 @@ def validate_turn(raw, evidence, catalog):
         # Amounts, dates and URLs must come from structured records, not model prose.
         if re.search(r'https?://|<[^>]+>|\$\s*\d|\b\d{2,}\b', block.text):
             raise ValueError('Unvalidated numeric claim or URL')
-        if re.search(r'you (?:are eligible|qualify|will receive|are approved)|vous (?:êtes admissible|recevrez|avez droit)', block.text, re.I):
+        if _eligibility_claim(block.text):
             raise ValueError('Personal eligibility claim')
     for f in turn.proposed_facts:
         Profile(facts={f.field: Fact(value=f.value, state=f.value if f.value in ('unknown','declined') else 'proposed')})
@@ -22,3 +22,15 @@ def validate_turn(raw, evidence, catalog):
         if len(q) > 300 or re.search(r'(?:your|votre) (?:SIN|passport number|account number|password|numéro d.assurance sociale|mot de passe)', q, re.I):
             raise ValueError('Invalid question')
     return turn.model_dump()
+
+
+CLAIM = re.compile(r'you (?:are eligible|qualify|will receive|are approved)|vous (?:êtes admissible|recevrez|avez droit)', re.I)
+QUESTION_LEAD = re.compile(r'(?:whether|if|to see if|to check if|si)\s+$', re.I)
+
+
+def _eligibility_claim(text):
+    """True for statements such as 'you qualify'. 'Ask whether you qualify' is a question, not a claim."""
+    for m in CLAIM.finditer(text):
+        if not QUESTION_LEAD.search(text[max(0, m.start() - 20):m.start()]):
+            return True
+    return False
