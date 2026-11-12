@@ -70,7 +70,11 @@
     "institution": "Your institution or campus",
     "institution_service": "Does your school offer the settlement service you need?",
     "status": "Immigration category, only if you want to include it",
-    "children": "Are you looking for support for children in your care?"
+    "children": "Are you looking for support for children in your care?",
+    "naturalized": "Naturalized citizen",
+    "special_pathway": "Special IRCC pathway",
+    "pr_class": "PR category",
+    "pr_month": "Month you became a PR"
   },
   "values": {
     "BC": "British Columbia",
@@ -86,7 +90,10 @@
     "work_permit": "Work permit",
     "permanent_resident": "Permanent resident",
     "protected_person": "Protected person",
-    "citizen": "Canadian citizen"
+    "citizen": "Canadian citizen",
+    "economic": "Economic / employment",
+    "family": "Family sponsorship",
+    "refugee": "Refugee resettlement"
   },
   "planTitle": "Your next steps, in one place.",
   "planHelp": "Start with your priority. Keep the questions that still need an official answer.",
@@ -226,5 +233,151 @@
   "quota_exhausted": "The site’s AI quota is exhausted. Please use offline guidance or return later.",
   "provider_rate_limit": "The AI service is busy. Please retry later; your plan is preserved.",
   "turn_in_progress": "Your previous request is still running. Please wait before retrying.",
-  "index_not_ready": "Evidence search is awaiting owner setup. Offline guidance remains available."
+  "index_not_ready": "Evidence search is awaiting owner setup. Offline guidance remains available.",
+  "screen": {
+    "kicker": "Program screening",
+    "title": "What the official criteria show so far",
+    "intro": "VERA checks a few published criteria for three programs. Rules decide these results, not AI. Official programs make the final decision.",
+    "demoToggle": "Show draft rule logic (demo only — rules not yet independently reviewed)",
+    "demoBanner": "Showing draft rule logic. These rules have not been independently reviewed, so this is not a result you can rely on.",
+    "gatedNote": "Every rule is waiting for independent review, so each program shows “Needs official review”. Turn on draft logic to see what the rules would say.",
+    "questionKicker": "One question",
+    "submit": "Save answer",
+    "skip": "Not sure — skip",
+    "monthLabel": "Month and year",
+    "changedTitle": "What changed after your answer",
+    "changedNone": "Your answer did not change any program result.",
+    "shown": "Shown",
+    "draftLogic": "Draft logic",
+    "answersTitle": "Your screening answers",
+    "change": "Change",
+    "notAnswered": "Not answered",
+    "rule": "Rule",
+    "result": "Result",
+    "reason": "Reason",
+    "awaiting": "Awaiting independent review",
+    "draftSays": "draft logic",
+    "evidence": "Why — official source",
+    "checkedOn": "Page checked",
+    "openSource": "Open the official page",
+    "summaryNote": "VERA’s summary, not the official wording. The official page has the full conditions.",
+    "programs": {
+      "STU-01": "StudentAid BC",
+      "NEW-02": "BC Newcomer Services Program",
+      "NEW-03": "Federal settlement services"
+    },
+    "states": {
+      "blocker_found": "Blocker found",
+      "no_blocker_in_checked_criteria": "No blocker in the checked criteria",
+      "needs_information": "Needs information",
+      "needs_official_review": "Needs official review"
+    },
+    "outcomes": {
+      "pass": "Passes",
+      "fail": "Does not meet",
+      "unknown": "Unknown",
+      "review_required": "Needs review"
+    },
+    "next": {
+      "blocker_found": "A checked criterion is not met. Read the reason and the official page, and look at the other routes in your plan.",
+      "needs_information": "Answer the question above to continue, or skip it and contact the official source.",
+      "needs_official_review": "VERA cannot screen this reliably yet. Use the official page or ask a provider to confirm.",
+      "no_blocker_in_checked_criteria": "No blocker was found in the criteria VERA checked. The official assessment still decides; prepare your questions for the provider.",
+      "skipped": "You skipped a question this program needs. Ask the official source or a provider, or change your answer below."
+    },
+    "questions": {
+      "status": {
+        "title": "Which best describes your current status in Canada?",
+        "why": "Programs use different status categories. VERA only needs the category, never a document or number."
+      },
+      "student": {
+        "title": "Are you a student at a college or university in B.C.?",
+        "why": "BC NSP has a specific condition for international post-secondary students."
+      },
+      "institution_service": {
+        "title": "Does your college or university offer the newcomer service you need?",
+        "why": "BC NSP serves international students only when their school does not offer the service. If you haven’t checked, choose “Not sure”."
+      },
+      "naturalized": {
+        "title": "Did you become a Canadian citizen after immigrating?",
+        "why": "BC NSP lists naturalized citizens."
+      },
+      "special_pathway": {
+        "title": "Could a special IRCC pathway apply to you?",
+        "why": "Some temporary residents in designated programs can use federal settlement services. A provider can confirm."
+      },
+      "pr_class": {
+        "title": "Through which kind of program did you become a permanent resident?",
+        "why": "Federal service time limits differ for economic and non-economic categories."
+      },
+      "pr_month": {
+        "title": "In which month did you become a permanent resident?",
+        "why": "This helps your provider enquiry. VERA does not calculate a service end date."
+      }
+    },
+    "values": {
+      "study_permit": "Study permit",
+      "work_permit": "Work permit",
+      "permanent_resident": "Permanent resident",
+      "protected_person": "Protected person",
+      "citizen": "Canadian citizen",
+      "other": "Another category",
+      "declined": "Prefer not to say",
+      "unknown": "Not sure",
+      "yes": "Yes",
+      "no": "No",
+      "economic": "Economic / employment",
+      "family": "Family sponsorship",
+      "refugee": "Refugee resettlement"
+    },
+    "summaries": {
+      "S1": "StudentAid BC assesses immigration status, residency, study eligibility and financial need. A basic screen cannot determine an award.",
+      "S2": "BC NSP covers specified newcomer categories. International post-secondary students qualify only if their institution does not provide the service.",
+      "S3": "IRCC settlement services depend on status and specific pathways. Some temporary residents have exceptions that need individual confirmation.",
+      "S4": "Economic-class permanent residents face time limits. VERA does not calculate an end date.",
+      "S5": "The federal Benefits Finder supports broader discovery. Its listings are not eligibility decisions."
+    },
+    "reasons": {
+      "A permit alone does not meet the StudentAid BC status criterion.": "A permit alone does not meet the StudentAid BC status criterion.",
+      "A permit alone is not a general route; you reported that no special pathway applies.": "A permit alone is not a general route; you reported that no special pathway applies.",
+      "A special pathway may apply; its conditions need provider confirmation.": "A special pathway may apply; its conditions need provider confirmation.",
+      "BC NSP lists naturalized citizens only.": "BC NSP lists naturalized citizens only.",
+      "Covered by NEW-03-R2.": "Covered by NEW-03-R2.",
+      "Date you became a PR not provided.": "Date you became a PR not provided.",
+      "Economic-class time limit applies; date calculator not approved. Check official guidance.": "Economic-class time limit applies; date calculator not approved. Check official guidance.",
+      "May be a listed category not modeled (provincial nominee, CUAET, refugee claimant).": "May be a listed category not modeled (provincial nominee, CUAET, refugee claimant).",
+      "Naturalized Canadian citizens are listed for BC NSP.": "Naturalized Canadian citizens are listed for BC NSP.",
+      "No time limit listed for this PR class.": "No time limit listed for this PR class.",
+      "Not a general IRCC settlement route; listed programs and pathways were not checked.": "Not a general IRCC settlement route; listed programs and pathways were not checked.",
+      "Not a listed BC NSP category; see federal settlement services.": "Not a listed BC NSP category; see federal settlement services.",
+      "Not applicable: not a permanent resident.": "Not applicable: not a permanent resident.",
+      "Not applicable: not an economic-class PR.": "Not applicable: not an economic-class PR.",
+      "Not applicable: not on a study permit.": "Not applicable: not on a study permit.",
+      "PR class not covered by reviewed logic.": "PR class not covered by reviewed logic.",
+      "PR class not provided.": "PR class not provided.",
+      "Permit category is listed for BC NSP.": "Permit category is listed for BC NSP.",
+      "Program, financial need and academic progress are assessed by StudentAid BC.": "Program, financial need and academic progress are assessed by StudentAid BC.",
+      "Residency definition not reviewed; StudentAid BC decides residency.": "Residency definition not reviewed; StudentAid BC decides residency.",
+      "Some temporary residents have special pathways. Confirm with IRCC or a provider if one applies.": "Some temporary residents have special pathways. Confirm with IRCC or a provider if one applies.",
+      "Status category is listed for IRCC settlement services.": "Status category is listed for IRCC settlement services.",
+      "Status category is one listed in the StudentAid BC basic criteria.": "Status category is one listed in the StudentAid BC basic criteria.",
+      "Status category not covered by reviewed logic.": "Status category not covered by reviewed logic.",
+      "Status category not provided.": "Status category not provided.",
+      "Study permit holder who is not post-secondary: not a listed category.": "Study permit holder who is not post-secondary: not a listed category.",
+      "Whether the citizen is naturalized is not known.": "Whether the citizen is naturalized is not known.",
+      "Whether you are a post-secondary student is not known.": "Whether you are a post-secondary student is not known.",
+      "Whether your institution offers this service is not known.": "Whether your institution offers this service is not known.",
+      "Your institution does not offer this service.": "Your institution does not offer this service.",
+      "Your institution offers this service; BC NSP lists students only when it does not.": "Your institution offers this service; BC NSP lists students only when it does not."
+    },
+    "fields": {
+      "status": "Status",
+      "student": "Post-secondary student",
+      "institution_service": "School offers the service",
+      "naturalized": "Naturalized citizen",
+      "special_pathway": "Special IRCC pathway",
+      "pr_class": "PR category",
+      "pr_month": "Month you became a PR"
+    }
+  }
 }

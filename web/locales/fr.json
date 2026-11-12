@@ -70,7 +70,11 @@
     "institution": "Votre établissement ou campus",
     "institution_service": "Votre établissement offre-t-il le service d’établissement souhaité?",
     "status": "Catégorie d’immigration, seulement si vous souhaitez l’inclure",
-    "children": "Cherchez-vous du soutien pour des enfants à votre charge?"
+    "children": "Cherchez-vous du soutien pour des enfants à votre charge?",
+    "naturalized": "Citoyen(ne) naturalisé(e)",
+    "special_pathway": "Voie particulière d’IRCC",
+    "pr_class": "Catégorie de résidence permanente",
+    "pr_month": "Mois d’obtention de la résidence permanente"
   },
   "values": {
     "BC": "Colombie-Britannique",
@@ -86,7 +90,10 @@
     "work_permit": "Permis de travail",
     "permanent_resident": "Résident permanent",
     "protected_person": "Personne protégée",
-    "citizen": "Citoyen canadien"
+    "citizen": "Citoyen canadien",
+    "economic": "Économique / emploi",
+    "family": "Parrainage familial",
+    "refugee": "Réinstallation de réfugiés"
   },
   "planTitle": "Vos prochaines étapes, au même endroit.",
   "planHelp": "Commencez par votre priorité. Gardez en vue les questions à confirmer officiellement.",
@@ -226,5 +233,151 @@
   "quota_exhausted": "Le quota d’IA du site est épuisé. Utilisez le guide hors ligne ou revenez plus tard.",
   "provider_rate_limit": "Le service d’IA est occupé. Réessayez plus tard ; votre plan est conservé.",
   "turn_in_progress": "Votre demande précédente est encore en cours. Veuillez patienter.",
-  "index_not_ready": "La recherche de sources attend la configuration du propriétaire. Le guide hors ligne reste disponible."
+  "index_not_ready": "La recherche de sources attend la configuration du propriétaire. Le guide hors ligne reste disponible.",
+  "screen": {
+    "kicker": "Vérification des programmes",
+    "title": "Ce que montrent les critères officiels pour l’instant",
+    "intro": "VERA vérifie quelques critères publiés pour trois programmes. Ce sont des règles, et non l’IA, qui produisent ces résultats. Les programmes officiels prennent la décision finale.",
+    "demoToggle": "Afficher la logique provisoire des règles (démonstration seulement — règles pas encore révisées de façon indépendante)",
+    "demoBanner": "Logique provisoire affichée. Ces règles n’ont pas été révisées de façon indépendante; ce résultat n’est pas fiable.",
+    "gatedNote": "Chaque règle attend une révision indépendante; chaque programme indique donc « Révision officielle nécessaire ». Activez la logique provisoire pour voir ce que diraient les règles.",
+    "questionKicker": "Une question",
+    "submit": "Enregistrer la réponse",
+    "skip": "Je ne sais pas — passer",
+    "monthLabel": "Mois et année",
+    "changedTitle": "Ce qui a changé après votre réponse",
+    "changedNone": "Votre réponse n’a modifié aucun résultat.",
+    "shown": "Affiché",
+    "draftLogic": "Logique provisoire",
+    "answersTitle": "Vos réponses de vérification",
+    "change": "Modifier",
+    "notAnswered": "Sans réponse",
+    "rule": "Règle",
+    "result": "Résultat",
+    "reason": "Motif",
+    "awaiting": "En attente de révision indépendante",
+    "draftSays": "logique provisoire",
+    "evidence": "Pourquoi — source officielle",
+    "checkedOn": "Page vérifiée",
+    "openSource": "Ouvrir la page officielle",
+    "summaryNote": "Résumé de VERA, pas le texte officiel. La page officielle présente toutes les conditions.",
+    "programs": {
+      "STU-01": "StudentAid BC",
+      "NEW-02": "Programme de services aux nouveaux arrivants de la C.-B. (BC NSP)",
+      "NEW-03": "Services d’établissement fédéraux"
+    },
+    "states": {
+      "blocker_found": "Obstacle repéré",
+      "no_blocker_in_checked_criteria": "Aucun obstacle dans les critères vérifiés",
+      "needs_information": "Information nécessaire",
+      "needs_official_review": "Révision officielle nécessaire"
+    },
+    "outcomes": {
+      "pass": "Satisfait",
+      "fail": "Non satisfait",
+      "unknown": "Inconnu",
+      "review_required": "À réviser"
+    },
+    "next": {
+      "blocker_found": "Un critère vérifié n’est pas satisfait. Lisez le motif et la page officielle, et consultez les autres pistes de votre plan.",
+      "needs_information": "Répondez à la question ci-dessus pour continuer, ou passez-la et communiquez avec la source officielle.",
+      "needs_official_review": "VERA ne peut pas encore vérifier ce programme de façon fiable. Consultez la page officielle ou demandez à un fournisseur de confirmer.",
+      "no_blocker_in_checked_criteria": "Aucun obstacle n’a été repéré dans les critères vérifiés. L’évaluation officielle décide; préparez vos questions pour le fournisseur.",
+      "skipped": "Vous avez passé une question nécessaire à ce programme. Communiquez avec la source officielle ou un fournisseur, ou modifiez votre réponse ci-dessous."
+    },
+    "questions": {
+      "status": {
+        "title": "Quelle catégorie décrit le mieux votre statut actuel au Canada?",
+        "why": "Les programmes utilisent différentes catégories de statut. VERA n’a besoin que de la catégorie, jamais d’un document ou d’un numéro."
+      },
+      "student": {
+        "title": "Êtes-vous étudiant(e) dans un collège ou une université de la C.-B.?",
+        "why": "Le BC NSP prévoit une condition particulière pour les étudiants étrangers du postsecondaire."
+      },
+      "institution_service": {
+        "title": "Votre collège ou université offre-t-il le service aux nouveaux arrivants dont vous avez besoin?",
+        "why": "Le BC NSP sert les étudiants étrangers seulement si leur établissement n’offre pas le service. Si vous n’avez pas vérifié, choisissez « Je ne sais pas »."
+      },
+      "naturalized": {
+        "title": "Êtes-vous devenu(e) citoyen(ne) canadien(ne) après avoir immigré?",
+        "why": "Le BC NSP mentionne les citoyens naturalisés."
+      },
+      "special_pathway": {
+        "title": "Une voie particulière d’IRCC pourrait-elle s’appliquer à vous?",
+        "why": "Certains résidents temporaires de programmes désignés peuvent utiliser les services d’établissement fédéraux. Un fournisseur peut le confirmer."
+      },
+      "pr_class": {
+        "title": "Par quel type de programme êtes-vous devenu(e) résident(e) permanent(e)?",
+        "why": "Les délais d’accès aux services fédéraux diffèrent pour les catégories économiques et non économiques."
+      },
+      "pr_month": {
+        "title": "Au cours de quel mois êtes-vous devenu(e) résident(e) permanent(e)?",
+        "why": "Cela aide votre demande au fournisseur. VERA ne calcule pas de date de fin de service."
+      }
+    },
+    "values": {
+      "study_permit": "Permis d’études",
+      "work_permit": "Permis de travail",
+      "permanent_resident": "Résident(e) permanent(e)",
+      "protected_person": "Personne protégée",
+      "citizen": "Citoyen(ne) canadien(ne)",
+      "other": "Autre catégorie",
+      "declined": "Je préfère ne pas répondre",
+      "unknown": "Je ne sais pas",
+      "yes": "Oui",
+      "no": "Non",
+      "economic": "Économique / emploi",
+      "family": "Parrainage familial",
+      "refugee": "Réinstallation de réfugiés"
+    },
+    "summaries": {
+      "S1": "StudentAid BC évalue le statut d’immigration, la résidence, l’admissibilité des études et le besoin financier. Une vérification de base ne peut pas déterminer une aide.",
+      "S2": "Le BC NSP vise des catégories précises de nouveaux arrivants. Les étudiants étrangers du postsecondaire y ont accès seulement si leur établissement n’offre pas le service.",
+      "S3": "Les services d’établissement d’IRCC dépendent du statut et de voies particulières. Certains résidents temporaires ont des exceptions à confirmer individuellement.",
+      "S4": "Les résidents permanents de la catégorie économique ont des délais d’accès. VERA ne calcule pas de date de fin.",
+      "S5": "Le Chercheur de prestations fédéral aide à explorer plus largement. Ses résultats ne sont pas des décisions d’admissibilité."
+    },
+    "reasons": {
+      "A permit alone does not meet the StudentAid BC status criterion.": "Un permis seul ne satisfait pas le critère de statut de StudentAid BC.",
+      "A permit alone is not a general route; you reported that no special pathway applies.": "Un permis seul n’ouvre pas l’accès en général; vous avez indiqué qu’aucune voie particulière ne s’applique.",
+      "A special pathway may apply; its conditions need provider confirmation.": "Une voie particulière pourrait s’appliquer; ses conditions doivent être confirmées par un fournisseur.",
+      "BC NSP lists naturalized citizens only.": "Le BC NSP mentionne seulement les citoyens naturalisés.",
+      "Covered by NEW-03-R2.": "Traité par NEW-03-R2.",
+      "Date you became a PR not provided.": "Date d’obtention de la résidence permanente non fournie.",
+      "Economic-class time limit applies; date calculator not approved. Check official guidance.": "Un délai s’applique à la catégorie économique; le calcul des dates n’est pas approuvé. Consultez les directives officielles.",
+      "May be a listed category not modeled (provincial nominee, CUAET, refugee claimant).": "Peut-être une catégorie mentionnée mais non modélisée (candidat provincial, AVUCU, demandeur d’asile).",
+      "Naturalized Canadian citizens are listed for BC NSP.": "Les citoyens canadiens naturalisés sont mentionnés pour le BC NSP.",
+      "No time limit listed for this PR class.": "Aucun délai indiqué pour cette catégorie de résidence permanente.",
+      "Not a general IRCC settlement route; listed programs and pathways were not checked.": "Pas une voie générale vers les services d’IRCC; les programmes et voies mentionnés n’ont pas été vérifiés.",
+      "Not a listed BC NSP category; see federal settlement services.": "Catégorie non mentionnée par le BC NSP; voyez les services d’établissement fédéraux.",
+      "Not applicable: not a permanent resident.": "Sans objet : pas résident(e) permanent(e).",
+      "Not applicable: not an economic-class PR.": "Sans objet : pas résident(e) permanent(e) de la catégorie économique.",
+      "Not applicable: not on a study permit.": "Sans objet : pas de permis d’études.",
+      "PR class not covered by reviewed logic.": "Catégorie de résidence permanente non couverte par la logique révisée.",
+      "PR class not provided.": "Catégorie de résidence permanente non fournie.",
+      "Permit category is listed for BC NSP.": "Cette catégorie de permis est mentionnée pour le BC NSP.",
+      "Program, financial need and academic progress are assessed by StudentAid BC.": "Le programme, le besoin financier et la progression scolaire sont évalués par StudentAid BC.",
+      "Residency definition not reviewed; StudentAid BC decides residency.": "Définition de la résidence non révisée; StudentAid BC décide de la résidence.",
+      "Some temporary residents have special pathways. Confirm with IRCC or a provider if one applies.": "Certains résidents temporaires ont des voies particulières. Vérifiez auprès d’IRCC ou d’un fournisseur.",
+      "Status category is listed for IRCC settlement services.": "Cette catégorie de statut est mentionnée pour les services d’établissement d’IRCC.",
+      "Status category is one listed in the StudentAid BC basic criteria.": "Cette catégorie de statut figure dans les critères de base de StudentAid BC.",
+      "Status category not covered by reviewed logic.": "Catégorie de statut non couverte par la logique révisée.",
+      "Status category not provided.": "Catégorie de statut non fournie.",
+      "Study permit holder who is not post-secondary: not a listed category.": "Titulaire d’un permis d’études hors postsecondaire : catégorie non mentionnée.",
+      "Whether the citizen is naturalized is not known.": "On ne sait pas si la citoyenneté a été obtenue par naturalisation.",
+      "Whether you are a post-secondary student is not known.": "On ne sait pas si vous étudiez au postsecondaire.",
+      "Whether your institution offers this service is not known.": "On ne sait pas si votre établissement offre ce service.",
+      "Your institution does not offer this service.": "Votre établissement n’offre pas ce service.",
+      "Your institution offers this service; BC NSP lists students only when it does not.": "Votre établissement offre ce service; le BC NSP vise les étudiants seulement lorsque ce n’est pas le cas."
+    },
+    "fields": {
+      "status": "Statut",
+      "student": "Étudiant(e) au postsecondaire",
+      "institution_service": "L’établissement offre le service",
+      "naturalized": "Citoyen(ne) naturalisé(e)",
+      "special_pathway": "Voie particulière d’IRCC",
+      "pr_class": "Catégorie de résidence permanente",
+      "pr_month": "Mois d’obtention de la résidence permanente"
+    }
+  }
 }

@@ -48,3 +48,12 @@
 - `server.py`, `conversation.py`, `grounding.py`, `sessions.py`, `settings.py`: optional bounded Anthropic API, explicit consent, session isolation, structured output validation and resource limits. Live provider validation remains blocked by missing credentials.
 - `web/`, `data/catalog/`: English/French interface, ten preparation routes, 19 official-source summaries, plan export/import and retained legacy demo.
 - `scripts/`, `tests/`, `reports/`: source tooling, reproducible regression reports and expanded checks. No independent policy approval, human translation review, full-document semantic retrieval or achieved user impact is claimed.
+
+## Hybrid (2026-11-12): v2 navigator + original three-program screening
+- web/screening.js - maps confirmed v2 profile facts to the compiled rules engine (engine.js / catalog.json); next question, correction diff
+- web/app.js, web/styles.css, web/locales/{en,fr}.json - "Program screening" section at the top of the plan: one question at a time, three result cards with rule-by-rule reasons, official-source summaries, "what changed" panel, labelled draft-logic switch, screening included in the Markdown download
+- web/navigator.js, api_contracts.py - new confirmable screening facts: naturalized, special_pathway, pr_class, pr_month (YYYY-MM)
+- worker/contracts.js - OpenAI intake may propose screening facts only when stated; must not state or predict screening results
+- scripts/build_worker.mjs - screening.js added to the hosted asset allowlist
+- tests/screening.test.mjs - 11 tests (Mei and Tomás journeys, gating, corrections, validation, OpenAI proposal limits)
+- data/fixtures/screening_cases.json - held-out C21, C22, C27 restored to their original expectations (see docs/fixture_review.md)

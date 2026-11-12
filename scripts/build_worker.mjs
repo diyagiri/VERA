@@ -8,7 +8,7 @@ execFileSync('python',['scripts/build_web.py'],{stdio:'inherit'});
 const catalog=withEvidenceVersions(JSON.parse(readFileSync('data/catalog/navigation.json')),JSON.parse(readFileSync('data/evidence/index.json')));
 writeFileSync('dist/navigation.json',JSON.stringify(catalog));
 const types={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.svg':'image/svg+xml'};
-const files=['index.html','app.js','api.js','navigator.js','engine.js','styles.css','i18n.js','icon.svg','legacy.html','legacy-app.js','navigation.json','catalog.json','locales/en.json','locales/fr.json'];
+const files=['index.html','app.js','api.js','navigator.js','engine.js','screening.js','styles.css','i18n.js','icon.svg','legacy.html','legacy-app.js','navigation.json','catalog.json','locales/en.json','locales/fr.json'];
 const assets={};for(const file of files){const data=readFileSync(path.join('dist',file));assets['/'+file]={type:types[path.extname(file)],data:data.toString('base64')};}
 writeFileSync('worker/generated-assets.js','export const ASSETS='+JSON.stringify(assets)+';\n');
 mkdirSync('dist/server',{recursive:true});mkdirSync('dist/.openai',{recursive:true});

@@ -1,4 +1,5 @@
 """Strict v2 API and portable-plan contracts; legacy models remain unchanged."""
+import re
 from typing import Literal
 from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 
@@ -13,6 +14,10 @@ FACTS = {
     'institution': ['sfu', 'ubc_vancouver', 'ubc_okanagan', 'other', 'unknown', 'declined'],
     'institution_service': ['yes', 'no', 'unknown', 'declined'],
     'status': ['study_permit', 'work_permit', 'permanent_resident', 'protected_person', 'citizen', 'other', 'unknown', 'declined'],
+    'naturalized': ['yes', 'no', 'unknown', 'declined'],
+    'special_pathway': ['yes', 'no', 'unknown', 'declined'],
+    'pr_class': ['economic', 'family', 'refugee', 'other', 'unknown', 'declined'],
+    'pr_month': None,
     'children': ['yes', 'no', 'unknown', 'declined'],
 }
 
@@ -41,6 +46,8 @@ class Profile(Strict):
                 raise ValueError('Unknown fact or value')
             if key == 'city' and any(c.isdigit() for c in fact.value):
                 raise ValueError('Use a city name, not an address')
+            if key == 'pr_month' and fact.value not in ('unknown', 'declined') and not re.fullmatch(r'\d{4}-(0[1-9]|1[0-2])', fact.value):
+                raise ValueError('Use a month as YYYY-MM')
             if fact.value in ('unknown', 'declined') and fact.state != fact.value:
                 raise ValueError('Unknown and declined facts must retain their state')
         return self

@@ -674,13 +674,9 @@
       "expected": {
         "STU-01": "blocker_found",
         "NEW-02": "no_blocker_in_checked_criteria",
-        "NEW-03": "needs_information"
+        "NEW-03": "blocker_found"
       },
-      "expected_missing": {
-        "NEW-03": [
-          "federal_exception"
-        ]
-      },
+      "expected_missing": {},
       "source_refs": [
         "NEW-02-R2",
         "STU-01-R1"
@@ -708,13 +704,9 @@
       "expected": {
         "STU-01": "blocker_found",
         "NEW-02": "no_blocker_in_checked_criteria",
-        "NEW-03": "needs_information"
+        "NEW-03": "blocker_found"
       },
-      "expected_missing": {
-        "NEW-03": [
-          "federal_exception"
-        ]
-      },
+      "expected_missing": {},
       "source_refs": [
         "NEW-02-R1",
         "NEW-02-R2"
@@ -859,14 +851,11 @@
       "expected": {
         "STU-01": "blocker_found",
         "NEW-02": "needs_information",
-        "NEW-03": "needs_information"
+        "NEW-03": "blocker_found"
       },
       "expected_missing": {
         "NEW-02": [
           "is_post_secondary_student"
-        ],
-        "NEW-03": [
-          "federal_exception"
         ]
       },
       "source_refs": [

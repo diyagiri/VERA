@@ -1,6 +1,8 @@
 // V2 offline preparation workflow. No model calls or browser storage in this module.
 export const TOPICS=['settlement','education','banking','taxes','benefits'];
-export const FACTS={province:['BC','other','unknown','declined'],city:null,student:['yes','no','unknown','declined'],institution:['sfu','ubc_vancouver','ubc_okanagan','other','unknown','declined'],institution_service:['yes','no','unknown','declined'],status:['study_permit','work_permit','permanent_resident','protected_person','citizen','other','unknown','declined'],children:['yes','no','unknown','declined']};
+export const FACTS={province:['BC','other','unknown','declined'],city:null,student:['yes','no','unknown','declined'],institution:['sfu','ubc_vancouver','ubc_okanagan','other','unknown','declined'],institution_service:['yes','no','unknown','declined'],status:['study_permit','work_permit','permanent_resident','protected_person','citizen','other','unknown','declined'],children:['yes','no','unknown','declined'],
+ // Screening facts (hybrid): categories only, never document numbers. pr_month is YYYY-MM.
+ naturalized:['yes','no','unknown','declined'],special_pathway:['yes','no','unknown','declined'],pr_class:['economic','family','refugee','other','unknown','declined'],pr_month:null};
 const clone=v=>JSON.parse(JSON.stringify(v));
 const same=(a,b)=>JSON.stringify(Object.entries(a||{}).sort())===JSON.stringify(Object.entries(b||{}).sort());
 export const bcToday=()=>new Intl.DateTimeFormat('en-CA',{timeZone:'America/Vancouver',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
@@ -66,6 +68,7 @@ export function validateProfile(p){
   keys(f,['value','state','version','confirmed_at']);str(f.value,80);integer(f.version);
   if(!['unknown','declined','proposed','confirmed'].includes(f.state)||(FACTS[k]&&!FACTS[k].includes(f.value))||(k==='city'&&/\d/.test(f.value)))throw Error('invalid_import');
   if(['unknown','declined'].includes(f.value)&&f.state!==f.value)throw Error('invalid_import');
+  if(k==='pr_month'&&!['unknown','declined'].includes(f.value)&&!/^\d{4}-(0[1-9]|1[0-2])$/.test(f.value))throw Error('invalid_import');
   if(f.confirmed_at!==null)str(f.confirmed_at,80);
  }
  return p;

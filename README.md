@@ -21,6 +21,22 @@ The owner-only [setup page](https://vera-newcomer-guide.fondfoam.chatgpt.site/se
 
 The key and the session-encryption/setup credentials are held in Sites' built-in secret storage. The model, limits and other non-secret settings are already configured. You do not need to create an `.env` file or edit the hosting manifest.
 
+## The hybrid: preparation plan + program screening
+
+VERA combines two layers:
+
+1. **Program screening (the core journey).** When a person chooses *Settling in* or *School & funding*, the plan opens with a
+   "Program screening" section for StudentAid BC (STU-01), the BC Newcomer Services Program (NEW-02) and federal settlement
+   services (NEW-03). VERA asks one question at a time, shows each program's result rule by rule with an official source,
+   and re-runs only the affected programs when an answer changes. Results come from the deterministic rules in `rules.py`
+   (compiled to `dist/catalog.json` by `scripts/build_web.py`), **never from the model**. All eight rules are still drafts, so
+   every program shows *Needs official review* until an independent reviewer approves a rule; a clearly labelled
+   "draft rule logic" switch shows what the unreviewed rules would say.
+2. **Preparation plan (five topics).** Settlement, education, banking, taxes and benefits produce source-linked tasks and an
+   editable, unsent enquiry, as described below.
+
+The OpenAI model (online mode) may *propose* screening facts the person states; the person confirms them; the rules decide.
+
 ## How to use VERA
 
 Start by writing your situation in your own words. Optional example buttons only fill the text box; they do not restrict the kinds of requests accepted.
