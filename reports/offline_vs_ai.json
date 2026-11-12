@@ -1,0 +1,398 @@
+{
+  "summary": {
+    "cases": 10,
+    "stated_facts": 35,
+    "offline": {
+      "facts_right": 16,
+      "facts_wrong": 2,
+      "facts_by_hand": 19,
+      "no_topic_found": 1,
+      "programs_with_result_after_first_sentence": 4,
+      "programs_screened": 12
+    },
+    "ai": {
+      "facts_right": 35,
+      "facts_wrong": 0,
+      "facts_by_hand": 0,
+      "no_topic_found": 0,
+      "programs_with_result_after_first_sentence": 5,
+      "programs_screened": 13
+    },
+    "same_screening_result": "10/10",
+    "note": "Draft rule logic. \"Result\" = any state other than needs_information. Same final facts give the same result because the written rules decide, not the AI."
+  },
+  "rows": [
+    {
+      "id": "A01",
+      "locale": "en",
+      "style": "plain, complete",
+      "stated_facts": 5,
+      "offline": {
+        "topics": [
+          "settlement",
+          "education"
+        ],
+        "proposed": {
+          "city": "Vancouver",
+          "institution": "ubc_vancouver",
+          "status": "study_permit"
+        },
+        "right": 3,
+        "wrong": [],
+        "by_hand": 2,
+        "screened_programs": 3,
+        "results_after_first_sentence": 1
+      },
+      "ai": {
+        "topics": [
+          "settlement",
+          "education"
+        ],
+        "proposed": {
+          "city": "Vancouver",
+          "province": "BC",
+          "student": "yes",
+          "institution": "ubc_vancouver",
+          "status": "study_permit"
+        },
+        "right": 5,
+        "wrong": [],
+        "by_hand": 0,
+        "screened_programs": 3,
+        "results_after_first_sentence": 1
+      },
+      "same_screening_result_after_confirming": true
+    },
+    {
+      "id": "A02",
+      "locale": "en",
+      "style": "casual, lower case",
+      "stated_facts": 4,
+      "offline": {
+        "topics": [
+          "banking",
+          "taxes"
+        ],
+        "proposed": {
+          "city": "Burnaby",
+          "status": "permanent_resident"
+        },
+        "right": 2,
+        "wrong": [],
+        "by_hand": 2,
+        "screened_programs": 0,
+        "results_after_first_sentence": 0
+      },
+      "ai": {
+        "topics": [
+          "banking",
+          "taxes"
+        ],
+        "proposed": {
+          "city": "Burnaby",
+          "province": "BC",
+          "status": "permanent_resident",
+          "pr_class": "economic"
+        },
+        "right": 4,
+        "wrong": [],
+        "by_hand": 0,
+        "screened_programs": 0,
+        "results_after_first_sentence": 0
+      },
+      "same_screening_result_after_confirming": true
+    },
+    {
+      "id": "A03",
+      "locale": "en",
+      "style": "family, benefits",
+      "stated_facts": 4,
+      "offline": {
+        "topics": [
+          "benefits"
+        ],
+        "proposed": {
+          "city": "Surrey"
+        },
+        "right": 1,
+        "wrong": [],
+        "by_hand": 3,
+        "screened_programs": 0,
+        "results_after_first_sentence": 0
+      },
+      "ai": {
+        "topics": [
+          "benefits"
+        ],
+        "proposed": {
+          "status": "protected_person",
+          "city": "Surrey",
+          "province": "BC",
+          "children": "yes"
+        },
+        "right": 4,
+        "wrong": [],
+        "by_hand": 0,
+        "screened_programs": 0,
+        "results_after_first_sentence": 0
+      },
+      "same_screening_result_after_confirming": true
+    },
+    {
+      "id": "A04",
+      "locale": "en",
+      "style": "very short; status not stated",
+      "stated_facts": 2,
+      "offline": {
+        "topics": [
+          "education"
+        ],
+        "proposed": {
+          "institution": "sfu",
+          "student": "yes"
+        },
+        "right": 2,
+        "wrong": [],
+        "by_hand": 0,
+        "screened_programs": 1,
+        "results_after_first_sentence": 0
+      },
+      "ai": {
+        "topics": [
+          "settlement",
+          "banking",
+          "taxes",
+          "education"
+        ],
+        "proposed": {
+          "student": "yes",
+          "institution": "sfu"
+        },
+        "right": 2,
+        "wrong": [],
+        "by_hand": 0,
+        "screened_programs": 3,
+        "results_after_first_sentence": 0
+      },
+      "same_screening_result_after_confirming": true
+    },
+    {
+      "id": "A05",
+      "locale": "en",
+      "style": "asks for an eligibility verdict",
+      "stated_facts": 4,
+      "offline": {
+        "topics": [
+          "settlement"
+        ],
+        "proposed": {
+          "city": "Kelowna",
+          "status": "permanent_resident"
+        },
+        "right": 1,
+        "wrong": [
+          "status"
+        ],
+        "by_hand": 3,
+        "screened_programs": 2,
+        "results_after_first_sentence": 1
+      },
+      "ai": {
+        "topics": [
+          "settlement"
+        ],
+        "proposed": {
+          "status": "citizen",
+          "naturalized": "yes",
+          "city": "Kelowna",
+          "province": "BC"
+        },
+        "right": 4,
+        "wrong": [],
+        "by_hand": 0,
+        "screened_programs": 2,
+        "results_after_first_sentence": 2
+      },
+      "same_screening_result_after_confirming": true
+    },
+    {
+      "id": "A06",
+      "locale": "en",
+      "style": "demands yes or no",
+      "stated_facts": 4,
+      "offline": {
+        "topics": [
+          "settlement"
+        ],
+        "proposed": {
+          "province": "BC",
+          "city": "Richmond",
+          "status": "work_permit"
+        },
+        "right": 3,
+        "wrong": [],
+        "by_hand": 1,
+        "screened_programs": 2,
+        "results_after_first_sentence": 1
+      },
+      "ai": {
+        "topics": [
+          "settlement"
+        ],
+        "proposed": {
+          "province": "BC",
+          "city": "Richmond",
+          "status": "work_permit",
+          "children": "no"
+        },
+        "right": 4,
+        "wrong": [],
+        "by_hand": 0,
+        "screened_programs": 2,
+        "results_after_first_sentence": 1
+      },
+      "same_screening_result_after_confirming": true
+    },
+    {
+      "id": "A07",
+      "locale": "en",
+      "style": "prompt injection",
+      "stated_facts": 3,
+      "offline": {
+        "topics": [
+          "education"
+        ],
+        "proposed": {
+          "province": "BC",
+          "institution": "ubc_okanagan",
+          "status": "permanent_resident"
+        },
+        "right": 2,
+        "wrong": [
+          "province"
+        ],
+        "by_hand": 1,
+        "screened_programs": 1,
+        "results_after_first_sentence": 1
+      },
+      "ai": {
+        "topics": [
+          "education"
+        ],
+        "proposed": {
+          "student": "yes",
+          "institution": "ubc_okanagan",
+          "status": "permanent_resident"
+        },
+        "right": 3,
+        "wrong": [],
+        "by_hand": 0,
+        "screened_programs": 1,
+        "results_after_first_sentence": 1
+      },
+      "same_screening_result_after_confirming": true
+    },
+    {
+      "id": "A08",
+      "locale": "fr",
+      "style": "French, banking",
+      "stated_facts": 4,
+      "offline": {
+        "topics": [
+          "settlement",
+          "education",
+          "banking"
+        ],
+        "proposed": {
+          "city": "Victoria"
+        },
+        "right": 1,
+        "wrong": [],
+        "by_hand": 3,
+        "screened_programs": 3,
+        "results_after_first_sentence": 0
+      },
+      "ai": {
+        "topics": [
+          "banking"
+        ],
+        "proposed": {
+          "city": "Victoria",
+          "province": "BC",
+          "student": "yes",
+          "status": "study_permit"
+        },
+        "right": 4,
+        "wrong": [],
+        "by_hand": 0,
+        "screened_programs": 0,
+        "results_after_first_sentence": 0
+      },
+      "same_screening_result_after_confirming": true
+    },
+    {
+      "id": "A09",
+      "locale": "fr",
+      "style": "French, family benefits",
+      "stated_facts": 5,
+      "offline": {
+        "topics": [
+          "benefits"
+        ],
+        "proposed": {
+          "city": "Vancouver"
+        },
+        "right": 1,
+        "wrong": [],
+        "by_hand": 4,
+        "screened_programs": 0,
+        "results_after_first_sentence": 0
+      },
+      "ai": {
+        "topics": [
+          "benefits"
+        ],
+        "proposed": {
+          "status": "permanent_resident",
+          "pr_class": "family",
+          "city": "Vancouver",
+          "province": "BC",
+          "children": "yes"
+        },
+        "right": 5,
+        "wrong": [],
+        "by_hand": 0,
+        "screened_programs": 0,
+        "results_after_first_sentence": 0
+      },
+      "same_screening_result_after_confirming": true
+    },
+    {
+      "id": "A10",
+      "locale": "en",
+      "style": "vague, almost no facts",
+      "stated_facts": 0,
+      "offline": {
+        "topics": [],
+        "proposed": {},
+        "right": 0,
+        "wrong": [],
+        "by_hand": 0,
+        "screened_programs": 0,
+        "results_after_first_sentence": 0
+      },
+      "ai": {
+        "topics": [
+          "settlement"
+        ],
+        "proposed": {},
+        "right": 0,
+        "wrong": [],
+        "by_hand": 0,
+        "screened_programs": 2,
+        "results_after_first_sentence": 0
+      },
+      "same_screening_result_after_confirming": true
+    }
+  ]
+}

@@ -13,9 +13,10 @@ All cases are fictional and written by the team, so these results show the softw
 | Evidence retrieval, expected source in top 5 (EN / FR) | 20/20 · 20/20 | `python scripts/evaluate_v2.py --output …` |
 | Browser and Python planners give the same plan | 30/30 | same |
 | Screening journey tests (Mei, Tomás, corrections, gating) | 11/11 | `node --test tests/screening.test.mjs` |
-| AI assistant, 10 live goals with Claude: stated facts proposed correctly | 39/39, 0 wrong, 0 guessed | `python scripts/evaluate_ai.py` (needs a key) |
+| AI assistant, 10 live goals with Claude: stated facts proposed correctly | 35/35, 0 wrong, 0 guessed | `python scripts/evaluate_ai.py` (needs a key) |
 | AI assistant: answer blocks supported by the text they cite | 25/26 | reviewer reading, see below |
 | AI assistant: eligibility claims in text shown to the person | 0 in 26 blocks and 17 questions | same |
+| Offline keyword reader vs Claude, same ten goals: facts pre-filled correctly | 16/35 vs 35/35 | `node scripts/compare_offline_ai.mjs` |
 | Browser walk-through: desktop, 390 px phone, French, banking-only, legacy page | all pass, 0 console errors | manual + Playwright |
 
 ## The three held-out misses
@@ -29,7 +30,7 @@ Ten fictional goals (eight English, two French) were sent through the real local
 | Check | Result |
 |---|---|
 | Answers returned (no error) | 10/10 |
-| Facts the message stated, proposed with the right value | 39/39 |
+| Facts the message stated, proposed with the right value | 35/35 |
 | Facts proposed that the message did not state | 0 (A04 "I'm a student at SFU" did not guess an immigration status; A10 "not sure where to start" proposed none) |
 | Every citation was actually retrieved | 10/10 answers |
 | Answer blocks whose claims follow from the cited text | 25/26 |
@@ -46,6 +47,27 @@ Ten fictional goals (eight English, two French) were sent through the real local
 **Bug found by this test.** On Windows, the evidence file was read with the wrong text encoding, so apostrophes and French accents reached Claude garbled (`IRCCâ€™s`). Claude still wrote clean text. Fixed after the run (`catalog.py` and `evaluate.py` now read files as UTF-8).
 
 **Limits.** Ten team-written cases, one run, one model. Support was judged by the build team with AI assistance, not by an independent reviewer. The first version of the script's claim detector flagged A07's refusal ("I can't tell you that you're approved") as a claim; it now ignores refusals.
+
+## Offline keyword reader vs Claude (same ten goals)
+
+Without AI, VERA reads the goal with a keyword matcher (`detectTopics`, `proposeFacts` in `web/navigator.js`), and the person types the rest. This compares that reader with Claude's recorded answers from the live test, using VERA's real browser code. No network or key needed. Per-goal detail: `reports/offline_vs_ai.json`.
+
+| From the first sentence | Offline keywords | Claude |
+|---|---|---|
+| Stated facts pre-filled with the right value | 16/35 | 35/35 |
+| Facts the person must type or fix by hand | 19 | 0 |
+| Pre-filled facts that were wrong or not stated | 2 | 0 |
+| Goals where no topic was found | 1/10 | 0/10 |
+| French goals: stated facts pre-filled | 2/9 | 9/9 |
+| Program results after confirming the same facts | same in 10/10 | same in 10/10 |
+
+**Where the keyword reader goes wrong.** "I became a Canadian citizen after coming here as a permanent resident" was read as *permanent resident*. Not caught, that wrong status would change the screening result. "StudentAid BC" was read as living in BC. It missed "two kids", "protected person", "citizen", plural French ("résidents permanents") and "permis d'études" with a straight apostrophe. "hi, i'm new here" matched no topic at all.
+
+**What does not change.** Once the person confirms the same facts, the program results are identical, because the written rules decide, not the AI. The AI saves typing and catches facts the keywords miss. It does not change any decision.
+
+**Costs of the AI.** About 19 seconds per answer (offline is instant), a paid API call, and the person's words sent to Anthropic with consent.
+
+**Limits.** The keyword reader is VERA's own simple fallback, not a strong baseline. The Claude answers come from one run. Same ten team-written goals as above.
 
 ## Accessibility (program screening section)
 
@@ -65,7 +87,7 @@ Not checked: full-site audit with a screen reader, zoom to 400 %, and Fan's pre-
 
 ## Not measured
 
-- AI quality at scale: the live test above has ten cases. No comparison with a basic chatbot yet.
+- AI quality at scale: the live test above has ten cases. Compared only with VERA's own keyword reader (above), not with a basic chatbot.
 - Comparison with manual navigation.
 - Independent policy review of the eight rules; all remain drafts.
 - Usability with real newcomers, and human review of the French text.

@@ -9,7 +9,7 @@
     },
     "answers_returned": "10/10",
     "facts": {
-      "stated_facts_proposed_correctly": "39/39",
+      "stated_facts_proposed_correctly": "35/35",
       "wrong_values": 0,
       "proposed_but_not_stated": 0,
       "note": "A04 (\"student at SFU\") did not guess immigration status; A10 (vague hello) proposed no facts"

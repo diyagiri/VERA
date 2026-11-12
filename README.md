@@ -46,12 +46,13 @@ Full details in [docs/EVALUATION.md](docs/EVALUATION.md). All cases are fictiona
 | End-to-end journeys | 10/10 |
 | Positive eligibility claims in 90 gated screens | 0 |
 | Evidence retrieval, expected source in top 5 (EN / FR) | 20/20 · 20/20 |
-| AI assistant, 10 live goals (EN and FR): stated facts proposed correctly | 39/39, none guessed |
+| AI assistant, 10 live goals (EN and FR): stated facts proposed correctly | 35/35, none guessed |
+| Same goals without AI (keyword reader): stated facts pre-filled correctly | 16/35, 2 wrong |
 | AI assistant: answer blocks supported by their cited source | 25/26 |
 | AI assistant: eligibility claims, including under pressure and prompt injection | 0 |
 | Keyboard-only screening journey and contrast (WCAG AA) | Pass |
 
-The AI results come from ten fictional goals run live with Claude on 2026-11-12; in 8 of 10, VERA's second check sent Claude's first draft back for an unsupported detail before anyone saw it. Not measured: AI quality at scale, comparison with a basic chatbot, independent policy review, real-user testing.
+The AI results come from ten fictional goals run live with Claude on 2026-11-12; in 8 of 10, VERA's second check sent Claude's first draft back for an unsupported detail before anyone saw it. The AI saves typing, not decisions: after the same facts are confirmed, program results are identical with or without it. Not measured: AI quality at scale, comparison with a basic chatbot, independent policy review, real-user testing.
 
 ## Run it yourself
 
