@@ -1,7 +1,23 @@
 """Bounded Anthropic conversation: actual retrieval, structured output and support review.
 No provider call can confirm a fact, change a policy approval, or send an enquiry.
 """
-import asyncio, json, re, time
+import asyncio, contextlib, json, re, time
+
+if hasattr(asyncio, 'timeout'):  # Python 3.11+
+    _timeout = asyncio.timeout
+else:  # Python 3.10: same behaviour, raises asyncio.TimeoutError when the wall-clock budget runs out
+    @contextlib.asynccontextmanager
+    async def _timeout(seconds):
+        task, fired = asyncio.current_task(), []
+        handle = asyncio.get_running_loop().call_later(seconds, lambda: (fired.append(True), task.cancel()))
+        try:
+            yield
+        except asyncio.CancelledError:
+            if fired:
+                raise asyncio.TimeoutError() from None
+            raise
+        finally:
+            handle.cancel()
 import httpx
 from api_contracts import ModelTurn
 from catalog import available_programs
@@ -64,7 +80,7 @@ async def converse(settings, session, request, catalog, budget, call=provider_re
     context={'message':request.message,'locale':request.locale,'profile':selected_profile,
              'previous_messages':session.recent[-2:], 'as_of':session.plan['as_of'] if session.plan else None}
     messages=[{'role':'user','content':json.dumps(context, ensure_ascii=False)}]
-    async with asyncio.timeout(settings.wall_seconds):
+    async with _timeout(settings.wall_seconds):
         for attempt in range(2):  # At most two planning requests, plus one grounding review.
             await budget.reserve(settings,session,messages,TOOLS)
             response=await call(settings,messages,TOOLS)
