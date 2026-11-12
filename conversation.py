@@ -81,7 +81,7 @@ async def converse(settings, session, request, catalog, budget, call=provider_re
              'previous_messages':session.recent[-2:], 'as_of':session.plan['as_of'] if session.plan else None}
     messages=[{'role':'user','content':json.dumps(context, ensure_ascii=False)}]
     async with _timeout(settings.wall_seconds):
-        for attempt in range(2):  # At most two planning requests, plus one grounding review.
+        for attempt in range(3):  # Search, answer, and at most one corrective retry; plus one grounding review.
             await budget.reserve(settings,session,messages,TOOLS)
             response=await call(settings,messages,TOOLS)
             u=response.get('usage',{})
@@ -110,9 +110,20 @@ async def converse(settings, session, request, catalog, budget, call=provider_re
                     profile=dict(session.profile,goals=args['topics'])
                     result=[{k:p[k] for k in ['id','topic','name','sources','steps','enquiry']} for p in available_programs(catalog,profile)]
                 elif name=='prepare_turn':
-                    turn=validate_turn(args,list(retrieved.values()),catalog)
-                    applicable={p['id'] for p in available_programs(catalog,dict(session.profile,goals=turn['topics']))}
-                    if not set(turn['program_ids']) <= applicable: raise ProviderUnavailable('invalid_route')
+                    try:
+                        turn=validate_turn(args,list(retrieved.values()),catalog)
+                        applicable={p['id'] for p in available_programs(catalog,dict(session.profile,goals=turn['topics']))}
+                        if not set(turn['program_ids']) <= applicable: raise ValueError('program_ids must come from find_programs results')
+                    except Exception as exc:
+                        reason=_check_reason(exc)
+                        log_event('prepare_turn_rejected', reason=reason, attempt=attempt)
+                        if attempt>=2: raise ProviderUnavailable('invalid_response')
+                        feedback.append({'type':'tool_result','tool_use_id':use['id'],'is_error':True,'content':(
+                            'Rejected by a structural check: '+reason+'. Call prepare_turn again. Rules: cite only chunk IDs returned by search_knowledge; '
+                            'no digits of two or more in block text (no amounts, dates, durations or URLs); no personal eligibility statements; '
+                            'program_ids only from find_programs; proposed_facts only with allowed fields and values.')})
+                        events.append({'tool':name,'status':'retry'})
+                        continue
                     events.append({'tool':name,'status':'completed'})
                     # Separate bounded support check; not independent policy validation.
                     review_tool={'name':'support_review','description':'Check whether every claim follows from its cited evidence without missing an important restriction.',
@@ -122,7 +133,7 @@ async def converse(settings, session, request, catalog, budget, call=provider_re
                     await budget.reserve(settings,session,review_messages,[review_tool],review_system)
                     review=await call(settings,review_messages,[review_tool],review_system)
                     if not any(b.get('type')=='tool_use' and b.get('name')=='support_review' and b.get('input')=={'supported':True} for b in review.get('content',[])):
-                        raise ProviderUnavailable('unsupported_claim')
+                        log_event('support_review_rejected'); raise ProviderUnavailable('unsupported_claim')
                     for k in usage:usage[k]+=int(review.get('usage',{}).get(k,0))
                     events.append({'tool':'support_review','status':'completed'})
                     session.tokens+=sum(usage.values())
@@ -133,4 +144,25 @@ async def converse(settings, session, request, catalog, budget, call=provider_re
                 events.append({'tool':name,'status':'completed','result_count':len(result)})
                 feedback.append({'type':'tool_result','tool_use_id':use['id'],'content':json.dumps(result,ensure_ascii=False)})
             messages.append({'role':'user','content':feedback})
-        raise ProviderUnavailable('request_limit')
+        log_event('no_final_answer_after_retries'); raise ProviderUnavailable('request_limit')
+
+
+def _check_reason(exc):
+    """Short, safe description of a failed structural check (no user text)."""
+    text=str(exc)
+    if 'validation error' in text:  # pydantic: keep only field locations and error kinds
+        lines=[l.strip() for l in text.splitlines()]
+        return 'invalid structure: '+'; '.join(l for l in lines[1:] if l and not l.startswith('For further') and 'input_value' not in l)[:300]
+    return text[:200]
+
+
+def log_event(event, **fields):
+    """Append one diagnostic line to logs/vera_server.log (git-ignored). Never the key or user text."""
+    import datetime, pathlib
+    try:
+        path=pathlib.Path(__file__).resolve().parent/'logs'; path.mkdir(exist_ok=True)
+        line=datetime.datetime.now().isoformat(timespec='seconds')+' '+event+''.join(f' {k}={v}' for k,v in fields.items())
+        with open(path/'vera_server.log','a',encoding='utf-8') as fh: fh.write(line+'\n')
+        print('[VERA] '+line, flush=True)
+    except Exception:
+        pass

@@ -245,4 +245,5 @@ def _log_failure(exc, code):
             detail = f" status={exc.response.status_code} provider_error={err.get('type')}: {str(err.get('message', ''))[:200]}"
         except Exception:
             detail = f" status={exc.response.status_code}"
-    print(f"[VERA] AI turn failed: code={code} exception={type(exc).__name__}{detail}", flush=True)
+    from conversation import log_event
+    log_event('ai_turn_failed', code=code, exception=type(exc).__name__, detail=detail.strip() or '-')
