@@ -31,3 +31,5 @@
 - models.py - PlanLine, Plan, QUESTIONS (2026-11-05)
 - rules.py - results now cite exact evidence.json records (2026-11-05)
 - tests/test_actions.py - plan, correction, invalidation, wording and export tests (2026-11-05)
+- agent.py - bounded tool loop (4 tools, server-side policy, call cap, repetition stop, deterministic fallback), answer/skip/correction handling (2026-11-05)
+- tests/test_agent.py - scripted-client tests: happy path, cap, repetition, rejections, fallback, skip, injection, no files, no fact values (2026-11-05)
