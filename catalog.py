@@ -10,7 +10,7 @@ def bc_today():
     return datetime.now(ZoneInfo('America/Vancouver')).date().isoformat()
 
 def load_catalog():
-    return json.loads((ROOT / 'data/catalog/navigation.json').read_text())
+    return json.loads((ROOT / 'data/catalog/navigation.json').read_text(encoding='utf-8'))
 
 def fact_value(profile, field):
     f = profile.get('facts', {}).get(field, {})

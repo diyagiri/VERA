@@ -14,8 +14,8 @@ ROOT=Path(__file__).resolve().parent
 def digest(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 def freeze(output):
  if output.exists():raise ValueError('Frozen outputs already exist. Choose a new filename to preserve the experiment.')
- cases=json.loads((ROOT/'data/fixtures/screening_cases.json').read_text())['cases']
- journeys=json.loads((ROOT/'data/fixtures/journeys.json').read_text())['journeys']
+ cases=json.loads((ROOT/'data/fixtures/screening_cases.json').read_text(encoding='utf-8'))['cases']
+ journeys=json.loads((ROOT/'data/fixtures/journeys.json').read_text(encoding='utf-8'))['journeys']
  case_outputs=[];journey_outputs=[]
  for c in cases:
   f=facts_from_dict(c['facts']);asof=date.fromisoformat(c['as_of_date'])
@@ -32,7 +32,7 @@ def freeze(output):
 
 def score(input_path,output):
  if not input_path.exists():raise ValueError('Frozen outputs are missing. Run freeze first.')
- d=json.loads(input_path.read_text())
+ d=json.loads(input_path.read_text(encoding='utf-8'))
  if not isinstance(d.get('cases'),list) or not d['cases'] or not isinstance(d.get('journeys'),list) or not d['journeys']:raise ValueError('Malformed or empty frozen outputs; not a zero score.')
  report={'frozen_sha256':digest(input_path),'run_at_utc':d['run_at_utc'],'model':d['model'],'cases':{},'journeys':{},'limitations':['Synthetic author-written cases; held-out partition is not independently validated and was inspected during routing debugging. This rerun is regression evidence.','Policy correctness and excerpt support still need independent human review.','Full source snapshots are verified locally but excluded from redistribution pending reuse review.','Manual navigation and retrieval-chatbot comparison not performed.','No usability participants; no claim about reduced user effort.','Latency measures local Python orchestration, not human completion or hosted browser time.','No live model-provider request was tested.'],'comparisons':{'manual_navigation':'not_run','retrieval_chatbot':'not_run'},'model_cost_usd':0}
  for split in ['dev','heldout']:
