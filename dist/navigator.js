@@ -81,13 +81,13 @@ export function validatePortable(raw,catalog){
   if(!step||seen.has(t.id)||t.topic!==route.topic||t.group!==step.group||t.destination!==(step.url||route.url)||t.due_date!==null)throw Error('invalid_import');seen.add(t.id);
   str(t.text,1600);if(t.user_text!==null)str(t.user_text,1600);array(t.evidence,8);array(t.dependencies,8);
   if(JSON.stringify(t.evidence)!==JSON.stringify(step.sources||route.sources)||JSON.stringify(t.dependencies)!==JSON.stringify(route.dependencies))throw Error('invalid_import');
-  keys(t.dependency_values,route.dependencies);keys(t.source_versions,route.sources);for(const v of Object.values(t.dependency_values))str(v,80);for(const v of Object.values(t.source_versions))str(v,100);
+  keys(t.dependency_values,route.dependencies);keys(t.source_versions,route.sources);for(const v of Object.values(t.dependency_values))str(v,80);for(const v of Object.values(t.source_versions))str(v,500);
   if(!['ready','needs_information','needs_official_confirmation','stale'].includes(t.readiness)||!['todo','done','dismissed'].includes(t.completion)||![null,'facts_changed','source_changed','source_stale','route_removed'].includes(t.review_reason))throw Error('invalid_import');
  }
  const enquiryIds=new Set();for(const e of p.enquiries){
   keys(e,['program_id','text','user_text','dependencies','dependency_values','source_versions','needs_review']);const route=programs[e.program_id];
   if(!route||enquiryIds.has(e.program_id)||typeof e.needs_review!=='boolean'||JSON.stringify(e.dependencies)!==JSON.stringify(route.dependencies))throw Error('invalid_import');enquiryIds.add(e.program_id);
-  str(e.text,4000);if(e.user_text!==null)str(e.user_text,4000);keys(e.dependency_values,route.dependencies);keys(e.source_versions,route.sources);for(const v of Object.values(e.dependency_values))str(v,80);for(const v of Object.values(e.source_versions))str(v,100);
+  str(e.text,4000);if(e.user_text!==null)str(e.user_text,4000);keys(e.dependency_values,route.dependencies);keys(e.source_versions,route.sources);for(const v of Object.values(e.dependency_values))str(v,80);for(const v of Object.values(e.source_versions))str(v,500);
  }
  return clone(raw);
 }

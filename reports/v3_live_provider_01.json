@@ -1,0 +1,12 @@
+{
+  "schema_version": 2,
+  "checked_at": "2026-11-12T07:36:41.898674+00:00",
+  "status": "blocked",
+  "reason": "OPENAI_API_KEY is not configured in Sites. No live Responses or embedding requests were made.",
+  "configured_model": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "embedding_model": "text-embedding-3-small",
+  "setup_entry": "/setup",
+  "requires_redeployment_after_secret_change": true,
+  "fixture_tests_are_live_tests": false
+}

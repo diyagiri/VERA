@@ -1,0 +1,86 @@
+{
+  "schema_version": 2,
+  "corpus_version": "b5dfd5e44ef5ed4f2f770c1e28e083b9fd4c0e6babb378580870cf4a71fa5442",
+  "generated_at": "2026-11-12T07:24:31.457352+00:00",
+  "coverage": {
+    "registered_sources": 21,
+    "attempted_documents": 35,
+    "captured_documents": 35,
+    "indexed_documents": 33,
+    "chunks": 33,
+    "official_short_excerpts": 23,
+    "languages": [
+      "en",
+      "fr"
+    ],
+    "topics": [
+      "banking",
+      "benefits",
+      "education",
+      "settlement",
+      "taxes"
+    ],
+    "human_policy_reviews": 0,
+    "human_language_reviews": 0,
+    "embedding_model": null
+  },
+  "gaps": [
+    {
+      "document_id": "D01-en",
+      "kind": "publisher_modified_date_unknown"
+    },
+    {
+      "document_id": "D02-en",
+      "kind": "publisher_modified_date_unknown"
+    },
+    {
+      "document_id": "D02-fr",
+      "kind": "publisher_modified_date_unknown"
+    },
+    {
+      "document_id": "D03-en",
+      "kind": "excerpt_gap",
+      "detail": "No complete short sentence found in selected sections; original paraphrase only."
+    },
+    {
+      "document_id": "D03-fr",
+      "kind": "excerpt_gap",
+      "detail": "No complete short sentence found in selected sections; original paraphrase only."
+    },
+    {
+      "document_id": "D04-en",
+      "kind": "captured_pdf_link_only",
+      "detail": "PDF bytes captured and hashed only; no PDF text used in runtime guidance."
+    },
+    {
+      "document_id": "D05-en",
+      "kind": "publisher_modified_date_unknown"
+    },
+    {
+      "document_id": "D06-en",
+      "kind": "publisher_modified_date_unknown"
+    },
+    {
+      "document_id": "D15-fr",
+      "kind": "excerpt_gap",
+      "detail": "No complete short sentence found in selected sections; original paraphrase only."
+    },
+    {
+      "document_id": "D16-en",
+      "kind": "publisher_modified_date_unknown"
+    },
+    {
+      "document_id": "D16-fr",
+      "kind": "captured_pdf_link_only",
+      "detail": "PDF bytes captured and hashed only; no PDF text used in runtime guidance."
+    },
+    {
+      "document_id": "D19-en",
+      "kind": "publisher_modified_date_unknown"
+    }
+  ],
+  "all_source_hashes_recorded": true,
+  "all_chunk_locators_recorded": true,
+  "all_reuse_metadata_recorded": true,
+  "no_policy_approvals_changed": true
+}

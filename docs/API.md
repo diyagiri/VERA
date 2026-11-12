@@ -1,3 +1,5 @@
+> Legacy Python/Anthropic development API. The production OpenAI backend now runs in `worker/`; use the root README for hosted setup. This file is preserved for the inherited optional development path and is not the no-terminal owner workflow.
+
 # VERA v2 API and operating modes
 
 The public `vera-newcomer-guide.fondfoam.chatgpt.site` deployment is static and stays in explicitly labelled offline guidance mode. Python hosting and a provider credential are required for the new optional conversation. No production environment key was available during implementation; `reports/v2_live_provider_01.json` records the blocked smoke test.

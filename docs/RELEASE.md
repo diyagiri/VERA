@@ -1,35 +1,15 @@
-# VERA v2 release — 11 November 2026 (America/Vancouver)
+# Hosted OpenAI preparation release — verification pending
 
-Implemented against the user-supplied `docs/PLAN.md`, starting from GitHub commit `185e545eb77c0c501d16673318d2bba56f278988`. The original local Sites source had the identical tree `403a8cd0d566fe43cebea0727c41014cea721dd2`. No intervening GitHub change was present at inspection. Original release evidence remains in `RELEASE_v1.md` and the existing reports.
+Prepared 12 November 2026 (America/Vancouver). This release adapts the supplied plan to ChatGPT Sites' JavaScript Worker runtime while preserving the Python/offline project and attribution.
 
-## Delivered
+Implemented: free-text online entry, combined fact proposals, one-at-a-time questions, confirmation, real OpenAI Responses API adapter (`gpt-6.1-sol`, medium), bounded function-call retrieval, separate support checking, editable plans, correction-aware merge, English/French, explicit offline fallback, secure server-only secrets, encrypted expiring sessions, usage ceilings and owner setup controls.
 
-- Five-topic BC-wide guidance: settlement, education, banking, taxes and benefits. Students remain included; the app is not limited to one campus or family benefits.
-- English/French UI, source summaries, tasks and enquiry drafts. Language switching preserves task IDs, facts, edits and completion; no human language-review claim.
-- Multi-topic intake, explicit priority, confirmation of proposed details and optional relevant profile fields.
-- SFU and UBC Vancouver records with scope limits; other campuses and institutions receive a truthful handoff. UBC emergency-funding expenses are bounded. CCB/BC family benefit tasks avoid duplicate applications.
-- Stable, dependency-aware tasks: unrelated completed work survives corrections; affected edits are retained and flagged; completed work whose meaning changes is reopened for review.
-- Editable unsent enquiries, notes, Markdown export, strict JSON export/import, and source-version/age revalidation. No imported AI consent or executable instructions.
-- Optional same-origin FastAPI service, strict v2 schemas, cookie-bound ephemeral sessions, version conflicts, idempotent message retries, origin/size/rate/budget controls and session deletion.
-- Bounded Anthropic conversation adapter with actual retrieval/catalog tools, citations, fact proposals and a separate model support-check step. Mocked tests exercise tool execution and failure boundaries.
-- 19 official source records and short bilingual paraphrases, aliases for S1–S5, allowlisted capture tooling, source-status reporting and an auditable SQLite lexical index builder. Publisher dates, inspection dates, summary versions and snapshot hashes are separate.
-- Updated public-site GitHub link and a labelled link to the existing slide deck. Original browser demo and upstream attribution remain available.
+Evidence: 35 successful document captures, 33 preparation chunks, 21 canonical sources, five topics, English/French. Two PDFs are excluded pending visual extraction review. Source-byte versions now invalidate dependent plans. Captures and paraphrases remain distinct from policy approval. Semantic retrieval uses hosted OpenAI embeddings instead of a local E5 model; it is not yet live-evaluated.
 
-## Measured results
+Baseline before edits: 123 Python tests and 29 JavaScript tests passed. Current measured verification is in `reports/verification_latest.json`; fixture provider tests do not establish real provider/model access.
 
-- Baseline before edits: 93 Python tests and 12 JavaScript tests passed locally.
-- Updated build: 123 Python tests and 29 JavaScript tests passed, with no skips on this build machine. One upstream Starlette/httpx deprecation warning remains.
-- 30 v2 Python/browser plan comparisons matched across institutions, service answers and en/fr.
-- Retrieval: 20 English and 20 paired French development queries each achieved Recall@5 = 1.0 with a known topic filter over 19 short summaries. This is a small author-written regression set, not a held-out result, semantic-search benchmark or generalization claim.
-- All 19 records had required metadata and were within the configured 30-day inspection window when checked. No full v2 publisher snapshots were ingested or cleared for redistribution.
-- Desktop browser checks exercised combined goals, institution selection, a correction, preserved banking completion and a French switch. Additional QA details are recorded in `reports/verification_latest.json`.
+**Live completion remains blocked:** the owner must privately save `OPENAI_API_KEY` in Sites settings, then the saved version must be redeployed and the setup check must succeed. No successful live-provider request, semantic benchmark, participant test, human French review or independent policy approval is claimed. Online capability remains false until a real structured extraction, bounded tool call and grounded response test passes for the configured key/model/corpus.
 
-## Incomplete / blocked
+The release does not implement Chinese, speech, document uploads, applications, payment calculations or formal eligibility decisions. All eight inherited rules remain drafts. A source handoff is used when available evidence is insufficient.
 
-The P0 plan is **not fully complete**. `reports/v2_live_provider_01.json` records a blocked provider test: no key/model configuration was available, and no live provider call was made. The public static host cannot run the Python API; a Python backend host and secure runtime configuration are needed before online AI can be enabled publicly. The public release remains usable offline.
-
-Retrieval is a Unicode lexical baseline over curated summaries. The proposed E5 model, semantic index, longer section-level ingestion, independently reviewed expected-evidence cases and blinded held-out evaluation are not implemented or validated. The capture tool prepares a new review, not automatic approval.
-
-English/French are implemented and automatically checked, but neither has human language certification. Simplified Chinese, voice, cross-device accounts, document processing, live-provider failure testing, human usability studies and broader institution/provider coverage remain deferred. No reduction in effort, improved benefit uptake or population accuracy is claimed.
-
-All eight original rules remain drafts. `audit_release.py --require-screening` intentionally fails. Independent policy and source-reuse review are still required for formal screening and full-snapshot redistribution. The public app offers preparation, education and official handoffs only.
+See README for secure point-and-click owner setup. No key belongs in chat, frontend fields, exports, logs, repository files or build artifacts.

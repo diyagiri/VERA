@@ -1,0 +1,18 @@
+{
+  "schema_version": 2,
+  "checked_at": "2026-11-12T07:36:41.899005+00:00",
+  "mode": "offline local preview",
+  "observed": [
+    "Free-text goal is primary; optional example buttons",
+    "Banking and taxes accepted together",
+    "Vancouver retained; no required student/status questions",
+    "Four preparation/action/clarification tasks with official links",
+    "Editable unsent enquiry and notes",
+    "Offline setup status visibly labeled"
+  ],
+  "not_verified": [
+    "Live model conversation pending secret",
+    "Owner sign-in setup flow",
+    "Mobile screen-reader audit"
+  ]
+}

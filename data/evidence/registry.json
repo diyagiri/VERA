@@ -1,0 +1,518 @@
+{
+  "schema_version": 2,
+  "selection_note": "Fixed official URLs selected for VERA preparation guidance. No runtime crawling or user-supplied URLs. Not human policy approval.",
+  "aliases": {
+    "S1": "D04",
+    "S2": "D19",
+    "S3": "D02",
+    "S4": "D03",
+    "S5": "D15"
+  },
+  "sources": [
+    {
+      "id": "D01",
+      "title": "Find newcomer services",
+      "publisher": "WelcomeBC",
+      "topic": "settlement",
+      "url": "https://www.welcomebc.ca/start-your-life-in-b-c/find-newcomer-services",
+      "fr_url": null,
+      "jurisdiction": "BC",
+      "institution": null,
+      "campus": null,
+      "section": "Newcomer services overview",
+      "summary": {
+        "en": "WelcomeBC describes different settlement services and links to their program and provider information.",
+        "fr": "WelcomeBC présente différents services d’établissement et leurs renseignements officiels."
+      },
+      "limits": null,
+      "freshness_days": 30,
+      "reuse_policy": "original_paraphrase_and_link_only",
+      "reuse_terms_url": "https://www2.gov.bc.ca/gov/content/home/copyright",
+      "registry_review": "automated_curator_selection; human review pending",
+      "related_source_ids": []
+    },
+    {
+      "id": "D02",
+      "title": "Find free newcomer services near you",
+      "publisher": "Immigration, Refugees and Citizenship Canada",
+      "topic": "settlement",
+      "url": "https://ircc.canada.ca/english/newcomers/services/",
+      "fr_url": "https://ircc.canada.ca/francais/nouveaux/services/index.asp",
+      "jurisdiction": "Canada",
+      "institution": null,
+      "campus": null,
+      "section": "Find settlement services near you",
+      "summary": {
+        "en": "IRCC’s directory can be searched by city and service type. Published eligibility and time limits still need to be checked with the responsible provider.",
+        "fr": "Le répertoire d’IRCC permet une recherche par ville et type de service. Vérifiez les conditions et les périodes d’admissibilité auprès du fournisseur."
+      },
+      "limits": null,
+      "freshness_days": 30,
+      "reuse_policy": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "registry_review": "automated_curator_selection; human review pending",
+      "related_source_ids": []
+    },
+    {
+      "id": "D03",
+      "title": "Changes to eligibility for economic class permanent residents",
+      "publisher": "Immigration, Refugees and Citizenship Canada",
+      "topic": "settlement",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/settle-canada/newcomer-services/eligibility.html",
+      "fr_url": "https://www.canada.ca/fr/immigration-refugies-citoyennete/services/setablir-canada/services-nouveaux-arrivants/admissibilite.html",
+      "jurisdiction": "Canada",
+      "institution": null,
+      "campus": null,
+      "section": "New eligibility period for economic class PRs",
+      "summary": {
+        "en": "Economic-class permanent residents have time-limited access to federal settlement services. Ask the provider how the current transition rules apply; VERA does not calculate an end date.",
+        "fr": "L’accès des résidents permanents de la catégorie économique aux services fédéraux est limité dans le temps. Demandez comment les règles transitoires s’appliquent; VERA ne calcule pas de date de fin."
+      },
+      "limits": null,
+      "freshness_days": 30,
+      "reuse_policy": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "registry_review": "automated_curator_selection; human review pending",
+      "related_source_ids": [
+        "D02",
+        "D19"
+      ]
+    },
+    {
+      "id": "D04",
+      "title": "StudentAid BC Policy Manual 2026/27",
+      "publisher": "StudentAid BC",
+      "topic": "education",
+      "url": "https://studentaidbc.ca/sites/all/files/school-officials/policy_manual_26_27.pdf",
+      "fr_url": null,
+      "jurisdiction": "BC",
+      "institution": null,
+      "campus": null,
+      "section": "Chapter 3, sections 3.3.3–3.3.6, printed pages 38–40",
+      "summary": {
+        "en": "StudentAid BC uses program-specific status, residence and study requirements. Living in BC alone does not establish program residency. Ask the financial aid office which conditions and exceptions apply.",
+        "fr": "StudentAid BC applique des conditions propres au statut, à la résidence et aux études. Vivre en C.-B. ne suffit pas à établir la résidence au sens du programme. Consultez le bureau d’aide financière."
+      },
+      "limits": null,
+      "freshness_days": 30,
+      "reuse_policy": "original_paraphrase_and_link_only",
+      "reuse_terms_url": "https://www2.gov.bc.ca/gov/content/home/copyright",
+      "registry_review": "automated_curator_selection; human review pending",
+      "related_source_ids": [
+        "D05",
+        "D06",
+        "D07"
+      ]
+    },
+    {
+      "id": "D05",
+      "title": "SFU funding options for international students",
+      "publisher": "Simon Fraser University",
+      "topic": "education",
+      "url": "https://www.sfu.ca/students/financial-aid/international/general-funding-options.html",
+      "fr_url": null,
+      "jurisdiction": "BC",
+      "institution": "sfu",
+      "campus": null,
+      "section": "Funding options for International Students",
+      "summary": {
+        "en": "SFU lists separate undergraduate and graduate funding resources for international students. Bursaries are supplemental, not guaranteed, and cannot be treated as core funding for immigration requirements.",
+        "fr": "SFU présente des ressources de financement distinctes pour les étudiants internationaux de premier cycle et des cycles supérieurs. Les bourses fondées sur les besoins sont un complément non garanti; elles ne constituent pas le financement de base exigé pour l’immigration."
+      },
+      "limits": "Institution-specific discovery only; admission does not imply financial support; no award amount or deadline verified.",
+      "freshness_days": 30,
+      "reuse_policy": "original_paraphrase_and_link_only",
+      "reuse_terms_url": "https://www.sfu.ca/contact/terms-conditions.html",
+      "registry_review": "automated_curator_selection; human review pending",
+      "related_source_ids": [
+        "D06"
+      ]
+    },
+    {
+      "id": "D06",
+      "title": "SFU undergraduate bursaries",
+      "publisher": "Simon Fraser University",
+      "topic": "education",
+      "url": "https://www.sfu.ca/students/financial-aid/undergraduate/bursaries.html",
+      "fr_url": null,
+      "jurisdiction": "BC",
+      "institution": "sfu",
+      "campus": null,
+      "section": "Eligibility Requirements; How to Apply",
+      "summary": {
+        "en": "SFU undergraduate bursaries depend on assessed financial need and enrolment requirements, with listed exceptions. Check the current application period; applications use the SFU Student Information System. Bursary payments occur after the tuition deadline.",
+        "fr": "Les bourses de premier cycle de SFU dépendent des besoins financiers évalués et des conditions d’inscription, avec des exceptions publiées. Vérifiez la période de demande; la demande passe par le système étudiant de SFU. Les versements ont lieu après l’échéance des frais de scolarité."
+      },
+      "limits": "Undergraduate-specific page; eligibility is not inferred. Active dates and personalized funding not assessed.",
+      "freshness_days": 30,
+      "reuse_policy": "original_paraphrase_and_link_only",
+      "reuse_terms_url": "https://www.sfu.ca/contact/terms-conditions.html",
+      "registry_review": "automated_curator_selection; human review pending",
+      "related_source_ids": [
+        "D05"
+      ]
+    },
+    {
+      "id": "D07",
+      "title": "UBC Vancouver financial support options",
+      "publisher": "University of British Columbia",
+      "topic": "education",
+      "url": "https://students.ubc.ca/finances/financial-support-options/",
+      "fr_url": null,
+      "jurisdiction": "BC",
+      "institution": "ubc",
+      "campus": "vancouver",
+      "section": "Financial support options; If you have questions",
+      "summary": {
+        "en": "UBC Vancouver Enrolment Services Advisors can help discuss financial plans and funding resources. The page separates domestic, international, Indigenous and disability-related resources; individual program conditions differ.",
+        "fr": "Les conseillers des services d’inscription de UBC Vancouver peuvent aider à discuter d’un plan financier et des ressources disponibles. La page distingue plusieurs catégories de soutien; chaque programme possède ses propres conditions."
+      },
+      "limits": "This is the Vancouver campus site. Do not apply its specific programs to Okanagan without separate evidence.",
+      "freshness_days": 30,
+      "reuse_policy": "original_paraphrase_and_link_only",
+      "reuse_terms_url": "https://www.ubc.ca/site/legal.html",
+      "registry_review": "automated_curator_selection; human review pending",
+      "related_source_ids": [
+        "D08"
+      ]
+    },
+    {
+      "id": "D08",
+      "title": "UBC Vancouver emergency funding",
+      "publisher": "University of British Columbia",
+      "topic": "education",
+      "url": "https://students.ubc.ca/finances/financial-support-options/emergency-funding/",
+      "fr_url": null,
+      "jurisdiction": "BC",
+      "institution": "ubc",
+      "campus": "vancouver",
+      "section": "Eligibility requirements; How to apply",
+      "summary": {
+        "en": "The published emergency-funding route covers registered degree-seeking students at UBC Vancouver and unexpected temporary shortfalls after other options are exhausted. Tuition and student fees are excluded. Students may contact an Enrolment Services Advisor or use the linked application.",
+        "fr": "La voie publiée vise les étudiants inscrits à un programme menant à un diplôme à UBC Vancouver et certains manques temporaires imprévus après épuisement des autres options. Les droits de scolarité et frais étudiants sont exclus. Il est possible de contacter un conseiller ou d’utiliser la demande liée."
+      },
+      "limits": "Vancouver only; degree and expense restrictions apply. No guarantee or amount is established.",
+      "freshness_days": 30,
+      "reuse_policy": "original_paraphrase_and_link_only",
+      "reuse_terms_url": "https://www.ubc.ca/site/legal.html",
+      "registry_review": "automated_curator_selection; human review pending",
+      "related_source_ids": [
+        "D07"
+      ]
+    },
+    {
+      "id": "D09",
+      "title": "Opening a bank account",
+      "publisher": "Financial Consumer Agency of Canada",
+      "topic": "banking",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/banking/opening-bank-account.html",
+      "fr_url": "https://www.canada.ca/fr/agence-consommation-matiere-financiere/services/activites-bancaires/ouvrir-compte-banque.html",
+      "jurisdiction": "Canada",
+      "institution": null,
+      "campus": null,
+      "section": "Before opening an account; Providing identification",
+      "summary": {
+        "en": "Compare how you will use the account, fees, interest and deposit protection; read the account agreement. Banks verify identity using accepted original documents. Contact the institution to confirm the appropriate identification route and whether an in-person visit is needed.",
+        "fr": "Comparez l’usage prévu, les frais, les intérêts et la protection des dépôts; lisez la convention de compte. Les banques vérifient l’identité à l’aide de documents originaux acceptés. Confirmez les pièces requises et la nécessité d’une visite auprès de l’institution."
+      },
+      "limits": "No account opening, bank ranking or individual acceptance guarantee. Financial institution requirements must be confirmed.",
+      "freshness_days": 30,
+      "reuse_policy": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "registry_review": "automated_curator_selection; human review pending",
+      "related_source_ids": [
+        "D10"
+      ]
+    },
+    {
+      "id": "D10",
+      "title": "Opening a low-cost or no-cost bank account",
+      "publisher": "Financial Consumer Agency of Canada",
+      "topic": "banking",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/banking/bank-accounts/low-cost-no-cost.html",
+      "fr_url": "https://www.canada.ca/fr/agence-consommation-matiere-financiere/services/activites-bancaires/comptes-bancaires/frais-modiques-sans-frais.html",
+      "jurisdiction": "Canada",
+      "institution": null,
+      "campus": null,
+      "section": "Comparing account options; Contacting the financial institution",
+      "summary": {
+        "en": "FCAC provides an account comparison tool for low-cost and no-cost options. Compare total costs, including transaction and ATM fees, and confirm included services and any qualifying conditions with the institution.",
+        "fr": "L’ACFC fournit un outil de comparaison des comptes à frais modiques et sans frais. Comparez tous les coûts, y compris les opérations et retraits, puis confirmez les services compris et les conditions auprès de l’institution."
+      },
+      "limits": "No promotional product ranking; no automatic conclusion that a newcomer receives a free account. English and French page modification dates differ.",
+      "freshness_days": 30,
+      "reuse_policy": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "registry_review": "automated_curator_selection; human review pending",
+      "related_source_ids": [
+        "D09"
+      ]
+    },
+    {
+      "id": "D11",
+      "title": "Newcomers to Canada and the CRA",
+      "publisher": "Canada Revenue Agency",
+      "topic": "taxes",
+      "url": "https://www.canada.ca/en/revenue-agency/services/tax/international-non-residents/individuals-leaving-entering-canada-non-residents/newcomers-canada-immigrants.html",
+      "fr_url": "https://www.canada.ca/fr/agence-revenu/services/impot/impot-international-non-residents/particuliers-depart-canada-entree-canada-non-residents/nouveaux-arrivants-canada-immigrants.html",
+      "jurisdiction": "Canada",
+      "institution": null,
+      "campus": null,
+      "section": "Residency status; Immigration status; Canada’s tax system",
+      "summary": {
+        "en": "Tax residency and immigration status are distinct; arrival date alone is not a complete tax-residency assessment. CRA explains tax slips, supporting records, and benefit application routes for newcomers, including before a first tax return in applicable cases.",
+        "fr": "La résidence fiscale et le statut d’immigration sont distincts; la date d’arrivée seule ne permet pas une évaluation complète de la résidence fiscale. L’ARC explique les feuillets, les pièces justificatives et les démarches de prestations des nouveaux arrivants, parfois avant la première déclaration."
+      },
+      "limits": "No residency decision, tax filing, liability calculation, or benefit eligibility determination.",
+      "freshness_days": 30,
+      "reuse_policy": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "registry_review": "automated_curator_selection; human review pending",
+      "related_source_ids": [
+        "D21",
+        "D12",
+        "D20"
+      ]
+    },
+    {
+      "id": "D12",
+      "title": "Overview of child and family benefits",
+      "publisher": "Canada Revenue Agency",
+      "topic": "benefits",
+      "url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits.html",
+      "fr_url": "https://www.canada.ca/fr/agence-revenu/services/prestations-enfants-familles.html",
+      "jurisdiction": "Canada",
+      "institution": null,
+      "campus": null,
+      "section": "Overview; After applying",
+      "summary": {
+        "en": "CRA’s directory links Canada child benefit and other household benefits to their specific requirements. Ongoing payments depend on current information and annual tax filing, including for a spouse or common-law partner where applicable.",
+        "fr": "Le répertoire de l’ARC relie l’Allocation canadienne pour enfants et d’autres prestations à leurs conditions propres. La continuité des versements dépend de renseignements à jour et des déclarations annuelles, y compris celles du conjoint s’il y a lieu."
+      },
+      "limits": "Directory is not an exhaustive VERA catalog or eligibility decision. Current page names Canada Groceries and Essentials Benefit, formerly GST/HST credit; do not promote the old name as current.",
+      "freshness_days": 30,
+      "reuse_policy": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "registry_review": "automated_curator_selection; human review pending",
+      "related_source_ids": [
+        "D13",
+        "D14",
+        "D20"
+      ]
+    },
+    {
+      "id": "D13",
+      "title": "Canada child benefit — How to apply",
+      "publisher": "Canada Revenue Agency",
+      "topic": "benefits",
+      "url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit/how-apply.html",
+      "fr_url": "https://www.canada.ca/fr/agence-revenu/services/prestations-enfants-familles/allocation-canadienne-enfants/comment-demande.html",
+      "jurisdiction": "Canada",
+      "institution": null,
+      "campus": null,
+      "section": "How to apply; Gather supporting documents",
+      "summary": {
+        "en": "A Canada child benefit application also lets CRA assess related provincial and territorial programs; separate applications for those related programs are not needed. Check eligibility and situation-specific supporting documents before using an official application method.",
+        "fr": "La demande d’Allocation canadienne pour enfants permet aussi l’évaluation des programmes provinciaux et territoriaux connexes; une demande distincte n’est pas nécessaire pour ceux-ci. Vérifiez les conditions et les pièces propres à votre situation avant de choisir une méthode officielle de demande."
+      },
+      "limits": "Do not decide who qualifies, infer custody or applicant identity, or collect documents/identifiers in VERA.",
+      "freshness_days": 30,
+      "reuse_policy": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "registry_review": "automated_curator_selection; human review pending",
+      "related_source_ids": [
+        "D20",
+        "D14"
+      ]
+    },
+    {
+      "id": "D14",
+      "title": "Province of British Columbia — BC family benefit",
+      "publisher": "Canada Revenue Agency",
+      "topic": "benefits",
+      "url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/provincial-territorial-programs/province-british-columbia.html",
+      "fr_url": "https://www.canada.ca/fr/agence-revenu/services/prestations-enfants-familles/programmes-provinciaux-territoriaux/province-colombie-britannique.html",
+      "jurisdiction": "BC",
+      "institution": null,
+      "campus": null,
+      "section": "BC family benefit",
+      "summary": {
+        "en": "CRA administers the BC family benefit as a program related to the Canada child benefit. The BC family benefit is combined with CCB in one monthly payment; confirm individual conditions through CRA.",
+        "fr": "L’ARC administre la prestation familiale de la Colombie-Britannique comme programme connexe à l’Allocation canadienne pour enfants. La prestation de la C.-B. est combinée à l’ACE en un versement mensuel; confirmez les conditions individuelles auprès de l’ARC."
+      },
+      "limits": "No amount or award estimate; VERA does not assess household income or eligibility.",
+      "freshness_days": 30,
+      "reuse_policy": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "registry_review": "automated_curator_selection; human review pending",
+      "related_source_ids": [
+        "D13",
+        "D20"
+      ]
+    },
+    {
+      "id": "D15",
+      "title": "Benefits Finder",
+      "publisher": "Government of Canada",
+      "topic": "benefits",
+      "url": "https://www.canada.ca/en/services/benefits/finder.html",
+      "fr_url": "https://www.canada.ca/fr/services/prestations/chercheur.html",
+      "jurisdiction": "Canada",
+      "institution": null,
+      "campus": null,
+      "section": "Use these filters to find benefits that match your needs",
+      "summary": {
+        "en": "The Benefits Finder filters federal support by need and audience and links to provincial resources. Results are discovery leads, not personal eligibility decisions.",
+        "fr": "Le Chercheur de prestations filtre les aides fédérales selon les besoins et le public, et propose des liens provinciaux. Les résultats ne sont pas des décisions d’admissibilité."
+      },
+      "limits": null,
+      "freshness_days": 30,
+      "reuse_policy": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "registry_review": "automated_curator_selection; human review pending",
+      "related_source_ids": []
+    },
+    {
+      "id": "D16",
+      "title": "B.C. Newcomers’ Guide",
+      "publisher": "Government of British Columbia",
+      "topic": "settlement",
+      "url": "https://www.welcomebc.ca/start-your-life-in-b-c/bc-newcomers-guide",
+      "fr_url": "https://www.welcomebc.ca/start-your-life-in-b-c/bc-newcomers-guide-french-pdf",
+      "jurisdiction": "BC",
+      "institution": null,
+      "campus": null,
+      "section": "2025 edition download links",
+      "summary": {
+        "en": "The official page lists the 2025 guide in English, French and Simplified Chinese, among other languages. It introduces life in BC, including housing, health care, transport and other everyday topics.",
+        "fr": "La page officielle propose le guide de 2025 en anglais, en français et en chinois simplifié, entre autres langues. Il présente la vie en C.-B., notamment le logement, les soins de santé et les transports."
+      },
+      "limits": "French PDF target is an official listed link but could not be fetched by web tool because of file size. PDF content and language-version equivalence not independently audited.",
+      "freshness_days": 30,
+      "reuse_policy": "original_paraphrase_and_link_only",
+      "reuse_terms_url": "https://www2.gov.bc.ca/gov/content/home/copyright",
+      "registry_review": "automated_curator_selection; human review pending",
+      "related_source_ids": []
+    },
+    {
+      "id": "D17",
+      "title": "Welcome to Canada: Multilingual resources for newcomers",
+      "publisher": "Immigration, Refugees and Citizenship Canada",
+      "topic": "settlement",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/publication-welcome-canada-what-you-should-know.html",
+      "fr_url": "https://www.canada.ca/fr/immigration-refugies-citoyennete/organisation/publications-guides/bienvenue-canada-vous-devriez-savoir.html",
+      "jurisdiction": "Canada",
+      "institution": null,
+      "campus": null,
+      "section": "Living in Canada — Money and finances",
+      "summary": {
+        "en": "IRCC links multilingual resources about arriving, housing, work, study and everyday life. The money-and-finances section includes English and French PDF resources for orientation.",
+        "fr": "IRCC propose des ressources multilingues sur l’arrivée, le logement, le travail, les études et la vie quotidienne. La section consacrée à l’argent et aux finances comprend des ressources PDF en anglais et en français."
+      },
+      "limits": "General orientation; PDF contents and language equivalence not audited; not a current eligibility rule source.",
+      "freshness_days": 30,
+      "reuse_policy": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "registry_review": "automated_curator_selection; human review pending",
+      "related_source_ids": []
+    },
+    {
+      "id": "D18",
+      "title": "Financial Basics",
+      "publisher": "Financial Consumer Agency of Canada",
+      "topic": "banking",
+      "url": "https://www.canada.ca/en/financial-consumer-agency/services/financial-basics.html",
+      "fr_url": "https://www.canada.ca/fr/agence-consommation-matiere-financiere/services/finances-personnelles.html",
+      "jurisdiction": "Canada",
+      "institution": null,
+      "campus": null,
+      "section": "Money management lessons for life; Get started now",
+      "summary": {
+        "en": "FCAC’s Financial Basics covers budgeting, saving, credit, fraud prevention and financial planning. The official page links downloadable learning materials and videos.",
+        "fr": "Les ressources de l’ACFC abordent le budget, l’épargne, le crédit, la prévention de la fraude et la planification financière. La page officielle propose des documents d’apprentissage téléchargeables et des vidéos."
+      },
+      "limits": "Education only; no personalized investment or credit-product advice. Linked materials were not fully reviewed.",
+      "freshness_days": 30,
+      "reuse_policy": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "registry_review": "automated_curator_selection; human review pending",
+      "related_source_ids": []
+    },
+    {
+      "id": "D19",
+      "title": "BC Newcomer Services Program (BC NSP)",
+      "publisher": "WelcomeBC",
+      "topic": "settlement",
+      "url": "https://www.welcomebc.ca/start-your-life-in-b-c/find-newcomer-services/services-for-newcomers-on-a-temporary-work-or-study-permit-and-new-citizens%C2%A0(bc-nsp)",
+      "fr_url": null,
+      "jurisdiction": "BC",
+      "institution": null,
+      "campus": null,
+      "section": "Eligibility; Find a service provider",
+      "summary": {
+        "en": "BC NSP offers settlement and employment supports for specified newcomer categories. For international post-secondary students, the published condition depends on whether the institution offers the relevant service. Confirm individual access with a provider.",
+        "fr": "Le BC NSP propose des services d’établissement et d’emploi à certaines catégories. Pour les étudiants internationaux du postsecondaire, une condition dépend de l’offre du service par leur établissement. Confirmez l’accès auprès d’un fournisseur."
+      },
+      "limits": null,
+      "freshness_days": 30,
+      "reuse_policy": "original_paraphrase_and_link_only",
+      "reuse_terms_url": "https://www2.gov.bc.ca/gov/content/home/copyright",
+      "registry_review": "automated_curator_selection; human review pending",
+      "related_source_ids": [
+        "D01",
+        "D02",
+        "D03"
+      ]
+    },
+    {
+      "id": "D20",
+      "title": "Canada child benefit — Who can apply",
+      "publisher": "Canada Revenue Agency",
+      "topic": "benefits",
+      "url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit/who-apply.html",
+      "fr_url": "https://www.canada.ca/fr/agence-revenu/services/prestations-enfants-familles/allocation-canadienne-enfants/qui-demande.html",
+      "jurisdiction": "Canada",
+      "institution": null,
+      "campus": null,
+      "section": "Eligibility criteria; Who should apply in a custody arrangement",
+      "summary": {
+        "en": "CCB requires all applicable child-care, tax-residence and status conditions to be met. Different arrangements can affect which caregiver should apply. Temporary-resident and protected-person categories have specific conditions and exclusions. Use the complete criteria and CRA advice for unresolved circumstances; VERA does not determine eligibility or custody.",
+        "fr": "L’ACE exige que toutes les conditions applicables concernant l’enfant, la résidence fiscale et le statut soient remplies. Les modalités de garde peuvent modifier la personne qui doit présenter la demande. Certaines catégories comportent des conditions et exclusions particulières. Consultez les critères complets et l’ARC; VERA ne décide ni de l’admissibilité ni de la garde."
+      },
+      "limits": "No personal eligibility, custody or payment calculation. Conditions are cumulative; retain links to related application and residency evidence.",
+      "freshness_days": 30,
+      "reuse_policy": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "registry_review": "automated_curator_selection; human review pending",
+      "related_source_ids": [
+        "D13",
+        "D14",
+        "D21"
+      ]
+    },
+    {
+      "id": "D21",
+      "title": "Determining your residency status",
+      "publisher": "Canada Revenue Agency",
+      "topic": "taxes",
+      "url": "https://www.canada.ca/en/revenue-agency/services/tax/international-non-residents/information-been-moved/determining-your-residency-status.html",
+      "fr_url": "https://www.canada.ca/fr/agence-revenu/services/impot/impot-international-non-residents/renseignements-ont-deplaces/determination-votre-statut-residence.html",
+      "jurisdiction": "Canada",
+      "institution": null,
+      "campus": null,
+      "section": "Determine if you have residential ties with Canada; Forms and publications",
+      "summary": {
+        "en": "Tax residency depends on the full circumstances, including residential connections, the purpose and continuity of a stay, and relevant tax treaties. The CRA provides residency guidance and forms for requesting its opinion when entering or leaving Canada. A permit category, city or arrival date is not enough for VERA to decide residency.",
+        "fr": "La résidence fiscale dépend de l’ensemble des circonstances, notamment les liens de résidence, le but et la continuité du séjour, ainsi que les conventions fiscales. L’ARC fournit des conseils et des formulaires pour demander son avis lors de l’entrée au Canada ou du départ. VERA ne peut pas décider à partir d’un permis, d’une ville ou d’une date."
+      },
+      "limits": "Interactive decision-tree outputs must not be extracted without their conditions. Index only the general introductory and residential-ties guidance.",
+      "freshness_days": 30,
+      "reuse_policy": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "registry_review": "automated_curator_selection; human review pending",
+      "related_source_ids": [
+        "D11"
+      ]
+    }
+  ]
+}

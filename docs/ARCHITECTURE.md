@@ -1,3 +1,9 @@
+# Current hosted architecture
+
+The public Site now uses the Worker modules documented in README. The prior Python architecture below remains available for offline and legacy development. Production secrets are injected by Sites; browser assets contain no privileged key. Production session state is AES-GCM encrypted in expiring D1 rows with optimistic versioning and mutation locks. Evidence is versioned public data; semantic vectors are built only during owner-authorized setup.
+
+## Earlier Python architecture
+
 # VERA architecture
 
 ## Public offline mode

@@ -1,0 +1,620 @@
+{
+  "schema_version": 2,
+  "created_at": "2026-11-12T07:36:42.234524+00:00",
+  "as_of": "2026-11-12",
+  "kind": "author-written development/regression cases; not held-out or independent policy evaluation",
+  "retrieval_method": "Unicode lexical ranking of curated bilingual summaries with user-selected topic filter; no embeddings",
+  "catalog_sha256": "9fd6ef43faec17a5ac95f41afc1ce2d83512285e197c2e28d2ae46ddaeea9872",
+  "retrieval": {
+    "en": {
+      "cases": 20,
+      "recall_at_5": 1.0
+    },
+    "fr": {
+      "cases": 20,
+      "recall_at_5": 1.0
+    }
+  },
+  "retrieval_cases": [
+    {
+      "case_id": "R01-en",
+      "locale": "en",
+      "topic": "banking",
+      "expected": [
+        "D09"
+      ],
+      "retrieved": [
+        "D09",
+        "D10",
+        "D18"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R01-fr",
+      "locale": "fr",
+      "topic": "banking",
+      "expected": [
+        "D09"
+      ],
+      "retrieved": [
+        "D09",
+        "D18",
+        "D10"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R02-en",
+      "locale": "en",
+      "topic": "banking",
+      "expected": [
+        "D10"
+      ],
+      "retrieved": [
+        "D10",
+        "D09",
+        "D18"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R02-fr",
+      "locale": "fr",
+      "topic": "banking",
+      "expected": [
+        "D10"
+      ],
+      "retrieved": [
+        "D10",
+        "D09",
+        "D18"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R03-en",
+      "locale": "en",
+      "topic": "banking",
+      "expected": [
+        "D18"
+      ],
+      "retrieved": [
+        "D18",
+        "D10",
+        "D09"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R03-fr",
+      "locale": "fr",
+      "topic": "banking",
+      "expected": [
+        "D18"
+      ],
+      "retrieved": [
+        "D18",
+        "D09",
+        "D10"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R04-en",
+      "locale": "en",
+      "topic": "banking",
+      "expected": [
+        "D09"
+      ],
+      "retrieved": [
+        "D09",
+        "D10",
+        "D18"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R04-fr",
+      "locale": "fr",
+      "topic": "banking",
+      "expected": [
+        "D09"
+      ],
+      "retrieved": [
+        "D09",
+        "D18",
+        "D10"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R05-en",
+      "locale": "en",
+      "topic": "taxes",
+      "expected": [
+        "D11"
+      ],
+      "retrieved": [
+        "D11"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R05-fr",
+      "locale": "fr",
+      "topic": "taxes",
+      "expected": [
+        "D11"
+      ],
+      "retrieved": [
+        "D11"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R06-en",
+      "locale": "en",
+      "topic": "taxes",
+      "expected": [
+        "D11"
+      ],
+      "retrieved": [
+        "D11"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R06-fr",
+      "locale": "fr",
+      "topic": "taxes",
+      "expected": [
+        "D11"
+      ],
+      "retrieved": [
+        "D11"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R07-en",
+      "locale": "en",
+      "topic": "taxes",
+      "expected": [
+        "D11"
+      ],
+      "retrieved": [
+        "D11"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R07-fr",
+      "locale": "fr",
+      "topic": "taxes",
+      "expected": [
+        "D11"
+      ],
+      "retrieved": [
+        "D11"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R08-en",
+      "locale": "en",
+      "topic": "education",
+      "expected": [
+        "D05"
+      ],
+      "retrieved": [
+        "D05",
+        "D07",
+        "D04",
+        "D08",
+        "D06"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R08-fr",
+      "locale": "fr",
+      "topic": "education",
+      "expected": [
+        "D05"
+      ],
+      "retrieved": [
+        "D05",
+        "D06",
+        "D08",
+        "D07",
+        "D04"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R09-en",
+      "locale": "en",
+      "topic": "education",
+      "expected": [
+        "D06"
+      ],
+      "retrieved": [
+        "D06",
+        "D05",
+        "D08",
+        "D04",
+        "D07"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R09-fr",
+      "locale": "fr",
+      "topic": "education",
+      "expected": [
+        "D06"
+      ],
+      "retrieved": [
+        "D05",
+        "D06",
+        "D08",
+        "D07",
+        "D04"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R10-en",
+      "locale": "en",
+      "topic": "education",
+      "expected": [
+        "D08"
+      ],
+      "retrieved": [
+        "D08",
+        "D07",
+        "D06",
+        "D04",
+        "D05"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R10-fr",
+      "locale": "fr",
+      "topic": "education",
+      "expected": [
+        "D08"
+      ],
+      "retrieved": [
+        "D08",
+        "D06",
+        "D07",
+        "D05",
+        "D04"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R11-en",
+      "locale": "en",
+      "topic": "education",
+      "expected": [
+        "D07"
+      ],
+      "retrieved": [
+        "D07",
+        "D08",
+        "D05",
+        "D06",
+        "D04"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R11-fr",
+      "locale": "fr",
+      "topic": "education",
+      "expected": [
+        "D07"
+      ],
+      "retrieved": [
+        "D07",
+        "D08",
+        "D04",
+        "D05",
+        "D06"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R12-en",
+      "locale": "en",
+      "topic": "education",
+      "expected": [
+        "D04"
+      ],
+      "retrieved": [
+        "D04",
+        "D07",
+        "D06",
+        "D05",
+        "D08"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R12-fr",
+      "locale": "fr",
+      "topic": "education",
+      "expected": [
+        "D04"
+      ],
+      "retrieved": [
+        "D04",
+        "D07",
+        "D06",
+        "D05",
+        "D08"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R13-en",
+      "locale": "en",
+      "topic": "benefits",
+      "expected": [
+        "D13"
+      ],
+      "retrieved": [
+        "D13",
+        "D14",
+        "D12",
+        "D15"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R13-fr",
+      "locale": "fr",
+      "topic": "benefits",
+      "expected": [
+        "D13"
+      ],
+      "retrieved": [
+        "D13",
+        "D14",
+        "D12",
+        "D15"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R14-en",
+      "locale": "en",
+      "topic": "benefits",
+      "expected": [
+        "D15"
+      ],
+      "retrieved": [
+        "D12",
+        "D15",
+        "D13",
+        "D14"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R14-fr",
+      "locale": "fr",
+      "topic": "benefits",
+      "expected": [
+        "D15"
+      ],
+      "retrieved": [
+        "D15",
+        "D12",
+        "D13",
+        "D14"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R15-en",
+      "locale": "en",
+      "topic": "benefits",
+      "expected": [
+        "D14"
+      ],
+      "retrieved": [
+        "D14",
+        "D12",
+        "D15",
+        "D13"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R15-fr",
+      "locale": "fr",
+      "topic": "benefits",
+      "expected": [
+        "D14"
+      ],
+      "retrieved": [
+        "D14",
+        "D12",
+        "D13",
+        "D15"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R16-en",
+      "locale": "en",
+      "topic": "benefits",
+      "expected": [
+        "D12"
+      ],
+      "retrieved": [
+        "D14",
+        "D12",
+        "D13",
+        "D15"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R16-fr",
+      "locale": "fr",
+      "topic": "benefits",
+      "expected": [
+        "D12"
+      ],
+      "retrieved": [
+        "D12",
+        "D15",
+        "D14",
+        "D13"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R17-en",
+      "locale": "en",
+      "topic": "settlement",
+      "expected": [
+        "D02"
+      ],
+      "retrieved": [
+        "D02",
+        "D01",
+        "D19",
+        "D17",
+        "D16"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R17-fr",
+      "locale": "fr",
+      "topic": "settlement",
+      "expected": [
+        "D02"
+      ],
+      "retrieved": [
+        "D19",
+        "D02",
+        "D01",
+        "D03",
+        "D16"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R18-en",
+      "locale": "en",
+      "topic": "settlement",
+      "expected": [
+        "D19"
+      ],
+      "retrieved": [
+        "D02",
+        "D03",
+        "D19",
+        "D01",
+        "D17"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R18-fr",
+      "locale": "fr",
+      "topic": "settlement",
+      "expected": [
+        "D19"
+      ],
+      "retrieved": [
+        "D19",
+        "D02",
+        "D01",
+        "D03",
+        "D17"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R19-en",
+      "locale": "en",
+      "topic": "settlement",
+      "expected": [
+        "D03"
+      ],
+      "retrieved": [
+        "D03",
+        "D02",
+        "D19",
+        "D01",
+        "D16"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R19-fr",
+      "locale": "fr",
+      "topic": "settlement",
+      "expected": [
+        "D03"
+      ],
+      "retrieved": [
+        "D03",
+        "D19",
+        "D17",
+        "D16",
+        "D02"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R20-en",
+      "locale": "en",
+      "topic": "settlement",
+      "expected": [
+        "D16"
+      ],
+      "retrieved": [
+        "D01",
+        "D16",
+        "D02",
+        "D19",
+        "D17"
+      ],
+      "recall": 1.0
+    },
+    {
+      "case_id": "R20-fr",
+      "locale": "fr",
+      "topic": "settlement",
+      "expected": [
+        "D16"
+      ],
+      "retrieved": [
+        "D16",
+        "D17",
+        "D03",
+        "D19",
+        "D02"
+      ],
+      "recall": 1.0
+    }
+  ],
+  "python_browser_parity": {
+    "cases": 30,
+    "passed": 30
+  },
+  "live_provider_evaluated": false,
+  "human_language_reviewed": false,
+  "policy_reviewed": false,
+  "passed": true
+}

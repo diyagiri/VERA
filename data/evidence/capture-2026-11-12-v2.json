@@ -1,0 +1,2721 @@
+{
+  "schema_version": 2,
+  "registry_sha256": "0bf8e3640638984bb4840304304672f600862074303a28da5196d2ae4016a5a1",
+  "generated_at": "2026-11-12T07:22:33.405940+00:00",
+  "reextracted_from": "data/evidence/capture-2026-11-12.json",
+  "captures": [
+    {
+      "id": "D01-en",
+      "document_id": "D01-en",
+      "source_id": "D01",
+      "locale": "en",
+      "original_url": "https://www.welcomebc.ca/start-your-life-in-b-c/find-newcomer-services",
+      "resolved_url": "https://www.welcomebc.ca/start-your-life-in-b-c/find-newcomer-services",
+      "retrieved_at": "2026-11-12T07:18:32.441904+00:00",
+      "checked_on": "2026-11-12",
+      "snapshot_sha256": "6476ca753e4759cf61fa8592b39db72c6b606761d3adfbdd3c1ef8ce0cbb4d8d",
+      "content_type": "text/html; charset=utf-8",
+      "publisher_http_last_modified": null,
+      "path": "data/snapshots/v2/D01-en-6476ca753e4759cf.capture",
+      "byte_length": 71455,
+      "human_reviewed_on": null,
+      "policy_effective_from": null,
+      "policy_effective_to": null,
+      "review_status": "automated_capture_not_policy_approval",
+      "reuse_status": "original_paraphrase_and_link_only",
+      "reuse_terms_url": "https://www2.gov.bc.ca/gov/content/home/copyright",
+      "policy_approval_changed": false,
+      "source_text_excerpt": null,
+      "status": "captured",
+      "extraction_status": "html_sections_parsed",
+      "heading_locators": [
+        {
+          "text": "Find newcomer services",
+          "anchor": ""
+        }
+      ],
+      "publisher_modified_on": null,
+      "extracted_paragraphs": 7,
+      "captured_title": "Find newcomer services",
+      "extracted_text_sha256": "55177a223c11e2aac3f96946096b9b3591745a994e2a020fd4ade41666ffab65",
+      "extractor_version": "html-sections-2.1"
+    },
+    {
+      "id": "D02-en",
+      "document_id": "D02-en",
+      "source_id": "D02",
+      "locale": "en",
+      "original_url": "https://ircc.canada.ca/english/newcomers/services/",
+      "resolved_url": "https://ircc.canada.ca/english/newcomers/services/",
+      "retrieved_at": "2026-11-12T07:18:36.841791+00:00",
+      "checked_on": "2026-11-12",
+      "snapshot_sha256": "1607efb11e9bf67030ceb04f5a1a3279a4815e9b17e6183d01d16a3ba1822fa5",
+      "content_type": "text/html",
+      "publisher_http_last_modified": null,
+      "path": "data/snapshots/v2/D02-en-1607efb11e9bf670.capture",
+      "byte_length": 57260,
+      "human_reviewed_on": null,
+      "policy_effective_from": null,
+      "policy_effective_to": null,
+      "review_status": "automated_capture_not_policy_approval",
+      "reuse_status": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "policy_approval_changed": false,
+      "source_text_excerpt": {
+        "text": "We fund many qualified professionals who can help you successfully adapt to life in Canada.",
+        "section": "Find free newcomer services near you",
+        "anchor": "wb-cont",
+        "word_count": 15,
+        "complete_sentence": true
+      },
+      "status": "captured",
+      "extraction_status": "html_sections_parsed",
+      "heading_locators": [
+        {
+          "text": "Find free newcomer services near you",
+          "anchor": "wb-cont"
+        },
+        {
+          "text": "About settlement services funded by the Government of Canada",
+          "anchor": ""
+        },
+        {
+          "text": "Help us improve our services",
+          "anchor": ""
+        },
+        {
+          "text": "Give feedback about this page",
+          "anchor": ""
+        }
+      ],
+      "publisher_modified_on": null,
+      "extracted_paragraphs": 26,
+      "captured_title": "Find free newcomer services near you",
+      "extracted_text_sha256": "107ed059ea4cd8292ca80b728a4776ec5fca302160fef62550ee55ffef4497b2",
+      "extractor_version": "html-sections-2.1"
+    },
+    {
+      "id": "D02-fr",
+      "document_id": "D02-fr",
+      "source_id": "D02",
+      "locale": "fr",
+      "original_url": "https://ircc.canada.ca/francais/nouveaux/services/index.asp",
+      "resolved_url": "https://ircc.canada.ca/francais/nouveaux/services/index.asp",
+      "retrieved_at": "2026-11-12T07:18:40.383270+00:00",
+      "checked_on": "2026-11-12",
+      "snapshot_sha256": "49507f8d6e0417bf412d7c49c6e29fbdb54b80eb19d5d35511fad4409bc707b0",
+      "content_type": "text/html",
+      "publisher_http_last_modified": null,
+      "path": "data/snapshots/v2/D02-fr-49507f8d6e0417bf.capture",
+      "byte_length": 60875,
+      "human_reviewed_on": null,
+      "policy_effective_from": null,
+      "policy_effective_to": null,
+      "review_status": "automated_capture_not_policy_approval",
+      "reuse_status": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "policy_approval_changed": false,
+      "source_text_excerpt": {
+        "text": "Nous finançons plusieurs professionnels qualifiés qui peuvent vous aider à vous adapter avec succès à la vie au Canada.",
+        "section": "Trouvez des services gratuits pour nouveaux arrivants près de chez vous",
+        "anchor": "wb-cont",
+        "word_count": 19,
+        "complete_sentence": true
+      },
+      "status": "captured",
+      "extraction_status": "html_sections_parsed",
+      "heading_locators": [
+        {
+          "text": "Trouvez des services gratuits pour nouveaux arrivants près de chez vous",
+          "anchor": "wb-cont"
+        },
+        {
+          "text": "À propos des services d’établissement financés par le gouvernement du Canada",
+          "anchor": ""
+        },
+        {
+          "text": "Aidez-nous à améliorer nos services",
+          "anchor": ""
+        },
+        {
+          "text": "Donnez votre rétroaction sur cette page",
+          "anchor": ""
+        }
+      ],
+      "publisher_modified_on": null,
+      "extracted_paragraphs": 26,
+      "captured_title": "Trouvez des services gratuits pour nouveaux arrivants près de chez vous",
+      "extracted_text_sha256": "6c463712902d8c1fa0bf02861e75e26cd0bb80bbdd65a701861df0a4ec32cdfc",
+      "extractor_version": "html-sections-2.1"
+    },
+    {
+      "id": "D03-en",
+      "document_id": "D03-en",
+      "source_id": "D03",
+      "locale": "en",
+      "original_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/settle-canada/newcomer-services/eligibility.html",
+      "resolved_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/settle-canada/newcomer-services/eligibility.html",
+      "retrieved_at": "2026-11-12T07:18:44.158575+00:00",
+      "checked_on": "2026-11-12",
+      "snapshot_sha256": "fa59fc3a07d17a5a94808c3fead5ba164298b114a6460ff5d3cc19520d4e6311",
+      "content_type": "text/html;charset=utf-8",
+      "publisher_http_last_modified": "Thu, 12 Nov 2026 06:35:28 GMT",
+      "path": "data/snapshots/v2/D03-en-fa59fc3a07d17a5a.capture",
+      "byte_length": 29211,
+      "human_reviewed_on": null,
+      "policy_effective_from": null,
+      "policy_effective_to": null,
+      "review_status": "automated_capture_not_policy_approval",
+      "reuse_status": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "policy_approval_changed": false,
+      "source_text_excerpt": null,
+      "status": "captured",
+      "extraction_status": "html_sections_parsed",
+      "heading_locators": [
+        {
+          "text": "Changes to eligibility for economic class permanent residents",
+          "anchor": ""
+        },
+        {
+          "text": "On this page",
+          "anchor": ""
+        },
+        {
+          "text": "New eligibility period for economic class PRs",
+          "anchor": "new"
+        },
+        {
+          "text": "The date you became a PR",
+          "anchor": ""
+        },
+        {
+          "text": "Example 1: You became a PR on or before April 1, 2020",
+          "anchor": ""
+        },
+        {
+          "text": "Example 2: You became a PR between April 2, 2020, and March 31, 2027",
+          "anchor": ""
+        },
+        {
+          "text": "Example 3: You become a PR on or after April 1, 2027",
+          "anchor": ""
+        },
+        {
+          "text": "If you’re not sure about your eligibility period",
+          "anchor": ""
+        },
+        {
+          "text": "Other eligible newcomers",
+          "anchor": "other"
+        },
+        {
+          "text": "PRs",
+          "anchor": ""
+        },
+        {
+          "text": "Non-PRs",
+          "anchor": ""
+        },
+        {
+          "text": "If you become a Canadian citizen",
+          "anchor": "citizen"
+        },
+        {
+          "text": "Page details",
+          "anchor": ""
+        }
+      ],
+      "publisher_modified_on": "2026-03-10",
+      "extracted_paragraphs": 62,
+      "captured_title": "Changes to eligibility for economic class permanent residents",
+      "extracted_text_sha256": "7888aa397584235076f232a60e6e2f008dff05b3fef91522b61bf7373e3fcb6c",
+      "extractor_version": "html-sections-2.1",
+      "excerpt_gap": "No complete short sentence found in selected sections; original paraphrase only."
+    },
+    {
+      "id": "D03-fr",
+      "document_id": "D03-fr",
+      "source_id": "D03",
+      "locale": "fr",
+      "original_url": "https://www.canada.ca/fr/immigration-refugies-citoyennete/services/setablir-canada/services-nouveaux-arrivants/admissibilite.html",
+      "resolved_url": "https://www.canada.ca/fr/immigration-refugies-citoyennete/services/setablir-canada/services-nouveaux-arrivants/admissibilite.html",
+      "retrieved_at": "2026-11-12T07:18:47.875231+00:00",
+      "checked_on": "2026-11-12",
+      "snapshot_sha256": "5d4b05a467fb343a4eaa91e689ef16a05be88da682263d930a22fae0abd0acd8",
+      "content_type": "text/html;charset=utf-8",
+      "publisher_http_last_modified": "Thu, 12 Nov 2026 07:18:47 GMT",
+      "path": "data/snapshots/v2/D03-fr-5d4b05a467fb343a.capture",
+      "byte_length": 31876,
+      "human_reviewed_on": null,
+      "policy_effective_from": null,
+      "policy_effective_to": null,
+      "review_status": "automated_capture_not_policy_approval",
+      "reuse_status": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "policy_approval_changed": false,
+      "source_text_excerpt": null,
+      "status": "captured",
+      "extraction_status": "html_sections_parsed",
+      "heading_locators": [
+        {
+          "text": "Modifications apportées aux critères d’admissibilité pour les résidents permanents de la catégorie économique",
+          "anchor": ""
+        },
+        {
+          "text": "Sur cette page",
+          "anchor": ""
+        },
+        {
+          "text": "Nouvelle période d’admissibilité pour les RP de la catégorie économique",
+          "anchor": "nouvelle"
+        },
+        {
+          "text": "La date à laquelle vous êtes devenu RP",
+          "anchor": ""
+        },
+        {
+          "text": "Exemple 1 : Vous êtes devenu(e) RP au plus tard le 1er avril 2020",
+          "anchor": ""
+        },
+        {
+          "text": "Exemple 2 : Vous êtes devenu RP entre le 2 avril 2020 et le 31 mars 2027",
+          "anchor": ""
+        },
+        {
+          "text": "Exemple 3 : Vous devenez RP à compter du 1er avril 2027",
+          "anchor": ""
+        },
+        {
+          "text": "Si vous n’êtes pas sûr de votre période d’admissibilité",
+          "anchor": ""
+        },
+        {
+          "text": "Autres nouveaux arrivants admissibles",
+          "anchor": "autres"
+        },
+        {
+          "text": "RP",
+          "anchor": ""
+        },
+        {
+          "text": "Non RP",
+          "anchor": ""
+        },
+        {
+          "text": "Si vous devenez citoyen canadien",
+          "anchor": "citoyen"
+        },
+        {
+          "text": "Détails de la page",
+          "anchor": ""
+        }
+      ],
+      "publisher_modified_on": "2026-03-10",
+      "extracted_paragraphs": 62,
+      "captured_title": "Modifications apportées aux critères d’admissibilité pour les résidents permanents de la catégorie économique",
+      "extracted_text_sha256": "10a111d424d1b19e93fa67518ee8d1c2493291960e213a34262ade52b8301821",
+      "extractor_version": "html-sections-2.1",
+      "excerpt_gap": "No complete short sentence found in selected sections; original paraphrase only."
+    },
+    {
+      "id": "D04-en",
+      "document_id": "D04-en",
+      "source_id": "D04",
+      "locale": "en",
+      "original_url": "https://studentaidbc.ca/sites/all/files/school-officials/policy_manual_26_27.pdf",
+      "resolved_url": "https://studentaidbc.ca/sites/all/files/school-officials/policy_manual_26_27.pdf",
+      "retrieved_at": "2026-11-12T07:18:52.429107+00:00",
+      "checked_on": "2026-11-12",
+      "snapshot_sha256": "6668482a2d5ecefd3844e43eba647fca73dedf102e4dcb9333ed2dcf8c1757b7",
+      "content_type": "application/pdf",
+      "publisher_http_last_modified": "Thu, 27 Aug 2026 21:30:29 GMT",
+      "path": "data/snapshots/v2/D04-en-6668482a2d5ecefd.capture",
+      "byte_length": 1775500,
+      "human_reviewed_on": null,
+      "policy_effective_from": null,
+      "policy_effective_to": null,
+      "review_status": "automated_capture_not_policy_approval",
+      "reuse_status": "original_paraphrase_and_link_only",
+      "reuse_terms_url": "https://www2.gov.bc.ca/gov/content/home/copyright",
+      "policy_approval_changed": false,
+      "source_text_excerpt": null,
+      "status": "captured_pdf_link_only",
+      "extraction_status": "not_extracted_pending_page_visual_review",
+      "heading_locators": [],
+      "publisher_modified_on": null,
+      "coverage_limit": "PDF bytes captured and hashed only; no PDF text used in runtime guidance.",
+      "extractor_version": "html-sections-2.1"
+    },
+    {
+      "id": "D05-en",
+      "document_id": "D05-en",
+      "source_id": "D05",
+      "locale": "en",
+      "original_url": "https://www.sfu.ca/students/financial-aid/international/general-funding-options.html",
+      "resolved_url": "https://www.sfu.ca/students/financial-aid/international/general-funding-options.html",
+      "retrieved_at": "2026-11-12T07:18:56.311899+00:00",
+      "checked_on": "2026-11-12",
+      "snapshot_sha256": "23f1c35fa2bda82b1597eaf0098fc0ebd40dfce5a8efa5e08c226722cd0c66db",
+      "content_type": "text/html; charset=utf-8",
+      "publisher_http_last_modified": "Thu, 12 Nov 2026 05:42:25 GMT",
+      "path": "data/snapshots/v2/D05-en-23f1c35fa2bda82b.capture",
+      "byte_length": 54067,
+      "human_reviewed_on": null,
+      "policy_effective_from": null,
+      "policy_effective_to": null,
+      "review_status": "automated_capture_not_policy_approval",
+      "reuse_status": "original_paraphrase_and_link_only",
+      "reuse_terms_url": "https://www.sfu.ca/contact/terms-conditions.html",
+      "policy_approval_changed": false,
+      "source_text_excerpt": null,
+      "status": "captured",
+      "extraction_status": "html_sections_parsed",
+      "heading_locators": [
+        {
+          "text": "Funding options for International Students",
+          "anchor": ""
+        },
+        {
+          "text": "Entrance Scholarships, Awards, and Bursaries",
+          "anchor": ""
+        },
+        {
+          "text": "Undergraduate Resources",
+          "anchor": ""
+        },
+        {
+          "text": "Graduate Resources",
+          "anchor": ""
+        }
+      ],
+      "publisher_modified_on": null,
+      "extracted_paragraphs": 17,
+      "captured_title": "Funding options for International Students",
+      "extracted_text_sha256": "3766d0341a1db6c5b160e07d61c3fb7c896edac65d7ba85dddae9eb71ca865f4",
+      "extractor_version": "html-sections-2.1"
+    },
+    {
+      "id": "D06-en",
+      "document_id": "D06-en",
+      "source_id": "D06",
+      "locale": "en",
+      "original_url": "https://www.sfu.ca/students/financial-aid/undergraduate/bursaries.html",
+      "resolved_url": "https://www.sfu.ca/students/financial-aid/undergraduate/bursaries.html",
+      "retrieved_at": "2026-11-12T07:19:00.618353+00:00",
+      "checked_on": "2026-11-12",
+      "snapshot_sha256": "0a4d071ef556ddd1e85d56720f187af92e66a0c4e9ea4882828345cb19889ef4",
+      "content_type": "text/html; charset=utf-8",
+      "publisher_http_last_modified": "Thu, 12 Nov 2026 06:41:08 GMT",
+      "path": "data/snapshots/v2/D06-en-0a4d071ef556ddd1.capture",
+      "byte_length": 56251,
+      "human_reviewed_on": null,
+      "policy_effective_from": null,
+      "policy_effective_to": null,
+      "review_status": "automated_capture_not_policy_approval",
+      "reuse_status": "original_paraphrase_and_link_only",
+      "reuse_terms_url": "https://www.sfu.ca/contact/terms-conditions.html",
+      "policy_approval_changed": false,
+      "source_text_excerpt": null,
+      "status": "captured",
+      "extraction_status": "html_sections_parsed",
+      "heading_locators": [
+        {
+          "text": "Bursaries",
+          "anchor": ""
+        },
+        {
+          "text": "Eligibility Requirements",
+          "anchor": ""
+        },
+        {
+          "text": "How to Apply",
+          "anchor": ""
+        },
+        {
+          "text": "TSSU Member Child Care Fund",
+          "anchor": ""
+        },
+        {
+          "text": "TSSU Member Childcare Fund- late applications",
+          "anchor": ""
+        }
+      ],
+      "publisher_modified_on": null,
+      "extracted_paragraphs": 23,
+      "captured_title": "Bursaries",
+      "extracted_text_sha256": "4bc071d630aef73186bc814a8b36499b57db46cc535e6056270d41e74fc8bba3",
+      "extractor_version": "html-sections-2.1"
+    },
+    {
+      "id": "D07-en",
+      "document_id": "D07-en",
+      "source_id": "D07",
+      "locale": "en",
+      "original_url": "https://students.ubc.ca/finances/financial-support-options/",
+      "resolved_url": "https://students.ubc.ca/finances/financial-support-options/",
+      "retrieved_at": "2026-11-12T07:19:04.419623+00:00",
+      "checked_on": "2026-11-12",
+      "snapshot_sha256": "36606dd34b5a79f7b2ad151f6b693bb33167b33d5b2233213c9f914a5a89cdaf",
+      "content_type": "text/html; charset=UTF-8",
+      "publisher_http_last_modified": null,
+      "path": "data/snapshots/v2/D07-en-36606dd34b5a79f7.capture",
+      "byte_length": 296303,
+      "human_reviewed_on": null,
+      "policy_effective_from": null,
+      "policy_effective_to": null,
+      "review_status": "automated_capture_not_policy_approval",
+      "reuse_status": "original_paraphrase_and_link_only",
+      "reuse_terms_url": "https://www.ubc.ca/site/legal.html",
+      "policy_approval_changed": false,
+      "source_text_excerpt": null,
+      "status": "captured",
+      "extraction_status": "html_sections_parsed",
+      "heading_locators": [
+        {
+          "text": "Financial support options",
+          "anchor": ""
+        },
+        {
+          "text": "Setting yourself up for financial wellness",
+          "anchor": "setting-yourself-up-for-financial-wellness"
+        },
+        {
+          "text": "Your responsibilities as a student",
+          "anchor": "your-responsibilities-as-a-student"
+        },
+        {
+          "text": "Domestic student support",
+          "anchor": "domestic-student-support"
+        },
+        {
+          "text": "International student support",
+          "anchor": "international-student-support"
+        },
+        {
+          "text": "Indigenous student support",
+          "anchor": "indigenous-student-support"
+        },
+        {
+          "text": "Students with disabilities",
+          "anchor": "students-with-disabilities"
+        },
+        {
+          "text": "Student loans for students with disabilities",
+          "anchor": ""
+        },
+        {
+          "text": "Disability Programs application",
+          "anchor": ""
+        },
+        {
+          "text": "British Columbia residents",
+          "anchor": ""
+        },
+        {
+          "text": "Students outside of BC",
+          "anchor": ""
+        },
+        {
+          "text": "Awards for students with a disability",
+          "anchor": ""
+        },
+        {
+          "text": "Helpful resources",
+          "anchor": "helpful-resources"
+        },
+        {
+          "text": "If you have questions",
+          "anchor": "if-you-have-questions"
+        }
+      ],
+      "publisher_modified_on": "2026-09-14T16:32:35-07:00",
+      "extracted_paragraphs": 33,
+      "captured_title": "Financial support options",
+      "extracted_text_sha256": "482645bc04d7342938a7ec9d4ee9bf9b38bc3791c13f4e97fbacea70910956fa",
+      "extractor_version": "html-sections-2.1"
+    },
+    {
+      "id": "D08-en",
+      "document_id": "D08-en",
+      "source_id": "D08",
+      "locale": "en",
+      "original_url": "https://students.ubc.ca/finances/financial-support-options/emergency-funding/",
+      "resolved_url": "https://students.ubc.ca/finances/financial-support-options/emergency-funding/",
+      "retrieved_at": "2026-11-12T07:19:08.779321+00:00",
+      "checked_on": "2026-11-12",
+      "snapshot_sha256": "383e31b8a3d3478526058b8490f29f724b6f246746a6d89e7db505370f818a80",
+      "content_type": "text/html; charset=UTF-8",
+      "publisher_http_last_modified": null,
+      "path": "data/snapshots/v2/D08-en-383e31b8a3d34785.capture",
+      "byte_length": 251278,
+      "human_reviewed_on": null,
+      "policy_effective_from": null,
+      "policy_effective_to": null,
+      "review_status": "automated_capture_not_policy_approval",
+      "reuse_status": "original_paraphrase_and_link_only",
+      "reuse_terms_url": "https://www.ubc.ca/site/legal.html",
+      "policy_approval_changed": false,
+      "source_text_excerpt": null,
+      "status": "captured",
+      "extraction_status": "html_sections_parsed",
+      "heading_locators": [
+        {
+          "text": "Emergency funding",
+          "anchor": ""
+        },
+        {
+          "text": "Eligibility requirements",
+          "anchor": "eligibility-requirements"
+        },
+        {
+          "text": "How to apply",
+          "anchor": "how-to-apply"
+        },
+        {
+          "text": "Contact an Enrolment Services Advisor",
+          "anchor": ""
+        },
+        {
+          "text": "Submit an online application",
+          "anchor": ""
+        },
+        {
+          "text": "Additional resources",
+          "anchor": "additional-resources"
+        }
+      ],
+      "publisher_modified_on": "2026-08-10T13:40:44-07:00",
+      "extracted_paragraphs": 20,
+      "captured_title": "Emergency funding",
+      "extracted_text_sha256": "0fc4f7c6a39242edc0f277c6ebb2b6539e19c3519cfbd1c8ba13b450fd356789",
+      "extractor_version": "html-sections-2.1"
+    },
+    {
+      "id": "D09-en",
+      "document_id": "D09-en",
+      "source_id": "D09",
+      "locale": "en",
+      "original_url": "https://www.canada.ca/en/financial-consumer-agency/services/banking/opening-bank-account.html",
+      "resolved_url": "https://www.canada.ca/en/financial-consumer-agency/services/banking/opening-bank-account.html",
+      "retrieved_at": "2026-11-12T07:19:12.798665+00:00",
+      "checked_on": "2026-11-12",
+      "snapshot_sha256": "4a810beb8c5f1d980cd52db7c602c48f49d1a92e65d7a2776a79529e0034b1ea",
+      "content_type": "text/html;charset=utf-8",
+      "publisher_http_last_modified": "Thu, 12 Nov 2026 02:46:22 GMT",
+      "path": "data/snapshots/v2/D09-en-4a810beb8c5f1d98.capture",
+      "byte_length": 29237,
+      "human_reviewed_on": null,
+      "policy_effective_from": null,
+      "policy_effective_to": null,
+      "review_status": "automated_capture_not_policy_approval",
+      "reuse_status": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "policy_approval_changed": false,
+      "source_text_excerpt": {
+        "text": "Before you open an account, read the account agreement carefully.",
+        "section": "Before opening an account",
+        "anchor": "",
+        "word_count": 10,
+        "complete_sentence": true
+      },
+      "status": "captured",
+      "extraction_status": "html_sections_parsed",
+      "heading_locators": [
+        {
+          "text": "Opening a bank account",
+          "anchor": "wb-cont"
+        },
+        {
+          "text": "Before opening an account",
+          "anchor": ""
+        },
+        {
+          "text": "Transferring your account to another bank",
+          "anchor": ""
+        },
+        {
+          "text": "Providing identification to open a bank account",
+          "anchor": ""
+        },
+        {
+          "text": "Option 1: 2 documents from reliable sources",
+          "anchor": ""
+        },
+        {
+          "text": "Option 2: 1 document plus identity confirmation",
+          "anchor": ""
+        },
+        {
+          "text": "Opening a bank account if you’re not a Canadian citizen",
+          "anchor": ""
+        },
+        {
+          "text": "Understanding when a bank may refuse to open an account",
+          "anchor": ""
+        },
+        {
+          "text": "Related links",
+          "anchor": ""
+        },
+        {
+          "text": "Page details",
+          "anchor": ""
+        },
+        {
+          "text": "From:",
+          "anchor": ""
+        }
+      ],
+      "publisher_modified_on": "2026-10-29",
+      "extracted_paragraphs": 60,
+      "captured_title": "Opening a bank account",
+      "extracted_text_sha256": "430f2b0aedca1ab159197a9c77ed933db5613c2b353ec85b7eb6505d4c955718",
+      "extractor_version": "html-sections-2.1"
+    },
+    {
+      "id": "D09-fr",
+      "document_id": "D09-fr",
+      "source_id": "D09",
+      "locale": "fr",
+      "original_url": "https://www.canada.ca/fr/agence-consommation-matiere-financiere/services/activites-bancaires/ouvrir-compte-banque.html",
+      "resolved_url": "https://www.canada.ca/fr/agence-consommation-matiere-financiere/services/activites-bancaires/ouvrir-compte-banque.html",
+      "retrieved_at": "2026-11-12T07:19:16.814562+00:00",
+      "checked_on": "2026-11-12",
+      "snapshot_sha256": "f21c2491548ca77f95b63c6fdd8b0526ec137b77e82349584e3e5e6b369ee924",
+      "content_type": "text/html;charset=utf-8",
+      "publisher_http_last_modified": "Thu, 12 Nov 2026 05:49:46 GMT",
+      "path": "data/snapshots/v2/D09-fr-f21c2491548ca77f.capture",
+      "byte_length": 31132,
+      "human_reviewed_on": null,
+      "policy_effective_from": null,
+      "policy_effective_to": null,
+      "review_status": "automated_capture_not_policy_approval",
+      "reuse_status": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "policy_approval_changed": false,
+      "source_text_excerpt": {
+        "text": "Avant d’ouvrir un compte, lisez attentivement la convention de compte.",
+        "section": "Avant d’ouvrir un compte",
+        "anchor": "",
+        "word_count": 10,
+        "complete_sentence": true
+      },
+      "status": "captured",
+      "extraction_status": "html_sections_parsed",
+      "heading_locators": [
+        {
+          "text": "Ouvrir un compte de banque",
+          "anchor": "wb-cont"
+        },
+        {
+          "text": "Avant d’ouvrir un compte",
+          "anchor": ""
+        },
+        {
+          "text": "Transférer votre compte à une autre banque",
+          "anchor": ""
+        },
+        {
+          "text": "Fournir des pièces d’identité pour ouvrir un compte de banque",
+          "anchor": ""
+        },
+        {
+          "text": "Option 1 : deux documents provenant de sources fiables",
+          "anchor": ""
+        },
+        {
+          "text": "Option 2 : 1 document et 1 confirmation d’identité",
+          "anchor": ""
+        },
+        {
+          "text": "Ouvrir un compte de banque si vous n’êtes pas un citoyen canadien",
+          "anchor": ""
+        },
+        {
+          "text": "Comprendre quand une banque peut refuser d’ouvrir un compte",
+          "anchor": ""
+        },
+        {
+          "text": "Liens connexes",
+          "anchor": ""
+        },
+        {
+          "text": "Détails de la page",
+          "anchor": ""
+        },
+        {
+          "text": "De :",
+          "anchor": ""
+        }
+      ],
+      "publisher_modified_on": "2026-10-29",
+      "extracted_paragraphs": 60,
+      "captured_title": "Ouvrir un compte de banque",
+      "extracted_text_sha256": "36f41ec36bd247e382ad1ab54a62d29780399cfcd53029fa1dc26c4f7899710c",
+      "extractor_version": "html-sections-2.1"
+    },
+    {
+      "id": "D10-en",
+      "document_id": "D10-en",
+      "source_id": "D10",
+      "locale": "en",
+      "original_url": "https://www.canada.ca/en/financial-consumer-agency/services/banking/bank-accounts/low-cost-no-cost.html",
+      "resolved_url": "https://www.canada.ca/en/financial-consumer-agency/services/banking/bank-accounts/low-cost-no-cost.html",
+      "retrieved_at": "2026-11-12T07:19:21.870525+00:00",
+      "checked_on": "2026-11-12",
+      "snapshot_sha256": "a1eebfb65e9ef4107352a0eb52c5fe7350264face49c64ddf9eae3d70c049786",
+      "content_type": "text/html;charset=utf-8",
+      "publisher_http_last_modified": "Thu, 12 Nov 2026 05:22:21 GMT",
+      "path": "data/snapshots/v2/D10-en-a1eebfb65e9ef410.capture",
+      "byte_length": 26757,
+      "human_reviewed_on": null,
+      "policy_effective_from": null,
+      "policy_effective_to": null,
+      "review_status": "automated_capture_not_policy_approval",
+      "reuse_status": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "policy_approval_changed": false,
+      "source_text_excerpt": {
+        "text": "Once you know what type of account you want, use the Account Comparison Tool to compare your options.",
+        "section": "Comparing account options",
+        "anchor": "",
+        "word_count": 18,
+        "complete_sentence": true
+      },
+      "status": "captured",
+      "extraction_status": "html_sections_parsed",
+      "heading_locators": [
+        {
+          "text": "Opening a low-cost or no-cost bank account",
+          "anchor": "wb-cont"
+        },
+        {
+          "text": "Checking if you qualify",
+          "anchor": ""
+        },
+        {
+          "text": "Low-cost accounts",
+          "anchor": ""
+        },
+        {
+          "text": "No-cost accounts",
+          "anchor": ""
+        },
+        {
+          "text": "Comparing account options",
+          "anchor": ""
+        },
+        {
+          "text": "Tip",
+          "anchor": ""
+        },
+        {
+          "text": "Contacting the financial institution to confirm what the account includes",
+          "anchor": ""
+        },
+        {
+          "text": "Related links",
+          "anchor": ""
+        },
+        {
+          "text": "Page details",
+          "anchor": ""
+        },
+        {
+          "text": "From:",
+          "anchor": ""
+        }
+      ],
+      "publisher_modified_on": "2026-10-29",
+      "extracted_paragraphs": 38,
+      "captured_title": "Opening a low-cost or no-cost bank account",
+      "extracted_text_sha256": "eaccc194a1489ebaa12bd45880f71f073fd4535b4ec15c5c30416f797b3505af",
+      "extractor_version": "html-sections-2.1"
+    },
+    {
+      "id": "D10-fr",
+      "document_id": "D10-fr",
+      "source_id": "D10",
+      "locale": "fr",
+      "original_url": "https://www.canada.ca/fr/agence-consommation-matiere-financiere/services/activites-bancaires/comptes-bancaires/frais-modiques-sans-frais.html",
+      "resolved_url": "https://www.canada.ca/fr/agence-consommation-matiere-financiere/services/activites-bancaires/comptes-bancaires/frais-modiques-sans-frais.html",
+      "retrieved_at": "2026-11-12T07:19:26.530751+00:00",
+      "checked_on": "2026-11-12",
+      "snapshot_sha256": "07602fb94fef8e2600aaab68803526de5847cb56d35cdbf152fb6fa58c767db4",
+      "content_type": "text/html;charset=utf-8",
+      "publisher_http_last_modified": "Thu, 12 Nov 2026 05:18:35 GMT",
+      "path": "data/snapshots/v2/D10-fr-07602fb94fef8e26.capture",
+      "byte_length": 28585,
+      "human_reviewed_on": null,
+      "policy_effective_from": null,
+      "policy_effective_to": null,
+      "review_status": "automated_capture_not_policy_approval",
+      "reuse_status": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "policy_approval_changed": false,
+      "source_text_excerpt": {
+        "text": "Une fois que vous savez quel type de compte que vous voulez, utilisez l’Outil de comparaison de comptes pour comparer vos options.",
+        "section": "Comparer les options de comptes",
+        "anchor": "",
+        "word_count": 22,
+        "complete_sentence": true
+      },
+      "status": "captured",
+      "extraction_status": "html_sections_parsed",
+      "heading_locators": [
+        {
+          "text": "Ouvrir un compte de banque à frais modiques ou sans frais",
+          "anchor": "wb-cont"
+        },
+        {
+          "text": "Vérifier si vous êtes admissible",
+          "anchor": ""
+        },
+        {
+          "text": "Comptes à frais modiques",
+          "anchor": ""
+        },
+        {
+          "text": "Comptes sans frais",
+          "anchor": ""
+        },
+        {
+          "text": "Comparer les options de comptes",
+          "anchor": ""
+        },
+        {
+          "text": "Truc",
+          "anchor": ""
+        },
+        {
+          "text": "Communiquer avec l’institution financière pour confirmer quels services le compte comprend",
+          "anchor": ""
+        },
+        {
+          "text": "Liens connexes",
+          "anchor": ""
+        },
+        {
+          "text": "Détails de la page",
+          "anchor": ""
+        },
+        {
+          "text": "De :",
+          "anchor": ""
+        }
+      ],
+      "publisher_modified_on": "2026-10-29",
+      "extracted_paragraphs": 38,
+      "captured_title": "Ouvrir un compte de banque à frais modiques ou sans frais",
+      "extracted_text_sha256": "8fbd4f288aa9f7e64ff08a2b195440e1f225fd724600906165cd0aec31a2f058",
+      "extractor_version": "html-sections-2.1"
+    },
+    {
+      "id": "D11-en",
+      "document_id": "D11-en",
+      "source_id": "D11",
+      "locale": "en",
+      "original_url": "https://www.canada.ca/en/revenue-agency/services/tax/international-non-residents/individuals-leaving-entering-canada-non-residents/newcomers-canada-immigrants.html",
+      "resolved_url": "https://www.canada.ca/en/revenue-agency/services/tax/international-non-residents/individuals-leaving-entering-canada-non-residents/newcomers-canada-immigrants.html",
+      "retrieved_at": "2026-11-12T07:19:30.943112+00:00",
+      "checked_on": "2026-11-12",
+      "snapshot_sha256": "497d154330453a01f1376596b80695af99d5d10aadfa1098933a933449d6b262",
+      "content_type": "text/html;charset=utf-8",
+      "publisher_http_last_modified": "Thu, 12 Nov 2026 05:54:15 GMT",
+      "path": "data/snapshots/v2/D11-en-497d154330453a01.capture",
+      "byte_length": 99539,
+      "human_reviewed_on": null,
+      "policy_effective_from": null,
+      "policy_effective_to": null,
+      "review_status": "automated_capture_not_policy_approval",
+      "reuse_status": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "policy_approval_changed": false,
+      "source_text_excerpt": {
+        "text": "Your immigration status and tax filing obligations: Your immigration status tells you if you can live, work, or study in Canada.",
+        "section": "Immigration status",
+        "anchor": "",
+        "word_count": 21,
+        "complete_sentence": true
+      },
+      "status": "captured",
+      "extraction_status": "html_sections_parsed",
+      "heading_locators": [
+        {
+          "text": "Newcomers to Canada and the CRA",
+          "anchor": "wb-cont"
+        },
+        {
+          "text": "Who are newcomers according to the CRA",
+          "anchor": "who_newcomers"
+        },
+        {
+          "text": "Who is the Canada Revenue Agency (CRA)?",
+          "anchor": ""
+        },
+        {
+          "text": "Residency status",
+          "anchor": ""
+        },
+        {
+          "text": "Taxes for international students studying in Canada",
+          "anchor": ""
+        },
+        {
+          "text": "Immigration status",
+          "anchor": ""
+        },
+        {
+          "text": "Get and protect your social insurance number (SIN) or temporary tax number (TTN)",
+          "anchor": "sin_tn"
+        },
+        {
+          "text": "Canada’s tax system",
+          "anchor": "canada_ts"
+        },
+        {
+          "text": "Due dates and payment dates",
+          "anchor": ""
+        },
+        {
+          "text": "Get government payments",
+          "anchor": "government_payments"
+        },
+        {
+          "text": "Start getting payments, even before you file your first tax return",
+          "anchor": ""
+        },
+        {
+          "text": "New residents of Canada must apply for the Canada Groceries and Essentials Benefit (CGEB), formerly the GST/HST credit",
+          "anchor": ""
+        },
+        {
+          "text": "Report income earned outside of Canada before you arrived",
+          "anchor": ""
+        },
+        {
+          "text": "Keep getting payments",
+          "anchor": ""
+        },
+        {
+          "text": "Do your taxes on time each year",
+          "anchor": ""
+        },
+        {
+          "text": "Keep your information up to date",
+          "anchor": ""
+        },
+        {
+          "text": "Report your non-resident spouse's or common-law partner's income",
+          "anchor": ""
+        },
+        {
+          "text": "Payments you may get after doing your taxes",
+          "anchor": ""
+        },
+        {
+          "text": "Ways to do your taxes",
+          "anchor": ""
+        },
+        {
+          "text": "Online",
+          "anchor": ""
+        },
+        {
+          "text": "By paper",
+          "anchor": ""
+        },
+        {
+          "text": "Free solutions",
+          "anchor": ""
+        },
+        {
+          "text": "Claim deductions and credits on your tax return",
+          "anchor": "claim_deductions"
+        },
+        {
+          "text": "Claim your expenses",
+          "anchor": ""
+        },
+        {
+          "text": "Learn about your taxes",
+          "anchor": "learn_about_taxes"
+        },
+        {
+          "text": "Manage your information with the CRA",
+          "anchor": "manage_information"
+        },
+        {
+          "text": "Updating your information",
+          "anchor": ""
+        },
+        {
+          "text": "Accessing information",
+          "anchor": ""
+        },
+        {
+          "text": "Getting your information",
+          "anchor": ""
+        },
+        {
+          "text": "Making or receiving a payment",
+          "anchor": ""
+        },
+        {
+          "text": "Contact us",
+          "anchor": ""
+        },
+        {
+          "text": "Stay connected and stay informed",
+          "anchor": ""
+        },
+        {
+          "text": "Protect yourself from scams",
+          "anchor": "protect_yourself"
+        },
+        {
+          "text": "Services for persons with disabilities",
+          "anchor": "services"
+        },
+        {
+          "text": "Know your rights",
+          "anchor": "know_your_rights"
+        },
+        {
+          "text": "Forms and guides",
+          "anchor": "forms_guides"
+        },
+        {
+          "text": "Multimedia",
+          "anchor": "multimedia"
+        },
+        {
+          "text": "Webinar: Newcomers to Canada",
+          "anchor": ""
+        },
+        {
+          "text": "Infographic: Benefit and credit payments",
+          "anchor": ""
+        },
+        {
+          "text": "Taxology – Episode 8: New Country, New Taxes: Info for Newcomers and International Students",
+          "anchor": ""
+        },
+        {
+          "text": "Learning events",
+          "anchor": "learning_events"
+        },
+        {
+          "text": "Employment opportunities",
+          "anchor": "employment_opportunities"
+        },
+        {
+          "text": "Related communities",
+          "anchor": "related_communities"
+        },
+        {
+          "text": "Page details",
+          "anchor": ""
+        }
+      ],
+      "publisher_modified_on": "2026-08-03",
+      "extracted_paragraphs": 262,
+      "captured_title": "Newcomers to Canada and the CRA",
+      "extracted_text_sha256": "8654cbf08d5e0ff9abdd272700cd1933839a8711d56c18460fd5cb7cc78ac761",
+      "extractor_version": "html-sections-2.1"
+    },
+    {
+      "id": "D11-fr",
+      "document_id": "D11-fr",
+      "source_id": "D11",
+      "locale": "fr",
+      "original_url": "https://www.canada.ca/fr/agence-revenu/services/impot/impot-international-non-residents/particuliers-depart-canada-entree-canada-non-residents/nouveaux-arrivants-canada-immigrants.html",
+      "resolved_url": "https://www.canada.ca/fr/agence-revenu/services/impot/impot-international-non-residents/particuliers-depart-canada-entree-canada-non-residents/nouveaux-arrivants-canada-immigrants.html",
+      "retrieved_at": "2026-11-12T07:19:34.721084+00:00",
+      "checked_on": "2026-11-12",
+      "snapshot_sha256": "7d63f436101c812a89ad93eee7a4f291ce13f49104d843678f7cfe4c68bf4603",
+      "content_type": "text/html;charset=utf-8",
+      "publisher_http_last_modified": null,
+      "path": "data/snapshots/v2/D11-fr-7d63f436101c812a.capture",
+      "byte_length": 112567,
+      "human_reviewed_on": null,
+      "policy_effective_from": null,
+      "policy_effective_to": null,
+      "review_status": "automated_capture_not_policy_approval",
+      "reuse_status": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "policy_approval_changed": false,
+      "source_text_excerpt": {
+        "text": "Contrairement à votre statut de résidence, il ne vous indique pas vos obligations fiscales.",
+        "section": "Statut d’immigrant",
+        "anchor": "",
+        "word_count": 14,
+        "complete_sentence": true
+      },
+      "status": "captured",
+      "extraction_status": "html_sections_parsed",
+      "heading_locators": [
+        {
+          "text": "Les nouveaux arrivants au Canada et l’ARC",
+          "anchor": "wb-cont"
+        },
+        {
+          "text": "Qui sont les nouveaux arrivants selon l’ARC",
+          "anchor": "who_newcomers"
+        },
+        {
+          "text": "Qu’est-ce que l’Agence du revenu du Canada (ARC)?",
+          "anchor": ""
+        },
+        {
+          "text": "Statut de résidence",
+          "anchor": ""
+        },
+        {
+          "text": "Impôt pour les étudiants internationaux qui étudient au Canada",
+          "anchor": ""
+        },
+        {
+          "text": "Statut d’immigrant",
+          "anchor": ""
+        },
+        {
+          "text": "Obtenez et protégez votre numéro d’assurance sociale (NAS) ou votre numéro d’identification temporaire (NIT)",
+          "anchor": "sin_tn"
+        },
+        {
+          "text": "Régime fiscal canadien",
+          "anchor": "canada_ts"
+        },
+        {
+          "text": "Dates limites et dates de paiement",
+          "anchor": ""
+        },
+        {
+          "text": "Obtenez des versements du gouvernement",
+          "anchor": "government_payments"
+        },
+        {
+          "text": "Commencez à recevoir des versements, même avant de produire votre première déclaration de revenus",
+          "anchor": ""
+        },
+        {
+          "text": "Les nouveaux résidents du Canada doivent l'Allocation canadienne pour l'épicerie et les besoins essentials (ACEBE), anciennement le crédit pour la TPS/TVH",
+          "anchor": ""
+        },
+        {
+          "text": "Déclarez les revenus gagnés à l'extérieur du Canada avant votre arrivée",
+          "anchor": ""
+        },
+        {
+          "text": "Continuer à recevoir des versements",
+          "anchor": ""
+        },
+        {
+          "text": "Produisez votre déclaration de revenus à temps, chaque année.",
+          "anchor": ""
+        },
+        {
+          "text": "Gardez vos renseignements personnels à jour",
+          "anchor": ""
+        },
+        {
+          "text": "Déclarez les revenus de votre époux ou conjoint de fait non-résident",
+          "anchor": ""
+        },
+        {
+          "text": "Versements que vous pouvez recevoir après avoir fait vos impôts",
+          "anchor": ""
+        },
+        {
+          "text": "Différentes façons de produire votre déclaration de revenus",
+          "anchor": ""
+        },
+        {
+          "text": "En ligne",
+          "anchor": ""
+        },
+        {
+          "text": "En format papier",
+          "anchor": ""
+        },
+        {
+          "text": "Solutions gratuites",
+          "anchor": ""
+        },
+        {
+          "text": "Demandez des déductions et crédits dans votre déclaration de revenus",
+          "anchor": "claim_deductions"
+        },
+        {
+          "text": "Déclarez vos dépenses",
+          "anchor": ""
+        },
+        {
+          "text": "Comprendre vos impôts",
+          "anchor": ""
+        },
+        {
+          "text": "Gérez vos renseignements avec l’ARC",
+          "anchor": "manage_information"
+        },
+        {
+          "text": "Mettez à jour vos renseignements",
+          "anchor": ""
+        },
+        {
+          "text": "Accédez à vos renseignements",
+          "anchor": ""
+        },
+        {
+          "text": "Obtenez vos renseignements",
+          "anchor": ""
+        },
+        {
+          "text": "Effectuez un paiement ou recevez un versement",
+          "anchor": ""
+        },
+        {
+          "text": "Communiquez avec nous",
+          "anchor": ""
+        },
+        {
+          "text": "Soyez branché",
+          "anchor": ""
+        },
+        {
+          "text": "Protégez-vous contre les arnaques",
+          "anchor": "protect_yourself"
+        },
+        {
+          "text": "Services offerts aux personnes handicapées",
+          "anchor": "services"
+        },
+        {
+          "text": "Connaissez vos droits",
+          "anchor": "know_your_rights"
+        },
+        {
+          "text": "Formulaires et guides",
+          "anchor": "forms_guides"
+        },
+        {
+          "text": "Multimédia",
+          "anchor": "multimedia"
+        },
+        {
+          "text": "Webinaire : Nouveaux arrivants au Canada",
+          "anchor": ""
+        },
+        {
+          "text": "Infographie : Versements de prestations et de crédits",
+          "anchor": ""
+        },
+        {
+          "text": "Impologie - Épisode 8 : Le fonctionnement du régime fiscal canadien : ce que les nouveaux arrivants et les étudiants étrangers doivent savoir",
+          "anchor": ""
+        },
+        {
+          "text": "Activités d’apprentissage",
+          "anchor": "learning_events"
+        },
+        {
+          "text": "Possibilités d’emploi",
+          "anchor": "employment_opportunities"
+        },
+        {
+          "text": "Communautés connexes",
+          "anchor": "related_communities"
+        },
+        {
+          "text": "Détails de la page",
+          "anchor": ""
+        }
+      ],
+      "publisher_modified_on": "2026-08-03",
+      "extracted_paragraphs": 259,
+      "captured_title": "Les nouveaux arrivants au Canada et l’ARC",
+      "extracted_text_sha256": "ac57c098e9d5dbc5f6febdd243823c9c886830c6b729542e998a731ac46d80ab",
+      "extractor_version": "html-sections-2.1"
+    },
+    {
+      "id": "D12-en",
+      "document_id": "D12-en",
+      "source_id": "D12",
+      "locale": "en",
+      "original_url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits.html",
+      "resolved_url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits.html",
+      "retrieved_at": "2026-11-12T07:19:38.314776+00:00",
+      "checked_on": "2026-11-12",
+      "snapshot_sha256": "7fb1c7f5a61c1504e7c3bab89c0d40cd3e01144455902f26c6742afd6b178d15",
+      "content_type": "text/html;charset=utf-8",
+      "publisher_http_last_modified": "Thu, 12 Nov 2026 04:09:04 GMT",
+      "path": "data/snapshots/v2/D12-en-7fb1c7f5a61c1504.capture",
+      "byte_length": 29409,
+      "human_reviewed_on": null,
+      "policy_effective_from": null,
+      "policy_effective_to": null,
+      "review_status": "automated_capture_not_policy_approval",
+      "reuse_status": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "policy_approval_changed": false,
+      "source_text_excerpt": {
+        "text": "to continue receiving the benefit and credit payments that you are entitled to, even if you have no income in the year .",
+        "section": "After applying",
+        "anchor": "",
+        "word_count": 23,
+        "complete_sentence": true
+      },
+      "status": "captured",
+      "extraction_status": "html_sections_parsed",
+      "heading_locators": [
+        {
+          "text": "Overview of child and family benefits",
+          "anchor": "wb-cont"
+        },
+        {
+          "text": "Find out if you are eligible for benefits and credits",
+          "anchor": ""
+        },
+        {
+          "text": "You might also be eligible for other benefits",
+          "anchor": ""
+        },
+        {
+          "text": "Expecting mothers",
+          "anchor": ""
+        },
+        {
+          "text": "After applying",
+          "anchor": ""
+        },
+        {
+          "text": "How much you might get",
+          "anchor": ""
+        },
+        {
+          "text": "Payment dates",
+          "anchor": ""
+        },
+        {
+          "text": "Related services and information",
+          "anchor": ""
+        },
+        {
+          "text": "Page details",
+          "anchor": ""
+        }
+      ],
+      "publisher_modified_on": "2026-11-02",
+      "extracted_paragraphs": 30,
+      "captured_title": "Overview of child and family benefits",
+      "extracted_text_sha256": "54ebf98efffa0f84f791f7982b9ab75355deff8dcb7dfa48384cf9bf4d8a7fe2",
+      "extractor_version": "html-sections-2.1"
+    },
+    {
+      "id": "D12-fr",
+      "document_id": "D12-fr",
+      "source_id": "D12",
+      "locale": "fr",
+      "original_url": "https://www.canada.ca/fr/agence-revenu/services/prestations-enfants-familles.html",
+      "resolved_url": "https://www.canada.ca/fr/agence-revenu/services/prestations-enfants-familles.html",
+      "retrieved_at": "2026-11-12T07:19:42.545010+00:00",
+      "checked_on": "2026-11-12",
+      "snapshot_sha256": "8e8a8fea594b4fe1fba6ccd49283f309cdb2d331df03ffa6350893197ef65281",
+      "content_type": "text/html;charset=utf-8",
+      "publisher_http_last_modified": "Thu, 12 Nov 2026 07:19:42 GMT",
+      "path": "data/snapshots/v2/D12-fr-8e8a8fea594b4fe1.capture",
+      "byte_length": 31146,
+      "human_reviewed_on": null,
+      "policy_effective_from": null,
+      "policy_effective_to": null,
+      "review_status": "automated_capture_not_policy_approval",
+      "reuse_status": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "policy_approval_changed": false,
+      "source_text_excerpt": {
+        "text": "L’Agence du revenu du Canada (ARC) administre ces versements.",
+        "section": "Aperçu des prestations pour enfants et familles",
+        "anchor": "wb-cont",
+        "word_count": 9,
+        "complete_sentence": true
+      },
+      "status": "captured",
+      "extraction_status": "html_sections_parsed",
+      "heading_locators": [
+        {
+          "text": "Aperçu des prestations pour enfants et familles",
+          "anchor": "wb-cont"
+        },
+        {
+          "text": "Vérifiez si vous avez droit aux prestations et aux crédits",
+          "anchor": ""
+        },
+        {
+          "text": "Vous pourriez aussi avoir droit à d'autres prestations",
+          "anchor": ""
+        },
+        {
+          "text": "Femmes enceintes",
+          "anchor": ""
+        },
+        {
+          "text": "Après la demande",
+          "anchor": ""
+        },
+        {
+          "text": "Combien vous pourriez recevoir",
+          "anchor": ""
+        },
+        {
+          "text": "Dates de versement",
+          "anchor": ""
+        },
+        {
+          "text": "Services et renseignements connexes",
+          "anchor": ""
+        },
+        {
+          "text": "Détails de la page",
+          "anchor": ""
+        }
+      ],
+      "publisher_modified_on": "2026-07-31",
+      "extracted_paragraphs": 30,
+      "captured_title": "Aperçu des prestations pour enfants et familles",
+      "extracted_text_sha256": "bad6ad5c2e8c5de6f59850dced2988bb41f93410a3b4684ac6fa9b3df5113b35",
+      "extractor_version": "html-sections-2.1"
+    },
+    {
+      "id": "D13-en",
+      "document_id": "D13-en",
+      "source_id": "D13",
+      "locale": "en",
+      "original_url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit/how-apply.html",
+      "resolved_url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit/how-apply.html",
+      "retrieved_at": "2026-11-12T07:19:46.683103+00:00",
+      "checked_on": "2026-11-12",
+      "snapshot_sha256": "ae7b841358f4203bf560ced1dab13c60990d86128626e499c656199672b07c5d",
+      "content_type": "text/html;charset=utf-8",
+      "publisher_http_last_modified": "Thu, 12 Nov 2026 02:53:18 GMT",
+      "path": "data/snapshots/v2/D13-en-ae7b841358f4203b.capture",
+      "byte_length": 47569,
+      "human_reviewed_on": null,
+      "policy_effective_from": null,
+      "policy_effective_to": null,
+      "review_status": "automated_capture_not_policy_approval",
+      "reuse_status": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "policy_approval_changed": false,
+      "source_text_excerpt": {
+        "text": "When you apply for the Canada child benefit (CCB), you don't need to apply separately for related provincial and territorial programs.",
+        "section": "How to apply",
+        "anchor": "wb-cont",
+        "word_count": 21,
+        "complete_sentence": true
+      },
+      "status": "captured",
+      "extraction_status": "html_sections_parsed",
+      "heading_locators": [
+        {
+          "text": "Canada child benefit (CCB)",
+          "anchor": ""
+        },
+        {
+          "text": "How to apply",
+          "anchor": "wb-cont"
+        },
+        {
+          "text": "On this page",
+          "anchor": ""
+        },
+        {
+          "text": "When to apply",
+          "anchor": "toc1"
+        },
+        {
+          "text": "Apply for the benefit",
+          "anchor": "toc2"
+        },
+        {
+          "text": "Gather supporting documents",
+          "anchor": ""
+        },
+        {
+          "text": "Choose how you want to apply",
+          "anchor": ""
+        },
+        {
+          "text": "Birth registration",
+          "anchor": ""
+        },
+        {
+          "text": "Your CRA account",
+          "anchor": ""
+        },
+        {
+          "text": "If you are unable to apply through the other methods",
+          "anchor": ""
+        },
+        {
+          "text": "Check the processing times for your application",
+          "anchor": ""
+        },
+        {
+          "text": "Page details",
+          "anchor": ""
+        }
+      ],
+      "publisher_modified_on": "2026-10-22",
+      "extracted_paragraphs": 93,
+      "captured_title": "How to apply",
+      "extracted_text_sha256": "4d493cfd207465875575f59741c8e8f1852f1efeb597cc2ecb661aa492f3d0eb",
+      "extractor_version": "html-sections-2.1"
+    },
+    {
+      "id": "D13-fr",
+      "document_id": "D13-fr",
+      "source_id": "D13",
+      "locale": "fr",
+      "original_url": "https://www.canada.ca/fr/agence-revenu/services/prestations-enfants-familles/allocation-canadienne-enfants/comment-demande.html",
+      "resolved_url": "https://www.canada.ca/fr/agence-revenu/services/prestations-enfants-familles/allocation-canadienne-enfants/comment-demande.html",
+      "retrieved_at": "2026-11-12T07:19:50.479855+00:00",
+      "checked_on": "2026-11-12",
+      "snapshot_sha256": "1157fa98410458b8243b06756faade168154f15f68e4c171a93bbe9917c79742",
+      "content_type": "text/html;charset=utf-8",
+      "publisher_http_last_modified": "Thu, 12 Nov 2026 06:00:58 GMT",
+      "path": "data/snapshots/v2/D13-fr-1157fa98410458b8.capture",
+      "byte_length": 51803,
+      "human_reviewed_on": null,
+      "policy_effective_from": null,
+      "policy_effective_to": null,
+      "review_status": "automated_capture_not_policy_approval",
+      "reuse_status": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "policy_approval_changed": false,
+      "source_text_excerpt": {
+        "text": "Lorsque vous demandez l’allocation canadienne pour enfants (ACE), vous n’avez pas à faire une demande séparée pour les programmes provinciaux et territoriaux connexes.",
+        "section": "Comment faire une demande",
+        "anchor": "wb-cont",
+        "word_count": 23,
+        "complete_sentence": true
+      },
+      "status": "captured",
+      "extraction_status": "html_sections_parsed",
+      "heading_locators": [
+        {
+          "text": "Allocation canadienne pour enfants (ACE)",
+          "anchor": ""
+        },
+        {
+          "text": "Comment faire une demande",
+          "anchor": "wb-cont"
+        },
+        {
+          "text": "Sur cette page",
+          "anchor": ""
+        },
+        {
+          "text": "Quand faire une demande",
+          "anchor": "toc1"
+        },
+        {
+          "text": "Faire une demande",
+          "anchor": "toc2"
+        },
+        {
+          "text": "Rassemblez les documents justificatifs",
+          "anchor": ""
+        },
+        {
+          "text": "Choisissez la façon dont vous souhaitez faire une demande",
+          "anchor": ""
+        },
+        {
+          "text": "Lors de l’enregistrement de la naissance",
+          "anchor": ""
+        },
+        {
+          "text": "Dans votre compte de l’ARC",
+          "anchor": ""
+        },
+        {
+          "text": "Si vous n’êtes pas en mesure de faire la demande à l’aide des méthodes ci-dessus",
+          "anchor": ""
+        },
+        {
+          "text": "Vérifiez les délais de traitement de votre demande",
+          "anchor": ""
+        },
+        {
+          "text": "Détails de la page",
+          "anchor": ""
+        }
+      ],
+      "publisher_modified_on": "2026-10-22",
+      "extracted_paragraphs": 93,
+      "captured_title": "Comment faire une demande",
+      "extracted_text_sha256": "cde6f605aa85e3ebf4b0d911a1202a0a86c71f88b52a6a4edb7d1612eeb9a6c8",
+      "extractor_version": "html-sections-2.1"
+    },
+    {
+      "id": "D14-en",
+      "document_id": "D14-en",
+      "source_id": "D14",
+      "locale": "en",
+      "original_url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/provincial-territorial-programs/province-british-columbia.html",
+      "resolved_url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/provincial-territorial-programs/province-british-columbia.html",
+      "retrieved_at": "2026-11-12T07:19:54.121071+00:00",
+      "checked_on": "2026-11-12",
+      "snapshot_sha256": "b5f2c848fc0c72920dfeaf09aba638fd6a1355d9748b06dd3b78af758c7c1b77",
+      "content_type": "text/html;charset=utf-8",
+      "publisher_http_last_modified": "Thu, 12 Nov 2026 05:10:50 GMT",
+      "path": "data/snapshots/v2/D14-en-b5f2c848fc0c7292.capture",
+      "byte_length": 24500,
+      "human_reviewed_on": null,
+      "policy_effective_from": null,
+      "policy_effective_to": null,
+      "review_status": "automated_capture_not_policy_approval",
+      "reuse_status": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "policy_approval_changed": false,
+      "source_text_excerpt": {
+        "text": "The BC family benefit (BCFB) is a tax-free monthly payment to families with children under the age of 18.",
+        "section": "BC family benefit",
+        "anchor": "2",
+        "word_count": 19,
+        "complete_sentence": true
+      },
+      "status": "captured",
+      "extraction_status": "html_sections_parsed",
+      "heading_locators": [
+        {
+          "text": "Province of British Columbia",
+          "anchor": "wb-cont"
+        },
+        {
+          "text": "BC family benefit",
+          "anchor": "2"
+        },
+        {
+          "text": "More information",
+          "anchor": ""
+        },
+        {
+          "text": "Policy enquiries",
+          "anchor": ""
+        },
+        {
+          "text": "Related services and information",
+          "anchor": ""
+        },
+        {
+          "text": "Page details",
+          "anchor": ""
+        }
+      ],
+      "publisher_modified_on": "2026-05-11",
+      "extracted_paragraphs": 21,
+      "captured_title": "Province of British Columbia",
+      "extracted_text_sha256": "10d98cc02d7996dc4cf18a3af290d9bc1cb094b0d584a82d2e62e71d3f50cb86",
+      "extractor_version": "html-sections-2.1"
+    },
+    {
+      "id": "D14-fr",
+      "document_id": "D14-fr",
+      "source_id": "D14",
+      "locale": "fr",
+      "original_url": "https://www.canada.ca/fr/agence-revenu/services/prestations-enfants-familles/programmes-provinciaux-territoriaux/province-colombie-britannique.html",
+      "resolved_url": "https://www.canada.ca/fr/agence-revenu/services/prestations-enfants-familles/programmes-provinciaux-territoriaux/province-colombie-britannique.html",
+      "retrieved_at": "2026-11-12T07:19:57.842614+00:00",
+      "checked_on": "2026-11-12",
+      "snapshot_sha256": "3eca01cbe80c1e36d50a98337435ed9b96fa8ef09f55f8563664a106473507ac",
+      "content_type": "text/html;charset=utf-8",
+      "publisher_http_last_modified": "Thu, 12 Nov 2026 05:12:12 GMT",
+      "path": "data/snapshots/v2/D14-fr-3eca01cbe80c1e36.capture",
+      "byte_length": 25582,
+      "human_reviewed_on": null,
+      "policy_effective_from": null,
+      "policy_effective_to": null,
+      "review_status": "automated_capture_not_policy_approval",
+      "reuse_status": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "policy_approval_changed": false,
+      "source_text_excerpt": {
+        "text": "La prestation familiale de la Colombie-Britannique (PFCB) est un montant mensuel non imposable versé aux familles qui ont des enfants de moins de 18 ans.",
+        "section": "Prestation familiale de la Colombie-Britannique",
+        "anchor": "2",
+        "word_count": 25,
+        "complete_sentence": true
+      },
+      "status": "captured",
+      "extraction_status": "html_sections_parsed",
+      "heading_locators": [
+        {
+          "text": "Province de la Colombie-Britannique",
+          "anchor": "wb-cont"
+        },
+        {
+          "text": "Prestation familiale de la Colombie-Britannique",
+          "anchor": "2"
+        },
+        {
+          "text": "Pour en savoir plus",
+          "anchor": ""
+        },
+        {
+          "text": "Demandes de renseignements sur la politique",
+          "anchor": ""
+        },
+        {
+          "text": "Services connexes et renseignements",
+          "anchor": ""
+        },
+        {
+          "text": "Détails de la page",
+          "anchor": ""
+        }
+      ],
+      "publisher_modified_on": "2026-05-11",
+      "extracted_paragraphs": 21,
+      "captured_title": "Province de la Colombie-Britannique",
+      "extracted_text_sha256": "fa6a678eeedb9632ffd05f9279cac8aebe147ea5e0d927fbb7ef351813853f78",
+      "extractor_version": "html-sections-2.1"
+    },
+    {
+      "id": "D15-en",
+      "document_id": "D15-en",
+      "source_id": "D15",
+      "locale": "en",
+      "original_url": "https://www.canada.ca/en/services/benefits/finder.html",
+      "resolved_url": "https://www.canada.ca/en/services/benefits/finder.html",
+      "retrieved_at": "2026-11-12T07:20:01.907184+00:00",
+      "checked_on": "2026-11-12",
+      "snapshot_sha256": "8400fa5fac2629a6f458e5bc185e3c8987f91ae15e12d09cb31be858a9e95bce",
+      "content_type": "text/html;charset=utf-8",
+      "publisher_http_last_modified": "Thu, 12 Nov 2026 06:32:11 GMT",
+      "path": "data/snapshots/v2/D15-en-8400fa5fac2629a6.capture",
+      "byte_length": 31347,
+      "human_reviewed_on": null,
+      "policy_effective_from": null,
+      "policy_effective_to": null,
+      "review_status": "automated_capture_not_policy_approval",
+      "reuse_status": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "policy_approval_changed": false,
+      "source_text_excerpt": {
+        "text": "The Benefits Finder helps you find federal programs and benefits, making it easier to access financial assistance, healthcare, and other government supports and services.",
+        "section": "Benefits Finder",
+        "anchor": "wb-cont",
+        "word_count": 24,
+        "complete_sentence": true
+      },
+      "status": "captured",
+      "extraction_status": "html_sections_parsed",
+      "heading_locators": [
+        {
+          "text": "Benefits Finder",
+          "anchor": "wb-cont"
+        },
+        {
+          "text": "Be aware of scams and fraud.",
+          "anchor": ""
+        },
+        {
+          "text": "Use these filters to find benefits that match your needs",
+          "anchor": ""
+        },
+        {
+          "text": "Page details",
+          "anchor": ""
+        }
+      ],
+      "publisher_modified_on": "2026-04-16",
+      "extracted_paragraphs": 6,
+      "captured_title": "Benefits Finder",
+      "extracted_text_sha256": "04c920cdcd2d3d4ae7fa7ea7823ec3cee0b086a8a4963b523707bc938872efb4",
+      "extractor_version": "html-sections-2.1"
+    },
+    {
+      "id": "D15-fr",
+      "document_id": "D15-fr",
+      "source_id": "D15",
+      "locale": "fr",
+      "original_url": "https://www.canada.ca/fr/services/prestations/chercheur.html",
+      "resolved_url": "https://www.canada.ca/fr/services/prestations/chercheur.html",
+      "retrieved_at": "2026-11-12T07:20:05.844065+00:00",
+      "checked_on": "2026-11-12",
+      "snapshot_sha256": "0f79fc98b31e25efd90b53c165e60b8cc4fdd4584d5a838386379e5c4fe35691",
+      "content_type": "text/html;charset=utf-8",
+      "publisher_http_last_modified": null,
+      "path": "data/snapshots/v2/D15-fr-0f79fc98b31e25ef.capture",
+      "byte_length": 32402,
+      "human_reviewed_on": null,
+      "policy_effective_from": null,
+      "policy_effective_to": null,
+      "review_status": "automated_capture_not_policy_approval",
+      "reuse_status": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "policy_approval_changed": false,
+      "source_text_excerpt": null,
+      "status": "captured",
+      "extraction_status": "html_sections_parsed",
+      "heading_locators": [
+        {
+          "text": "Chercheur de prestations",
+          "anchor": "wb-cont"
+        },
+        {
+          "text": "Méfiez-vous des arnaques et de la fraude.",
+          "anchor": ""
+        },
+        {
+          "text": "Utilisez ces filtres pour trouver les prestations qui correspondent à vos besoins",
+          "anchor": ""
+        },
+        {
+          "text": "Détails de la page",
+          "anchor": ""
+        }
+      ],
+      "publisher_modified_on": "2026-04-16",
+      "extracted_paragraphs": 7,
+      "captured_title": "Chercheur de prestations",
+      "extracted_text_sha256": "ba4298009212d3ffe32f46166a36eebaf8adb0f77a7b93a5eac55957154750ef",
+      "extractor_version": "html-sections-2.1",
+      "excerpt_gap": "No complete short sentence found in selected sections; original paraphrase only."
+    },
+    {
+      "id": "D16-en",
+      "document_id": "D16-en",
+      "source_id": "D16",
+      "locale": "en",
+      "original_url": "https://www.welcomebc.ca/start-your-life-in-b-c/bc-newcomers-guide",
+      "resolved_url": "https://www.welcomebc.ca/start-your-life-in-b-c/bc-newcomers-guide",
+      "retrieved_at": "2026-11-12T07:20:10.039944+00:00",
+      "checked_on": "2026-11-12",
+      "snapshot_sha256": "ab8c87623aca84a52183ef0aaa490638f86405cac9a3896ab691af7216027fd8",
+      "content_type": "text/html; charset=utf-8",
+      "publisher_http_last_modified": null,
+      "path": "data/snapshots/v2/D16-en-ab8c87623aca84a5.capture",
+      "byte_length": 70188,
+      "human_reviewed_on": null,
+      "policy_effective_from": null,
+      "policy_effective_to": null,
+      "review_status": "automated_capture_not_policy_approval",
+      "reuse_status": "original_paraphrase_and_link_only",
+      "reuse_terms_url": "https://www2.gov.bc.ca/gov/content/home/copyright",
+      "policy_approval_changed": false,
+      "source_text_excerpt": null,
+      "status": "captured",
+      "extraction_status": "html_sections_parsed",
+      "heading_locators": [
+        {
+          "text": "B.C. Newcomers' Guide",
+          "anchor": ""
+        }
+      ],
+      "publisher_modified_on": null,
+      "extracted_paragraphs": 13,
+      "captured_title": "B.C. Newcomers' Guide",
+      "extracted_text_sha256": "efd164cfbafdc1901e1a8a58509ea2684f61bac2bde9b7b10a467e6f5f3367ed",
+      "extractor_version": "html-sections-2.1"
+    },
+    {
+      "id": "D16-fr",
+      "document_id": "D16-fr",
+      "source_id": "D16",
+      "locale": "fr",
+      "original_url": "https://www.welcomebc.ca/start-your-life-in-b-c/bc-newcomers-guide-french-pdf",
+      "resolved_url": "https://www.welcomebc.ca/start-your-life-in-b-c/bc-newcomers-guide-french-pdf",
+      "retrieved_at": "2026-11-12T07:20:15.602905+00:00",
+      "checked_on": "2026-11-12",
+      "snapshot_sha256": "5824b24038a7e71e380fe714379cd618effa922067f6d10ef364d0a7c11b001a",
+      "content_type": "application/pdf",
+      "publisher_http_last_modified": null,
+      "path": "data/snapshots/v2/D16-fr-5824b24038a7e71e.capture",
+      "byte_length": 11817454,
+      "human_reviewed_on": null,
+      "policy_effective_from": null,
+      "policy_effective_to": null,
+      "review_status": "automated_capture_not_policy_approval",
+      "reuse_status": "original_paraphrase_and_link_only",
+      "reuse_terms_url": "https://www2.gov.bc.ca/gov/content/home/copyright",
+      "policy_approval_changed": false,
+      "source_text_excerpt": null,
+      "status": "captured_pdf_link_only",
+      "extraction_status": "not_extracted_pending_page_visual_review",
+      "heading_locators": [],
+      "publisher_modified_on": null,
+      "coverage_limit": "PDF bytes captured and hashed only; no PDF text used in runtime guidance.",
+      "extractor_version": "html-sections-2.1"
+    },
+    {
+      "id": "D17-en",
+      "document_id": "D17-en",
+      "source_id": "D17",
+      "locale": "en",
+      "original_url": "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/publication-welcome-canada-what-you-should-know.html",
+      "resolved_url": "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/publication-welcome-canada-what-you-should-know.html",
+      "retrieved_at": "2026-11-12T07:20:19.870673+00:00",
+      "checked_on": "2026-11-12",
+      "snapshot_sha256": "28c22482f1b377ede9badee9edd2382bb18151b15a21e8d9668b021dddaea3ff",
+      "content_type": "text/html;charset=utf-8",
+      "publisher_http_last_modified": "Thu, 12 Nov 2026 04:55:23 GMT",
+      "path": "data/snapshots/v2/D17-en-28c22482f1b377ed.capture",
+      "byte_length": 41182,
+      "human_reviewed_on": null,
+      "policy_effective_from": null,
+      "policy_effective_to": null,
+      "review_status": "automated_capture_not_policy_approval",
+      "reuse_status": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "policy_approval_changed": false,
+      "source_text_excerpt": {
+        "text": "Find out about the cost of living in Canada.",
+        "section": "Money and finances",
+        "anchor": "",
+        "word_count": 9,
+        "complete_sentence": true
+      },
+      "status": "captured",
+      "extraction_status": "html_sections_parsed",
+      "heading_locators": [
+        {
+          "text": "Welcome to Canada: Multilingual resources for newcomers",
+          "anchor": "wb-cont"
+        },
+        {
+          "text": "On this page",
+          "anchor": ""
+        },
+        {
+          "text": "Arriving in Canada",
+          "anchor": "arrive"
+        },
+        {
+          "text": "Before you arrive",
+          "anchor": ""
+        },
+        {
+          "text": "After you arrive",
+          "anchor": ""
+        },
+        {
+          "text": "Finding a place to live",
+          "anchor": "place-to-live"
+        },
+        {
+          "text": "Housing",
+          "anchor": ""
+        },
+        {
+          "text": "Getting health care",
+          "anchor": "health"
+        },
+        {
+          "text": "Health care services",
+          "anchor": ""
+        },
+        {
+          "text": "Working in Canada",
+          "anchor": "work"
+        },
+        {
+          "text": "Job search",
+          "anchor": ""
+        },
+        {
+          "text": "Foreign credential recognition",
+          "anchor": ""
+        },
+        {
+          "text": "Studying in Canada",
+          "anchor": "study"
+        },
+        {
+          "text": "Overview of education in Canada",
+          "anchor": ""
+        },
+        {
+          "text": "Post-secondary education",
+          "anchor": ""
+        },
+        {
+          "text": "Living in Canada",
+          "anchor": "live"
+        },
+        {
+          "text": "Money and finances",
+          "anchor": ""
+        },
+        {
+          "text": "Community building",
+          "anchor": ""
+        },
+        {
+          "text": "Consumer protection",
+          "anchor": ""
+        },
+        {
+          "text": "Indigenous Peoples",
+          "anchor": ""
+        },
+        {
+          "text": "Page details",
+          "anchor": ""
+        }
+      ],
+      "publisher_modified_on": "2025-08-11",
+      "extracted_paragraphs": 94,
+      "captured_title": "Welcome to Canada: Multilingual resources for newcomers",
+      "extracted_text_sha256": "53f4ddbe72568e0bf08ed59f46e2e6cc8ffd2ba7b5f79a66c36fcaf14e8653a1",
+      "extractor_version": "html-sections-2.1"
+    },
+    {
+      "id": "D17-fr",
+      "document_id": "D17-fr",
+      "source_id": "D17",
+      "locale": "fr",
+      "original_url": "https://www.canada.ca/fr/immigration-refugies-citoyennete/organisation/publications-guides/bienvenue-canada-vous-devriez-savoir.html",
+      "resolved_url": "https://www.canada.ca/fr/immigration-refugies-citoyennete/organisation/publications-guides/bienvenue-canada-vous-devriez-savoir.html",
+      "retrieved_at": "2026-11-12T07:20:23.878133+00:00",
+      "checked_on": "2026-11-12",
+      "snapshot_sha256": "b79510dddd519b3a66884604e0da9485b98aaeb726cf66dbd4a784e97abec994",
+      "content_type": "text/html;charset=utf-8",
+      "publisher_http_last_modified": "Thu, 12 Nov 2026 07:20:23 GMT",
+      "path": "data/snapshots/v2/D17-fr-b79510dddd519b3a.capture",
+      "byte_length": 42253,
+      "human_reviewed_on": null,
+      "policy_effective_from": null,
+      "policy_effective_to": null,
+      "review_status": "automated_capture_not_policy_approval",
+      "reuse_status": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "policy_approval_changed": false,
+      "source_text_excerpt": {
+        "text": "Renseignez-vous sur le coût de la vie au Canada.",
+        "section": "Argent et finances",
+        "anchor": "",
+        "word_count": 9,
+        "complete_sentence": true
+      },
+      "status": "captured",
+      "extraction_status": "html_sections_parsed",
+      "heading_locators": [
+        {
+          "text": "Bienvenue au Canada : ressources multilingues pour les nouveaux arrivants",
+          "anchor": "wb-cont"
+        },
+        {
+          "text": "Sur cette page",
+          "anchor": ""
+        },
+        {
+          "text": "Arriver au Canada",
+          "anchor": "arrive"
+        },
+        {
+          "text": "Avant votre arrivée",
+          "anchor": ""
+        },
+        {
+          "text": "Après votre arrivée",
+          "anchor": ""
+        },
+        {
+          "text": "Se trouver du logement",
+          "anchor": "logement"
+        },
+        {
+          "text": "Logement",
+          "anchor": ""
+        },
+        {
+          "text": "Obtenir des soins de santé",
+          "anchor": "sante"
+        },
+        {
+          "text": "Services de soins de santé",
+          "anchor": ""
+        },
+        {
+          "text": "Travailler au Canada",
+          "anchor": "travailler"
+        },
+        {
+          "text": "Recherche d’emploi",
+          "anchor": ""
+        },
+        {
+          "text": "Reconnaissance des titres de compétences étrangers",
+          "anchor": ""
+        },
+        {
+          "text": "Étudier au Canada",
+          "anchor": "etudier"
+        },
+        {
+          "text": "Aperçu du système scolaire au Canada",
+          "anchor": ""
+        },
+        {
+          "text": "Études postsecondaires",
+          "anchor": ""
+        },
+        {
+          "text": "Vivre au Canada",
+          "anchor": "vivre"
+        },
+        {
+          "text": "Argent et finances",
+          "anchor": ""
+        },
+        {
+          "text": "Création de votre communauté",
+          "anchor": ""
+        },
+        {
+          "text": "Protection des consommateurs",
+          "anchor": ""
+        },
+        {
+          "text": "Peuples autochtones",
+          "anchor": ""
+        },
+        {
+          "text": "Détails de la page",
+          "anchor": ""
+        }
+      ],
+      "publisher_modified_on": "2025-08-11",
+      "extracted_paragraphs": 94,
+      "captured_title": "Bienvenue au Canada : ressources multilingues pour les nouveaux arrivants",
+      "extracted_text_sha256": "4bde81fda56c7dc12c4e0cfee53166c31d92f0e62ef20a687ee642edb5e14377",
+      "extractor_version": "html-sections-2.1"
+    },
+    {
+      "id": "D18-en",
+      "document_id": "D18-en",
+      "source_id": "D18",
+      "locale": "en",
+      "original_url": "https://www.canada.ca/en/financial-consumer-agency/services/financial-basics.html",
+      "resolved_url": "https://www.canada.ca/en/financial-consumer-agency/services/financial-basics.html",
+      "retrieved_at": "2026-11-12T07:20:28.195315+00:00",
+      "checked_on": "2026-11-12",
+      "snapshot_sha256": "5fa5e6d83f9681529f2074aa150786319fde8b2a0396987f2698c062df19a640",
+      "content_type": "text/html;charset=utf-8",
+      "publisher_http_last_modified": null,
+      "path": "data/snapshots/v2/D18-en-5fa5e6d83f968152.capture",
+      "byte_length": 25777,
+      "human_reviewed_on": null,
+      "policy_effective_from": null,
+      "policy_effective_to": null,
+      "review_status": "automated_capture_not_policy_approval",
+      "reuse_status": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "policy_approval_changed": false,
+      "source_text_excerpt": {
+        "text": "Financial Basics is a financial workshop to help young adults learn about budgeting, saving, credit, investing, fraud prevention and financial planning.",
+        "section": "Money management lessons for life",
+        "anchor": "",
+        "word_count": 21,
+        "complete_sentence": true
+      },
+      "status": "captured",
+      "extraction_status": "html_sections_parsed",
+      "heading_locators": [
+        {
+          "text": "Financial Basics",
+          "anchor": "wb-cont"
+        },
+        {
+          "text": "Money management lessons for life",
+          "anchor": ""
+        },
+        {
+          "text": "Get started now! Download the Financial Basics workshop",
+          "anchor": ""
+        },
+        {
+          "text": "We value your feedback",
+          "anchor": ""
+        },
+        {
+          "text": "Limited availability of printed copies",
+          "anchor": ""
+        },
+        {
+          "text": "Other resources",
+          "anchor": ""
+        },
+        {
+          "text": "e-Learning videos",
+          "anchor": ""
+        },
+        {
+          "text": "Page details",
+          "anchor": ""
+        },
+        {
+          "text": "From:",
+          "anchor": ""
+        }
+      ],
+      "publisher_modified_on": "2025-09-23",
+      "extracted_paragraphs": 40,
+      "captured_title": "Financial Basics",
+      "extracted_text_sha256": "cbff28086c15a2f2b5ae21acd3465dfe0b5daaecd6465f17b1b15f42d51c9ac0",
+      "extractor_version": "html-sections-2.1"
+    },
+    {
+      "id": "D18-fr",
+      "document_id": "D18-fr",
+      "source_id": "D18",
+      "locale": "fr",
+      "original_url": "https://www.canada.ca/fr/agence-consommation-matiere-financiere/services/finances-personnelles.html",
+      "resolved_url": "https://www.canada.ca/fr/agence-consommation-matiere-financiere/services/finances-personnelles.html",
+      "retrieved_at": "2026-11-12T07:20:33.550577+00:00",
+      "checked_on": "2026-11-12",
+      "snapshot_sha256": "8731bf703a6f1f7dc75af25cdc3b2c166697be51f61afae47ee83a716d36ca1a",
+      "content_type": "text/html;charset=utf-8",
+      "publisher_http_last_modified": "Thu, 12 Nov 2026 05:18:34 GMT",
+      "path": "data/snapshots/v2/D18-fr-8731bf703a6f1f7d.capture",
+      "byte_length": 28402,
+      "human_reviewed_on": null,
+      "policy_effective_from": null,
+      "policy_effective_to": null,
+      "review_status": "automated_capture_not_policy_approval",
+      "reuse_status": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "policy_approval_changed": false,
+      "source_text_excerpt": {
+        "text": "Commencer l’apprentissage dès maintenant : téléchargez les documents et commencez à enseigner ou à apprendre sans plus attendre.",
+        "section": "Commencez dès maintenant! Téléchargez les documents de l’atelier Finances personnelles : notions de base",
+        "anchor": "",
+        "word_count": 18,
+        "complete_sentence": true
+      },
+      "status": "captured",
+      "extraction_status": "html_sections_parsed",
+      "heading_locators": [
+        {
+          "text": "Finances personnelles : notions de base",
+          "anchor": "wb-cont"
+        },
+        {
+          "text": "La gestion des finances personnelles : des leçons pour la vie!",
+          "anchor": ""
+        },
+        {
+          "text": "Commencez dès maintenant! Téléchargez les documents de l’atelier Finances personnelles : notions de base",
+          "anchor": ""
+        },
+        {
+          "text": "Vos commentaires sont importants",
+          "anchor": ""
+        },
+        {
+          "text": "Disponibilité limitée des exemplaires imprimés",
+          "anchor": ""
+        },
+        {
+          "text": "Autres ressources",
+          "anchor": ""
+        },
+        {
+          "text": "Vidéos d'apprentissage en ligne",
+          "anchor": ""
+        },
+        {
+          "text": "Détails de la page",
+          "anchor": ""
+        },
+        {
+          "text": "De :",
+          "anchor": ""
+        }
+      ],
+      "publisher_modified_on": "2025-09-23",
+      "extracted_paragraphs": 42,
+      "captured_title": "Finances personnelles : notions de base",
+      "extracted_text_sha256": "514de0f80b47ed4c7fda3f1815766b72aefe6287b39b849261829a666fcfe13f",
+      "extractor_version": "html-sections-2.1"
+    },
+    {
+      "id": "D19-en",
+      "document_id": "D19-en",
+      "source_id": "D19",
+      "locale": "en",
+      "original_url": "https://www.welcomebc.ca/start-your-life-in-b-c/find-newcomer-services/services-for-newcomers-on-a-temporary-work-or-study-permit-and-new-citizens%C2%A0(bc-nsp)",
+      "resolved_url": "https://www.welcomebc.ca/start-your-life-in-b-c/find-newcomer-services/services-for-newcomers-on-a-temporary-work-or-study-permit-and-new-citizens%C2%A0(bc-nsp)",
+      "retrieved_at": "2026-11-12T07:20:37.950526+00:00",
+      "checked_on": "2026-11-12",
+      "snapshot_sha256": "14fb8a28c094106a51e9190ce03daf8e6b0e2421f80c9284651da5f7a4c2db13",
+      "content_type": "text/html; charset=utf-8",
+      "publisher_http_last_modified": null,
+      "path": "data/snapshots/v2/D19-en-14fb8a28c094106a.capture",
+      "byte_length": 113304,
+      "human_reviewed_on": null,
+      "policy_effective_from": null,
+      "policy_effective_to": null,
+      "review_status": "automated_capture_not_policy_approval",
+      "reuse_status": "original_paraphrase_and_link_only",
+      "reuse_terms_url": "https://www2.gov.bc.ca/gov/content/home/copyright",
+      "policy_approval_changed": false,
+      "source_text_excerpt": null,
+      "status": "captured",
+      "extraction_status": "html_sections_parsed",
+      "heading_locators": [
+        {
+          "text": "Services for temporary workers, international students, and new citizens: The BC Newcomer Services Program",
+          "anchor": "isPasted"
+        },
+        {
+          "text": "Find a service provider",
+          "anchor": ""
+        },
+        {
+          "text": "Temporary worker resources",
+          "anchor": "isPasted"
+        }
+      ],
+      "publisher_modified_on": null,
+      "extracted_paragraphs": 18,
+      "captured_title": "Services for temporary workers, international students, and new citizens: The BC Newcomer Services Program",
+      "extracted_text_sha256": "ccd58a5cce5dfc90e3ae8e1106a80a4e9638679387d0661c0615a7121f516f44",
+      "extractor_version": "html-sections-2.1"
+    },
+    {
+      "id": "D20-en",
+      "document_id": "D20-en",
+      "source_id": "D20",
+      "locale": "en",
+      "original_url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit/who-apply.html",
+      "resolved_url": "https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit/who-apply.html",
+      "retrieved_at": "2026-11-12T07:20:42.174676+00:00",
+      "checked_on": "2026-11-12",
+      "snapshot_sha256": "6c3b2ce5b834c480fc43a0383b4f0a1b1d37ec6b082ff8f3f0014a2433c28891",
+      "content_type": "text/html;charset=utf-8",
+      "publisher_http_last_modified": "Thu, 12 Nov 2026 02:39:36 GMT",
+      "path": "data/snapshots/v2/D20-en-6c3b2ce5b834c480.capture",
+      "byte_length": 43665,
+      "human_reviewed_on": null,
+      "policy_effective_from": null,
+      "policy_effective_to": null,
+      "review_status": "automated_capture_not_policy_approval",
+      "reuse_status": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "policy_approval_changed": false,
+      "source_text_excerpt": {
+        "text": "If you are unsure about your residency status, refer to: Determining your residency status .",
+        "section": "Eligibility criteria",
+        "anchor": "toc1",
+        "word_count": 15,
+        "complete_sentence": true
+      },
+      "status": "captured",
+      "extraction_status": "html_sections_parsed",
+      "heading_locators": [
+        {
+          "text": "Canada child benefit (CCB)",
+          "anchor": ""
+        },
+        {
+          "text": "Who can apply",
+          "anchor": "wb-cont"
+        },
+        {
+          "text": "On this page",
+          "anchor": ""
+        },
+        {
+          "text": "Eligibility criteria",
+          "anchor": "toc1"
+        },
+        {
+          "text": "You need all of the above to be eligible",
+          "anchor": ""
+        },
+        {
+          "text": "You may not meet all of the criteria",
+          "anchor": ""
+        },
+        {
+          "text": "You may be eligible for the benefit",
+          "anchor": ""
+        },
+        {
+          "text": "Who should apply when both parents live together",
+          "anchor": "toc2"
+        },
+        {
+          "text": "Who should apply in a custody arrangement",
+          "anchor": "toc3"
+        },
+        {
+          "text": "Determine if you have shared custody",
+          "anchor": "determinecustody"
+        },
+        {
+          "text": "Page details",
+          "anchor": ""
+        }
+      ],
+      "publisher_modified_on": "2026-10-22",
+      "extracted_paragraphs": 73,
+      "captured_title": "Who can apply",
+      "extracted_text_sha256": "5750b535e4a6b484cd4b431b133b24516b632e9dba102476a28dc5b75c2be740",
+      "extractor_version": "html-sections-2.1"
+    },
+    {
+      "id": "D20-fr",
+      "document_id": "D20-fr",
+      "source_id": "D20",
+      "locale": "fr",
+      "original_url": "https://www.canada.ca/fr/agence-revenu/services/prestations-enfants-familles/allocation-canadienne-enfants/qui-demande.html",
+      "resolved_url": "https://www.canada.ca/fr/agence-revenu/services/prestations-enfants-familles/allocation-canadienne-enfants/qui-demande.html",
+      "retrieved_at": "2026-11-12T07:20:46.050474+00:00",
+      "checked_on": "2026-11-12",
+      "snapshot_sha256": "d678ddb04dd92e76f0a1ad6450bca77879555e079e943735d9c0c18ba87fe5c7",
+      "content_type": "text/html;charset=utf-8",
+      "publisher_http_last_modified": "Thu, 12 Nov 2026 06:04:00 GMT",
+      "path": "data/snapshots/v2/D20-fr-d678ddb04dd92e76.capture",
+      "byte_length": 46737,
+      "human_reviewed_on": null,
+      "policy_effective_from": null,
+      "policy_effective_to": null,
+      "review_status": "automated_capture_not_policy_approval",
+      "reuse_status": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "policy_approval_changed": false,
+      "source_text_excerpt": {
+        "text": "Vous habitez avec un enfant de moins de 18 ans.",
+        "section": "Critères d’admissibilité",
+        "anchor": "toc1",
+        "word_count": 10,
+        "complete_sentence": true
+      },
+      "status": "captured",
+      "extraction_status": "html_sections_parsed",
+      "heading_locators": [
+        {
+          "text": "Allocation canadienne pour enfants (ACE)",
+          "anchor": ""
+        },
+        {
+          "text": "Qui peut faire une demande",
+          "anchor": "wb-cont"
+        },
+        {
+          "text": "Sur cette page",
+          "anchor": ""
+        },
+        {
+          "text": "Critères d’admissibilité",
+          "anchor": "toc1"
+        },
+        {
+          "text": "Vous devez répondre à tous les critères ci-dessus pour être admissible",
+          "anchor": ""
+        },
+        {
+          "text": "Vous ne répondez peut-être pas à tous les critères",
+          "anchor": ""
+        },
+        {
+          "text": "Vous pourriez peut-être avoir droit à l’allocation",
+          "anchor": ""
+        },
+        {
+          "text": "Qui doit faire la demande lorsque les deux parents vivent ensemble",
+          "anchor": "toc2"
+        },
+        {
+          "text": "Qui doit faire la demande s’il y a une entente de garde",
+          "anchor": "toc3"
+        },
+        {
+          "text": "Déterminer si vous êtes en situation de garde partagée",
+          "anchor": "determinecustody"
+        },
+        {
+          "text": "Détails de la page",
+          "anchor": ""
+        }
+      ],
+      "publisher_modified_on": "2026-10-22",
+      "extracted_paragraphs": 73,
+      "captured_title": "Qui peut faire une demande",
+      "extracted_text_sha256": "92b91ed17e760089f2c650ad2f7d5d04777b28b011aad4be554838bf8505ee10",
+      "extractor_version": "html-sections-2.1"
+    },
+    {
+      "id": "D21-en",
+      "document_id": "D21-en",
+      "source_id": "D21",
+      "locale": "en",
+      "original_url": "https://www.canada.ca/en/revenue-agency/services/tax/international-non-residents/information-been-moved/determining-your-residency-status.html",
+      "resolved_url": "https://www.canada.ca/en/revenue-agency/services/tax/international-non-residents/information-been-moved/determining-your-residency-status.html",
+      "retrieved_at": "2026-11-12T07:20:50.344177+00:00",
+      "checked_on": "2026-11-12",
+      "snapshot_sha256": "351c023de9f3bdf473c089e639bd0729bd5dce2fafa6ae00aa976a445dc51476",
+      "content_type": "text/html;charset=utf-8",
+      "publisher_http_last_modified": "Thu, 12 Nov 2026 04:45:12 GMT",
+      "path": "data/snapshots/v2/D21-en-351c023de9f3bdf4.capture",
+      "byte_length": 70946,
+      "human_reviewed_on": null,
+      "policy_effective_from": null,
+      "policy_effective_to": null,
+      "review_status": "automated_capture_not_policy_approval",
+      "reuse_status": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "policy_approval_changed": false,
+      "source_text_excerpt": {
+        "text": "Under the Canadian income tax system, your income tax obligations to Canada are based on your residency status.",
+        "section": "Determining your residency status",
+        "anchor": "wb-cont",
+        "word_count": 18,
+        "complete_sentence": true
+      },
+      "status": "captured",
+      "extraction_status": "html_sections_parsed",
+      "heading_locators": [
+        {
+          "text": "Determining your residency status",
+          "anchor": "wb-cont"
+        },
+        {
+          "text": "On this page",
+          "anchor": ""
+        },
+        {
+          "text": "Steps",
+          "anchor": "stps"
+        },
+        {
+          "text": "Determine if you have residential ties with Canada",
+          "anchor": "step1"
+        },
+        {
+          "text": "Residential ties",
+          "anchor": "Residential-ties"
+        },
+        {
+          "text": "Determine your residency status and its tax implications",
+          "anchor": "step2"
+        },
+        {
+          "text": "If you left Canada",
+          "anchor": ""
+        },
+        {
+          "text": "If you entered Canada",
+          "anchor": ""
+        },
+        {
+          "text": "If you normally, customarily or routinely live in another country",
+          "anchor": ""
+        },
+        {
+          "text": "Forms and publications",
+          "anchor": "forms"
+        },
+        {
+          "text": "Page details",
+          "anchor": ""
+        }
+      ],
+      "publisher_modified_on": "2026-01-20",
+      "extracted_paragraphs": 102,
+      "captured_title": "Determining your residency status",
+      "extracted_text_sha256": "70abf11d9c727b889cbedcc7fde0034337a6377af3e6f4fc6d06da817b32c70b",
+      "extractor_version": "html-sections-2.1"
+    },
+    {
+      "id": "D21-fr",
+      "document_id": "D21-fr",
+      "source_id": "D21",
+      "locale": "fr",
+      "original_url": "https://www.canada.ca/fr/agence-revenu/services/impot/impot-international-non-residents/renseignements-ont-deplaces/determination-votre-statut-residence.html",
+      "resolved_url": "https://www.canada.ca/fr/agence-revenu/services/impot/impot-international-non-residents/renseignements-ont-deplaces/determination-votre-statut-residence.html",
+      "retrieved_at": "2026-11-12T07:20:54.147295+00:00",
+      "checked_on": "2026-11-12",
+      "snapshot_sha256": "9e98dd90a81f13281eb2a3a806866435ac3013c6c3c6c73b7daa4c8d676839b3",
+      "content_type": "text/html;charset=utf-8",
+      "publisher_http_last_modified": "Thu, 12 Nov 2026 06:28:59 GMT",
+      "path": "data/snapshots/v2/D21-fr-9e98dd90a81f1328.capture",
+      "byte_length": 78061,
+      "human_reviewed_on": null,
+      "policy_effective_from": null,
+      "policy_effective_to": null,
+      "review_status": "automated_capture_not_policy_approval",
+      "reuse_status": "canada_noncommercial_attributed_short_extract",
+      "reuse_terms_url": "https://www.canada.ca/en/transparency/terms.html",
+      "policy_approval_changed": false,
+      "source_text_excerpt": {
+        "text": "Selon le régime fiscal canadien, vos obligations d'impôt sur le revenu au Canada dépendent de votre statut de résidence.",
+        "section": "Détermination de votre statut de résidence",
+        "anchor": "wb-cont",
+        "word_count": 19,
+        "complete_sentence": true
+      },
+      "status": "captured",
+      "extraction_status": "html_sections_parsed",
+      "heading_locators": [
+        {
+          "text": "Détermination de votre statut de résidence",
+          "anchor": "wb-cont"
+        },
+        {
+          "text": "Sur cette page",
+          "anchor": ""
+        },
+        {
+          "text": "Étapes",
+          "anchor": "stps"
+        },
+        {
+          "text": "Déterminer si vous avez des liens résidentiels avec le Canada",
+          "anchor": "step1"
+        },
+        {
+          "text": "Liens de résidence",
+          "anchor": "Residential-ties"
+        },
+        {
+          "text": "Déterminer votre statut de résidence et ses implications fiscales",
+          "anchor": "step2"
+        },
+        {
+          "text": "Si vous avez quitté le Canada",
+          "anchor": ""
+        },
+        {
+          "text": "Si vous êtes entré au Canada",
+          "anchor": ""
+        },
+        {
+          "text": "Si vous vivez dans un autre pays de façon régulière, normale ou habituelle",
+          "anchor": ""
+        },
+        {
+          "text": "Formulaires et publications",
+          "anchor": "forms"
+        },
+        {
+          "text": "Détails de la page",
+          "anchor": ""
+        }
+      ],
+      "publisher_modified_on": "2026-01-20",
+      "extracted_paragraphs": 102,
+      "captured_title": "Détermination de votre statut de résidence",
+      "extracted_text_sha256": "02950d17150ef598a6f76431f898101d0074583cacd934f05565951f40b1e848",
+      "extractor_version": "html-sections-2.1"
+    }
+  ],
+  "policy_approvals_changed": false,
+  "human_reviews_performed": 0
+}

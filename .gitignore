@@ -3,6 +3,15 @@ __pycache__/
 .venv/
 venv/
 .env
+.env.*
+!.env.example
+.dev.vars*
+node_modules/
+.wrangler/
+.sites-runtime/
+dist/server/
+dist/.openai/
+worker/generated-assets.js
 .pytest_cache/
 logs/
 *.log

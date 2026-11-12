@@ -11,7 +11,7 @@ def run(args):
     return r.stdout
 
 if __name__=='__main__':
-    run([sys.executable,'scripts/build_web.py'])
+    run(['npm','run','build'])
     with tempfile.TemporaryDirectory() as tmp:
         xml=Path(tmp)/'pytest.xml'
         run([sys.executable,'-m','pytest','-q','--junitxml='+str(xml)])
@@ -22,7 +22,7 @@ if __name__=='__main__':
     audit=json.loads(run([sys.executable,'scripts/audit_release.py']))
     digest=hashlib.sha256()
     inputs=[]
-    for folder in ['', 'web','data/catalog','tests']:
+    for folder in ['', 'web','worker','data/catalog','data/evidence','tests']:
         paths=ROOT.glob('*.py') if not folder else (ROOT/folder).rglob('*')
         for p in sorted(paths):
             if p.is_file() and p.suffix in {'.py','.js','.mjs','.json','.css','.html'}:
@@ -33,9 +33,9 @@ if __name__=='__main__':
         'source_input_sha256':digest.hexdigest(),'input_count':len(inputs),
         'python':dict(totals,passed=totals['tests']-totals['failures']-totals['errors']-totals['skipped']),
         'javascript':stats,'live_screening_ready':audit['live_screening_ready'],
-        'live_provider_report':'v2_live_provider_01.json',
+        'live_provider_report':'v3_live_provider_01.json',
         'retrieval_report':'v2_development_01.json',
-        'browser_report':'v2_browser_01.json',
+        'browser_report':'v3_browser_01.json',
         'human_language_reviewed':False,'policy_reviewed':False}
     (ROOT/'reports/verification_latest.json').write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps(result,indent=2))

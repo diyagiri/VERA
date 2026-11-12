@@ -1,0 +1,2 @@
+// Capture hashes invalidate dependent plans without pretending a download approved a policy.
+export function withEvidenceVersions(catalog,index){const copy=structuredClone(catalog);for(const source of copy.sources){const versions=[...new Set(index.chunks.filter(c=>c.source_id===source.id).map(c=>c.source_version))].sort();if(versions.length){source.curated_summary_version=source.version;source.version=source.version+'|'+versions.join('|');source.evidence_capture_versions=versions;}}return copy;}
