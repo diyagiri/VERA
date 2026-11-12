@@ -37,7 +37,7 @@ Not checked: full-site audit with a screen reader, zoom to 400 %, and Fan's pre-
 
 ## Not measured
 
-- Live Anthropic model quality: no API key was available during the build. The owner setup check records one real test once the key is added.
+- Live Anthropic model quality across many cases. One fictional journey ran end to end with Claude on 2026-11-12 (`docs/demo/VERA_demo_ai.mp4`) after the local server was given its writing rules up front, corrective retries and a 60-second timeout.
 - Comparison with manual navigation and a basic retrieval chatbot.
 - Independent policy review of the eight rules; all remain drafts.
 - Usability with real newcomers, and human review of the French text.

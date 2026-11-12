@@ -2,7 +2,7 @@
 
 VERA helps newcomers in British Columbia turn official information into a justified next step. It screens three support programs with written rules, explains every result with its official source, updates when an answer is corrected, and builds a practical plan with an editable, unsent enquiry. English and French.
 
-**[Open VERA](https://vera-newcomer-guide.fondfoam.chatgpt.site)** · [Demo video (90 s)](docs/demo/VERA_demo.mp4) · [Evaluation](docs/EVALUATION.md) · [Architecture](docs/ARCHITECTURE.md) · [Evidence and sources](docs/EVIDENCE.md)
+**[Demo with Claude (1 min 43 s)](docs/demo/VERA_demo_ai.mp4)** · [Offline demo (90 s)](docs/demo/VERA_demo.mp4) · [Evaluation](docs/EVALUATION.md) · [Architecture](docs/ARCHITECTURE.md) · [Evidence and sources](docs/EVIDENCE.md)
 
 > Prototype for a hackathon. Not legal, immigration or financial advice. Official programs make every decision.
 
@@ -48,7 +48,7 @@ Full details in [docs/EVALUATION.md](docs/EVALUATION.md). All cases are fictiona
 | Evidence retrieval, expected source in top 5 (EN / FR) | 20/20 · 20/20 |
 | Keyboard-only screening journey and contrast (WCAG AA) | Pass |
 
-Not measured: live model quality, comparison with a basic chatbot, independent policy review, real-user testing.
+Online mode was run end to end with Claude on 2026-11-12 (one fictional journey, shown in the demo). Not measured: live model quality across many cases, comparison with a basic chatbot, independent policy review, real-user testing.
 
 ## Run it yourself
 
@@ -77,9 +77,9 @@ python -m uvicorn server:app --host 127.0.0.1 --port 8000
 
 Open http://127.0.0.1:8000, enter a goal, click **Start a conversation**, then **Agree and start AI conversation**. `.env` is git-ignored; never commit it or paste the key anywhere else.
 
-### 3. Hosted site (owner only)
+### 3. Optional: host it online
 
-The public site runs the Worker in `worker/` on ChatGPT Sites. After pulling new code:
+`worker/` is a Cloudflare-style Worker version of the same app (it was first deployed on ChatGPT Sites). After pulling new code:
 
 ```
 npm ci
