@@ -1,4 +1,4 @@
-> Legacy Python/Anthropic development API. The production OpenAI backend now runs in `worker/`; use the root README for hosted setup. This file is preserved for the inherited optional development path and is not the no-terminal owner workflow.
+> Local Python API (Anthropic). The hosted site runs the Worker in `worker/`, which also uses Anthropic since 2026-11-12. To run this server, see "Online with Claude, on your own computer" in the root README.
 
 # VERA v2 API and operating modes
 

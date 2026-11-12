@@ -1,3 +1,5 @@
+> **Superseded on 2026-11-12.** This page records Fan's OpenAI-based release. The current release uses Anthropic and adds program screening; see the root README and docs/EVALUATION.md.
+
 # Hosted OpenAI preparation release — verification pending
 
 Prepared 12 November 2026 (America/Vancouver). This release adapts the supplied plan to ChatGPT Sites' JavaScript Worker runtime while preserving the Python/offline project and attribution.

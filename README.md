@@ -1,141 +1,143 @@
 # VERA — your next step in BC
 
-VERA helps newcomers in British Columbia prepare for settlement, education funding, banking, tax and benefit questions. English and French share the same confirmed facts and plan progress. SFU and UBC Vancouver have limited institution-specific coverage; other institutions receive an honest official-office handoff.
+VERA helps newcomers in British Columbia turn official information into a justified next step. It screens three support programs with written rules, explains every result with its official source, updates when an answer is corrected, and builds a practical plan with an editable, unsent enquiry. English and French.
 
-**[Open VERA](https://vera-newcomer-guide.fondfoam.chatgpt.site)** · [Presentation](https://chatgpt.com/space/page_d14459ce272081919fc31ab5d7062b42) · [Release status](docs/RELEASE.md) · [Evidence](docs/EVIDENCE.md)
+**[Open VERA](https://vera-newcomer-guide.fondfoam.chatgpt.site)** · [Demo video (90 s)](docs/demo/VERA_demo.mp4) · [Evaluation](docs/EVALUATION.md) · [Architecture](docs/ARCHITECTURE.md) · [Evidence and sources](docs/EVIDENCE.md)
 
-## For the site owner: no terminal or configuration files
+> Prototype for a hackathon. Not legal, immigration or financial advice. Official programs make every decision.
 
-The hosted backend and its runtime settings are prepared in ChatGPT Sites. The only credential you need to enter is your own OpenAI API key. Online AI remains unavailable until a real setup check succeeds. A saved key by itself does not count as a successful integration.
+## What it does
 
-1. Open **[ChatGPT Sites](https://chatgpt.com/sites)** while signed in to the account that owns VERA.
-2. Find **VERA · Your next step in BC**.
-3. Open its **More actions** menu and select **Settings**.
-4. In the hosted environment variables/secrets controls, add an entry named exactly **`OPENAI_API_KEY`**.
-5. Mark the entry as a **secret** and paste the key only into its private value field. Save the entry. Follow the controls shown in your Settings screen; do not put the key in the chat, website, README or GitHub.
-6. Return to the ChatGPT conversation and say **“The key is saved; redeploy VERA and run the setup check.”** Do not include the key. ChatGPT can apply the environment revision and test the backend.
+1. **You describe your goal** in your own words, for example *"I just arrived for my master's at SFU. I want help settling in and to know if I can get student funding."*
+2. **Program screening.** For *Settling in* and *School & funding*, VERA checks published criteria for three programs, asking one question at a time:
 
-Sites' documented navigation is **More actions → Settings**; labels inside the environment editor can vary. [Official instructions](https://learn.chatgpt.com/docs/sites/managing-a-site). Saving or changing a hosted secret requires redeploying a saved version to apply it.
+   | Program | Official source |
+   |---|---|
+   | StudentAid BC (STU-01) | studentaidbc.ca basic eligibility requirements |
+   | BC Newcomer Services Program (NEW-02) | WelcomeBC BC NSP page |
+   | Federal settlement services (NEW-03) | IRCC newcomer services and eligibility pages |
 
-The owner-only [setup page](https://vera-newcomer-guide.fondfoam.chatgpt.site/setup) can also run the check after deployment. Sign in with the owning ChatGPT account, then select **Run setup check**. It never asks for or displays a key. It creates the evidence vectors and runs a fictional multi-topic request with the configured model. The test checks extraction, a provider function call, citations and a support-review pass; it is not proof of general financial accuracy. It uses the owner's OpenAI API quota and may incur API charges. Public visitors can use the site without ChatGPT sign-in; only owner setup requires sign-in.
+   Each program gets one of four honest results: *Blocker found*, *No blocker in the checked criteria*, *Needs information*, or *Needs official review*. VERA never says "eligible", "approved" or "guaranteed". Each result shows the rule behind it and a link to the official page.
+3. **Corrections.** Change an answer and only the affected programs are re-checked; a "What changed" panel shows the difference.
+4. **Preparation plan** across five topics (settling in, school and funding, banking, taxes, benefits): source-linked steps, progress tracking, notes, and a draft enquiry to a provider. Nothing is ever sent. Download as Markdown or JSON and resume later.
 
-The key and the session-encryption/setup credentials are held in Sites' built-in secret storage. The model, limits and other non-secret settings are already configured. You do not need to create an `.env` file or edit the hosting manifest.
+## How it works: rules decide, AI assists
 
-## The hybrid: preparation plan + program screening
+| Layer | What it does | Where |
+|---|---|---|
+| Evidence | Official pages captured with SHA-256 fingerprints; every rule cites an exact page version | `data/manifest.json`, `sources.py`, `data/evidence/` |
+| Rules | Eight written rules, compiled into the browser; four honest result states; approval gate | `rules.py` → `dist/catalog.json`, `web/engine.js`, `web/screening.js` |
+| Plan | Stable steps with fact and source dependencies, so corrections update only what depends on them | `web/navigator.js`, `actions.py` |
+| AI (optional) | Anthropic Claude understands free text, proposes topics and facts, runs one bounded evidence search, and writes cited guidance | `worker/provider.js` |
+| Interface | One question at a time, result cards, evidence, corrections, download | `web/app.js` |
 
-VERA combines two layers:
+The AI can only **propose** facts. The person confirms them, and the rules engine decides. The model is told never to state or predict screening results. Citations are checked against the evidence actually retrieved, and a second model pass must find every block supported. Each turn has a call cap, a time limit and session and daily budgets.
 
-1. **Program screening (the core journey).** When a person chooses *Settling in* or *School & funding*, the plan opens with a
-   "Program screening" section for StudentAid BC (STU-01), the BC Newcomer Services Program (NEW-02) and federal settlement
-   services (NEW-03). VERA asks one question at a time, shows each program's result rule by rule with an official source,
-   and re-runs only the affected programs when an answer changes. Results come from the deterministic rules in `rules.py`
-   (compiled to `dist/catalog.json` by `scripts/build_web.py`), **never from the model**. All eight rules are still drafts, so
-   every program shows *Needs official review* until an independent reviewer approves a rule; a clearly labelled
-   "draft rule logic" switch shows what the unreviewed rules would say.
-2. **Preparation plan (five topics).** Settlement, education, banking, taxes and benefits produce source-linked tasks and an
-   editable, unsent enquiry, as described below.
+**Rule status.** All eight rules are drafts awaiting independent review, so the live site shows *Needs official review* for every program. A clearly labelled switch, *Show draft rule logic (demo only)*, shows what the unreviewed rules would say. Approving a rule needs a named reviewer who is not its author (`data/rules/rules.json`).
 
-The OpenAI model (online mode) may *propose* screening facts the person states; the person confirms them; the rules decide.
+## Results
 
-## How to use VERA
+Full details in [docs/EVALUATION.md](docs/EVALUATION.md). All cases are fictional and team-written.
 
-Start by writing your situation in your own words. Optional example buttons only fill the text box; they do not restrict the kinds of requests accepted.
+| Check | Result |
+|---|---|
+| Screening cases, development | 20/20 |
+| Screening cases, held-out | 7/10 (3 disputed cases awaiting an independent reviewer) |
+| End-to-end journeys | 10/10 |
+| Positive eligibility claims in 90 gated screens | 0 |
+| Evidence retrieval, expected source in top 5 (EN / FR) | 20/20 · 20/20 |
+| Keyboard-only screening journey and contrast (WCAG AA) | Pass |
 
-When online AI is available, the site explains what is sent to OpenAI and asks for consent. It extracts several relevant needs and tentative facts together. Review the compact summary, correct it if needed, and select **Confirm and build my plan**. Follow-up questions are limited to one at a time. Facts are not treated as confirmed just because a model proposed them.
+Not measured: live model quality, comparison with a basic chatbot, independent policy review, real-user testing.
 
-Your plan groups preparation, next actions and questions for an official provider. Open the source links, mark tasks complete, edit an unsent enquiry, and keep your own notes. Corrections revise dependent tasks and flag affected user edits while preserving unrelated progress. Language changes preserve task IDs and completion. Download readable Markdown or JSON for resuming. Import validates the file, rechecks source versions and dates, and never imports AI consent or executable instructions. Use **Start over** to clear the active session; downloaded files remain yours.
+## Run it yourself
 
-Offline guidance is an explicit alternative. It uses local matching and reviewed preparation templates rather than an LLM. It should not be described as the completed online release. Missing or failing AI configuration never creates simulated model output.
+### 1. Offline, no key needed (any computer with Python)
 
-### Fictional prompts to try
+```
+git clone https://github.com/diyagiri/VERA.git
+cd VERA
+python -m http.server 8000 --directory dist
+```
 
-| Prompt or action | What to look for |
-| --- | --- |
-| “I'm an international student at SFU in Burnaby. My family can't send money this month. I need help with tuition and finding settlement support.” | Several needs and facts proposed together; no repeated school question or inferred permit category. Confirm the summary and inspect the official destinations. |
-| “I moved to Vancouver for work two months ago. I need to open a bank account and understand what to prepare for taxes.” | Banking and tax preparation without a student questionnaire or a personal tax-residency decision. Mark one banking step complete. |
-| “We recently moved to BC with two children. What support should we investigate, and where do we start?” | Bounded family-support information and official next steps without promised payments. |
-| “Je viens d'arriver à Vancouver pour travailler. Comment ouvrir un compte bancaire et préparer mes démarches fiscales ?” | French guidance using the same source and confirmation requirements. Human French review is still unavailable. |
-| “Correction: I study at UBC, not SFU. Keep my completed banking checklist.” | A proposed school correction and campus clarification where necessary; unrelated banking progress preserved. |
-| “My college isn't listed. Can you still help me find settlement and funding information?” | BC/federal guidance plus a truthful school-office handoff, without fabricated awards. |
-| Export JSON, clear the session, import it and switch to French. | Validated restoration, rechecked evidence and unchanged task IDs; new consent required before another provider call. |
+Open http://localhost:8000. Press Ctrl+C to stop.
 
-## What is implemented, and what is not yet verified
+### 2. Online with Claude, on your own computer (Python 3.12)
 
-The hosted implementation includes a same-origin Cloudflare Worker API, the official OpenAI JavaScript SDK, the Responses API, strict structured outputs, a bounded function-call exchange, claim-support checks, encrypted short-lived sessions, version checks, idempotency, request/token ceilings and an owner-only setup check. The browser never makes a privileged provider request.
+```
+python -m pip install -r requirements-api.txt
+copy .env.example .env        # Mac/Linux: cp .env.example .env
+```
 
-The selected conversation model is **`gpt-6.1-sol`**, with **medium** reasoning, `store:false` and an 8,192-token output cap. The model is configurable only on the server; no model is silently substituted. The earlier standalone `gpt-4.1-mini` success does not verify this model. The live release remains **blocked pending the private key and successful setup test**; fixture tests are not live-provider evidence.
+Open `.env` in a text editor and fill in `ANTHROPIC_API_KEY=` with your key from console.anthropic.com. Keep `VERA_MODEL=claude-sonnet-5-5`, or use another model your account can access. Then:
 
-This is a hosting adaptation of the supplied Python plan. Sites runs JavaScript Workers, so the production backend uses the official JavaScript SDK instead of FastAPI/AsyncOpenAI. The existing Python core, offline launcher and optional legacy Anthropic development adapter are retained with attribution. They are not the production online path. To avoid loading a local E5 model into a 128 MB Worker, hosted semantic search uses configurable **`text-embedding-3-small`**, 256 dimensions, fused with Unicode lexical ranking. This embedding model is a disclosed adaptation, not a substitution of the selected conversation model. Embeddings are generated on the server only after the key is saved; no semantic-quality result is claimed before evaluation.
+```
+python -m uvicorn server:app --host 127.0.0.1 --port 8000
+```
+
+Open http://127.0.0.1:8000, enter a goal, click **Start a conversation**, then **Agree and start AI conversation**. `.env` is git-ignored; never commit it or paste the key anywhere else.
+
+### 3. Hosted site (owner only)
+
+The public site runs the Worker in `worker/` on ChatGPT Sites. After pulling new code:
+
+```
+npm ci
+npm run build
+```
+
+Then redeploy. To turn on online AI, add a hosted **secret** named `ANTHROPIC_API_KEY` in the site settings, redeploy, open `/setup` signed in as the owner, and run the setup check. It makes one real fictional request; online mode turns on only if it passes.
+
+| Setting | Default |
+|---|---|
+| `ANTHROPIC_API_KEY` | Required secret for online AI |
+| `VERA_MODEL` | `claude-sonnet-5-5` |
+| `VERA_MAX_OUTPUT_TOKENS` | 8192 |
+| `VERA_DAILY_REQUEST_LIMIT` · `VERA_DAILY_TOKEN_LIMIT` | 100 · 1,000,000 |
+| `VERA_SESSION_REQUEST_LIMIT` · `VERA_SESSION_TOKEN_LIMIT` | 30 · 300,000 |
+
+| Setup check says | Do this |
+|---|---|
+| `missing_api_key` | Add the `ANTHROPIC_API_KEY` secret and redeploy |
+| `invalid_api_key` | Replace the key, redeploy, run the check again |
+| `model_access` | Set `VERA_MODEL` to a model your account can use |
+| `quota_exhausted` | Add credit to the Anthropic account |
+| `provider_rate_limit` · `budget_exhausted` | Try later or raise the limits |
+
+## Tests
+
+```
+python -m pip install -r requirements-dev.txt
+npm ci && npm run build
+python -m pytest -q
+npm test
+python tests/fixture_runner.py dev
+python tests/fixture_runner.py heldout
+```
 
 ## Privacy and limits
 
-Offline answers remain in the current tab unless explicitly exported. Online mode sends only the selected profile context, current request, recent dialogue and relevant public evidence to OpenAI after consent. Do not enter names, SINs, account numbers, credentials or identity documents. The client never stores a secret or silently saves a profile in local storage.
+- VERA asks for categories, never names, ID numbers, documents or account numbers, and rejects messages that look like ID numbers.
+- Offline answers stay in the browser tab unless you download them.
+- Online mode needs consent and sends your message, confirmed details and relevant public evidence to Anthropic. On the hosted site, sessions are encrypted and expire after one hour of inactivity; the local Python server keeps them in memory only.
+- VERA does not file taxes, calculate payments, open accounts, send enquiries or submit applications.
+- French text is machine-drafted and has not had human review.
 
-Production sessions are encrypted with AES-GCM before being stored in the platform's D1 database. The cookie contains an unpredictable opaque session ID and is Secure, HttpOnly and SameSite=Strict. Sessions become inaccessible after one hour of inactivity and expired rows are purged on subsequent requests; **Start over** deletes the active row immediately. Hosting backups and provider retention can still apply. This replaces process-local memory because Workers may run in multiple isolates. There is no account-based cross-device history.
+## Repository map
 
-All eight inherited eligibility rules remain drafts. VERA prepares questions and next steps; official providers decide eligibility and funding. It does not file taxes, calculate payments, open bank accounts, send enquiries or submit applications. French is implemented and automatically checked, not human reviewed. Chinese remains deferred. No participant impact study or independent policy approval is claimed.
+| Path | Contents |
+|---|---|
+| `web/` | Browser app: `app.js`, `screening.js`, `engine.js`, `navigator.js`, locales |
+| `dist/` | Built site served offline and by the Worker |
+| `worker/` | Hosted API: Anthropic pipeline, sessions, retrieval, contracts |
+| `rules.py`, `models.py`, `sources.py`, `extract.py`, `actions.py` | Python rules engine, data contracts, evidence capture and plan |
+| `server.py`, `conversation.py`, `settings.py` | Local Python API with Anthropic |
+| `data/` | Source manifest, rules, evidence catalog, navigation catalog, test fixtures |
+| `tests/`, `evaluate.py`, `scripts/` | Tests, evaluation and build scripts |
+| `reports/` | Evaluation outputs (`hybrid_evaluation.json` is the latest) |
+| `docs/` | Evaluation, architecture, evidence, demo, review checklists |
+| `baseline/` | Inherited prototype, unchanged (tag `baseline-v0`) |
 
-## Runtime settings
+## Attribution
 
-All production values are managed in **Sites → VERA → More actions → Settings**. Only listed values change during updates; other secrets are preserved. Never store values in `.openai/hosting.json`. That manifest contains only project identity and storage bindings.
-
-| Key | Default / purpose |
-| --- | --- |
-| `OPENAI_API_KEY` | Required private secret for online AI. Entered by the owner. |
-| `VERA_MODEL` | `gpt-6.1-sol`; no automatic fallback. |
-| `VERA_REASONING_EFFORT` | `medium`. |
-| `VERA_EMBEDDING_MODEL` | `text-embedding-3-small`; vectors use 256 dimensions. |
-| `VERA_MAX_OUTPUT_TOKENS` | `8192`; reasoning shares this output budget. |
-| `VERA_DAILY_REQUEST_LIMIT` | `100` provider requests per Vancouver calendar day, including setup and embedding requests. |
-| `VERA_DAILY_TOKEN_LIMIT` | `1000000` conservative reserved token units per day. Reservations are not a dollar-spend estimate. |
-| `VERA_SESSION_REQUEST_LIMIT` | `30` requests per online session. |
-| `VERA_SESSION_TOKEN_LIMIT` | `300000` conservative reserved token units per session. |
-| `VERA_SESSION_SECRET` | Automatically configured secret for session encryption; rotating it invalidates old sessions. |
-| `VERA_SETUP_TOKEN` | Automatically configured secret for owner-authorized deployment checks. Never put it in a URL or browser bundle. |
-| `VERA_OWNER_EMAIL` | Private owner authorization value for setup; no public display. |
-
-Each turn permits at most six provider requests, one bounded retrieval function execution in the current pipeline, 60 seconds per provider request and 180 seconds total. Normal turns use four Responses requests plus one query-embedding request. SDK retries are disabled. An explicit retry after a network error uses the same idempotency key. API errors preserve the last valid plan. Bounds can be adjusted by the owner; there is no implied dollar allowance or unlimited usage.
-
-## Troubleshooting
-
-| What you see | What to do |
-| --- | --- |
-| Missing key / offline guidance | Save `OPENAI_API_KEY` as a Sites secret, then ask ChatGPT to redeploy and run setup. |
-| `invalid_api_key` / HTTP 401 from OpenAI | Replace a revoked/incorrect key privately in Sites settings, redeploy and rerun setup. Never share the key. |
-| `model_access` / OpenAI 403 or 404 | Check the configured model and project access. VERA will not change models silently. |
-| `quota_exhausted` | Check the API project's billing/quota. A ChatGPT subscription is not proof of available API quota. |
-| `provider_rate_limit` or `budget_exhausted` | Retry later or ask the owner to inspect the documented limits. Previous work remains available. |
-| Timeout, refusal, incomplete or unsupported answer | Keep the prior plan; retry a clearer request or switch to offline guidance. Diagnostics contain safe codes only. |
-| `index_not_ready` | Run the owner setup check after deployment; it builds the versioned vectors. |
-| Frontend opens but AI is unavailable | Check owner setup status. The browser being visible does not prove provider access. |
-| Session expired | Resume an explicitly downloaded JSON plan and grant fresh AI consent if wanted. |
-| `stale_version` | Reload the current session before editing; another request changed the version. |
-| Owner setup is denied | Sign in with the owning ChatGPT account. Public visitors cannot run setup. |
-
-## For contributors: reproducible local checks
-
-End users do not need these steps. Development was checked on Linux with Python 3.12 and Node 24; no Windows production-hosting support is claimed. Python dependencies are pinned in `requirements-dev.txt`/`requirements-api.txt`, and JavaScript dependencies are pinned in `package.json` and `package-lock.json`.
-
-```bash
-npm ci
-python -m pip install -r requirements-dev.txt
-python scripts/build_index.py --capture-report data/evidence/capture-2026-11-12-v2.json
-npm run build
-python scripts/verify.py
-python scripts/evaluate_v2.py --output reports/local_legacy_retrieval.json
-python scripts/audit_release.py
-```
-
-`npm run build` compiles the existing offline core, bundles the Worker and embeds only an explicit allowlist of frontend assets. It never reads `.env` files or uses API credentials as build inputs. `npm run dev -- --host 127.0.0.1 --port 4173` runs an offline-only local preview with an in-memory SQLite test adapter; it never reads production secrets. The original `python run.py` offline launcher remains available on port 8000. The legacy Python API setup is in [docs/API.md](docs/API.md); it is separate from the hosted OpenAI backend and does not load the hosted settings.
-
-The repository includes a reproducible public corpus: **35 captured documents, 33 indexed preparation chunks, 21 source IDs and five topics**. Twenty-three chunks include brief official excerpts; others use original preparation paraphrases with official links. Two captured PDFs are excluded from runtime text pending visual extraction review. See [docs/EVIDENCE.md](docs/EVIDENCE.md) for acquisition, allowlist, source terms, source-change handling and exact reproduction commands. A capture is not a human policy review. The existing 40-case retrieval report concerns the older summary catalog and must not be cited as measured semantic retrieval performance for this corpus.
-
-The owner setup flow performs the live check; it cannot pass without real credentials and actual Responses/function/embedding calls. Its report records the returned model, timing, usage, corpus version and scope without a key or transcript. Tests in `tests/worker.test.mjs` use fixtures for predictable failure cases and are explicitly not live evaluations.
-
-## Architecture and attribution
-
-Browser → same-origin Worker → strict context extraction → bounded evidence tool → lexical/semantic retrieval → structured explanation → citation and support checks → user confirmation → stable preparation plan. D1 holds encrypted expiring sessions, public evidence vectors and safe setup/usage metadata. The user controls export/import; no enquiry is sent.
-
-Main files: `worker/index.js` (API and owner controls), `worker/provider.js` (official SDK and bounded pipeline), `worker/contracts.js`, `worker/storage.js`, `worker/retrieval.js`, `worker/corpus.js`, `web/app.js`, `web/navigator.js`, `scripts/build_worker.mjs`, and `db/schema.ts`. Database migrations are generated and applied by Sites publication. The platform serves the Worker at `dist/server/index.js`; it does not execute the Python server.
-
-Built on [diyagiri/VERA](https://github.com/diyagiri/VERA), preserving `baseline/`, [NOTICE.md](NOTICE.md), existing source provenance and draft-rule gates. Current repository: [Fan-0215/VERA](https://github.com/Fan-0215/VERA). The supplied plan's reviewed commit was `185e545`; implementation preserved the subsequent `57cf5a1` work rather than replacing it.
+Built on Kopal Chaudhary's thesis and prototype (kept unchanged in `baseline/`). New work by Diya Giri and Fan, listed in [docs/new_work.md](docs/new_work.md). Government program names and links identify official sources, not endorsement. See [NOTICE.md](NOTICE.md) for rights.

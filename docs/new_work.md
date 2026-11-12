@@ -53,7 +53,14 @@
 - web/screening.js - maps confirmed v2 profile facts to the compiled rules engine (engine.js / catalog.json); next question, correction diff
 - web/app.js, web/styles.css, web/locales/{en,fr}.json - "Program screening" section at the top of the plan: one question at a time, three result cards with rule-by-rule reasons, official-source summaries, "what changed" panel, labelled draft-logic switch, screening included in the Markdown download
 - web/navigator.js, api_contracts.py - new confirmable screening facts: naturalized, special_pathway, pr_class, pr_month (YYYY-MM)
-- worker/contracts.js - OpenAI intake may propose screening facts only when stated; must not state or predict screening results
+- worker/contracts.js - AI intake may propose screening facts only when stated; must not state or predict screening results
 - scripts/build_worker.mjs - screening.js added to the hosted asset allowlist
 - tests/screening.test.mjs - 11 tests (Mei and Tomás journeys, gating, corrections, validation, OpenAI proposal limits)
 - data/fixtures/screening_cases.json - held-out C21, C22, C27 restored to their original expectations (see docs/fixture_review.md)
+
+## Submission release (2026-11-12)
+- worker/provider.js - Anthropic Messages API over fetch replaces the OpenAI SDK; forced tool calls for structured output; lexical retrieval (no embeddings)
+- worker/index.js, tests/worker.test.mjs, package.json, package-lock.json, .env.example, settings.py - Anthropic configuration, tests and local .env loading
+- docs/EVALUATION.md, reports/hybrid_*.json - evaluation and accessibility results
+- docs/demo/VERA_demo.mp4, docs/demo/record_demo.js - recorded offline demo and its script
+- README.md - rewritten for judges

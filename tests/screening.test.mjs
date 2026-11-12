@@ -90,7 +90,7 @@ test('Screening answers survive the v2 plan, export and import', () => {
   assert.equal(back.profile.facts.special_pathway.value, 'no');
 });
 
-test('The OpenAI intake may propose screening facts, but only listed values', () => {
+test('The AI intake may propose screening facts, but only listed values', () => {
   assert.doesNotThrow(() => checkProposals([{field: 'special_pathway', value: 'no'}, {field: 'pr_month', value: '2021-06'}]));
   assert.throws(() => checkProposals([{field: 'special_pathway', value: 'eligible'}]));
   assert.throws(() => checkProposals([{field: 'eligibility', value: 'yes'}]));
